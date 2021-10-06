@@ -2,19 +2,31 @@
 
 namespace App\Nova\Pages;
 
+use App\Models\Pages\PrivacyPolicyModel;
+use Digitalcloud\MultilingualNova\Multilingual;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Resource;
+use Whitecube\NovaFlexibleContent\Flexible;
 
 class PrivacyPolicyResource extends Resource
 {
+    public static function label()
+    {
+        return 'Privat Policy';
+    }
+
+    public static $group = 'Pages';
+
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\Models\\Pages\PrivacyPolicyResource::class;
+    public static $model = PrivacyPolicyModel::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -42,6 +54,18 @@ class PrivacyPolicyResource extends Resource
     {
         return [
             ID::make(__('ID'), 'id')->sortable(),
+            Multilingual::make('Language'),
+
+            Text::make('Meta-title', 'meta_title'),
+            Text::make('Meta-description', 'meta_description'),
+            Text::make('Meta-keywords', 'meta_keywords'),
+
+            Text::make('Title', 'title'),
+            Flexible::make('Blocks', 'blocks')
+            ->addLayout('One block', 'one_block', [
+                Text::make('Block title', 'block_title'),
+                Textarea::make('Block description', 'block_description')
+            ])->button('add block')
         ];
     }
 

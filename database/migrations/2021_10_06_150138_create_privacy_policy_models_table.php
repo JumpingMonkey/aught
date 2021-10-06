@@ -15,6 +15,11 @@ class CreatePrivacyPolicyModelsTable extends Migration
     {
         Schema::create('privacy_policy_models', function (Blueprint $table) {
             $table->id();
+            $table->json('meta_title');
+            $table->json('meta_description');
+            $table->json('meta_keywords');
+            $table->json('title');
+            $table->json('blocks');
             $table->timestamps();
         });
     }

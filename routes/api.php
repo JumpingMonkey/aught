@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Pages\PrivacyPolicyController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,5 +20,7 @@ use Illuminate\Support\Facades\Route;
 //});
 
 Route::middleware('locale')->group(function (){
+
+    Route::get('/privacy', [PrivacyPolicyController::class, 'privacy']);
 
 });
