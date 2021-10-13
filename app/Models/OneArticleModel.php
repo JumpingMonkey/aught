@@ -23,6 +23,7 @@ class OneArticleModel extends Model
         'meta_keywords',
         'create_date',
         'article_title',
+        'slug',
         'author_id',
         'interview',
         'video_maker',

@@ -67,6 +67,7 @@ class OneArticleResource extends Resource
 
             Date::make('Дата создания', 'create_date')->nullable(),
             Text::make('Заголовок', 'article_title'),
+            Text::make('Слаг', 'slug'),
             Select::make('Автор статьи', 'author_id')->options(
                 OneAuthorModel::all()->pluck('name', 'id')
             )->displayUsingLabels(),

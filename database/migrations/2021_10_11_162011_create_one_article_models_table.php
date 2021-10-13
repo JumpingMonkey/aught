@@ -21,6 +21,7 @@ class CreateOneArticleModelsTable extends Migration
 
             $table->date('create_date')->nullable();
             $table->json('article_title');
+            $table->json('slug');
             $table->foreignId('author_id')->nullable()->constrained('one_author_models')->onDelete('set null');
             $table->json('interview');
             $table->json('video_maker');
