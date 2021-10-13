@@ -331,7 +331,7 @@ abstract class Resource implements ArrayAccess, JsonSerializable, UrlRoutable
      */
     public static function singularLabel()
     {
-        return Str::singular(static::label());
+        return Str::singular(Resource::label());
     }
 
     /**
