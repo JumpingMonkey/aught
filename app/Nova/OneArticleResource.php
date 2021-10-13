@@ -69,7 +69,7 @@ class OneArticleResource extends Resource
             Text::make('Заголовок', 'article_title'),
             Select::make('Автор статьи', 'author_id')->options(
                 OneAuthorModel::all()->pluck('name', 'id')
-            ),
+            )->displayUsingLabels(),
             Text::make('Интервьюер', 'interview'),
             Text::make('Видео', 'video_maker'),
 
