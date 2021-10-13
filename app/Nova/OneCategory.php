@@ -18,6 +18,8 @@ class OneCategory extends Resource
 
 //    public static $group = 'Pages';
 
+
+
     /**
      * The model the resource corresponds to.
      *
@@ -30,7 +32,7 @@ class OneCategory extends Resource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'category_title';
 
     /**
      * The columns that should be searched.
