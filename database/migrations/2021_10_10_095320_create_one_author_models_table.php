@@ -19,6 +19,7 @@ class CreateOneAuthorModelsTable extends Migration
             $table->json('meta_description');
             $table->json('meta_keywords');
             $table->json('name');
+            $table->string('slug');
             $table->string('photo');
             $table->json('description');
             $table->string('facebook');

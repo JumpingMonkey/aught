@@ -18,6 +18,7 @@ class OneAuthorModel extends Model
         'meta_description',
         'meta_keywords',
         'name',
+        'slug',
         'photo',
         'description',
         'facebook',
