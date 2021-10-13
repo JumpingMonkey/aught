@@ -19,6 +19,7 @@ class CreateOneCategoryModelsTable extends Migration
             $table->json('meta_description');
             $table->json('meta_keywords');
             $table->json('category_title');
+            $table->string('slug');
             $table->json('category_description');
             $table->timestamps();
         });

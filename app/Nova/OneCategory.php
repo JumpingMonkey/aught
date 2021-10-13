@@ -60,6 +60,7 @@ class OneCategory extends Resource
             Text::make('Meta-keywords', 'meta_keywords'),
 
             Text::make('Название категории', 'category_title'),
+            Text::make('Слаг', 'slug'),
             Text::make('Описание категории', 'category_description'),
         ];
     }

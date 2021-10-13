@@ -18,6 +18,7 @@ class OneCategoryModel extends Model
         'meta_description',
         'meta_keywords',
         'category_title',
+        'slug',
         'category_description',
     ];
 
