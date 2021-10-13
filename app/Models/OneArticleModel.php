@@ -23,6 +23,7 @@ class OneArticleModel extends Model
         'meta_keywords',
         'create_date',
         'article_title',
+        'author_id',
         'interview',
         'video_maker',
         'main_image',
@@ -36,6 +37,7 @@ class OneArticleModel extends Model
         'meta_description',
         'meta_keywords',
         'article_title',
+//        'author_id',
         'interview',
         'video_maker',
         'social_label',
@@ -48,5 +50,9 @@ class OneArticleModel extends Model
         return $this->belongsToMany(OneCategoryModel::class, 'article_category', 'article_id', 'category_id');
     }
 
+    public function author()
+    {
+        return $this->belongsTo(OneAuthorModel::class);
+    }
 
 }

@@ -3,6 +3,7 @@
 namespace App\Nova;
 
 use App\Models\OneArticleModel;
+use App\Models\OneAuthorModel;
 use ClassicO\NovaMediaLibrary\MediaLibrary;
 use Digitalcloud\MultilingualNova\Multilingual;
 use Illuminate\Http\Request;
@@ -66,6 +67,9 @@ class OneArticleResource extends Resource
 
             Date::make('Дата создания', 'create_date')->nullable(),
             Text::make('Заголовок', 'article_title'),
+            Select::make('Автор статьи', 'author_id')->options(
+                OneAuthorModel::all()->pluck('name', 'id')
+            ),
             Text::make('Интервьюер', 'interview'),
             Text::make('Видео', 'video_maker'),
 
