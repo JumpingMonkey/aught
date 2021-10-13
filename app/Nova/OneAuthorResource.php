@@ -60,6 +60,7 @@ class OneAuthorResource extends Resource
 
             Text::make('Имя', 'name'),
             Text::make('Слаг', 'slug'),
+            Text::make('Должность', 'position'),
             MediaLibrary::make('Фото', 'photo'),
             Textarea::make('Описание', 'description'),
             Text::make('Facebook сылка', 'facebook'),
