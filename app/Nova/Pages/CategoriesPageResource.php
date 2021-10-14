@@ -64,7 +64,7 @@ class CategoriesPageResource extends Resource
                     Select::make('Выберите категорию', 'category')->options(
                         OneCategoryModel::all()->pluck('category_title', 'id'),
                     )
-            ])
+            ])->button('Добавить категорию')
         ];
     }
 
