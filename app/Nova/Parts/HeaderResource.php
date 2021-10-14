@@ -57,10 +57,10 @@ class HeaderResource extends Resource
 
             Flexible::make('Отображаемые категории', 'display_category')
                 ->addLayout('Категория', 'category', [
-                    Select::make('Выберите категорию', 'category')->options([
+                    Select::make('Выберите категорию', 'category')->options(
                         OneCategoryModel::all()->pluck('category_title', 'id'),
-                    ])
-                ])
+                    )
+                ])->button('Добавить категорию')
         ];
     }
 
