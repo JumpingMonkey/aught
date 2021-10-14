@@ -2,6 +2,7 @@
 
 namespace App\Nova\Pages;
 
+use App\Models\OneCategoryModel;
 use App\Models\Pages\CategoriesPageModel;
 use Digitalcloud\MultilingualNova\Multilingual;
 use Illuminate\Http\Request;
@@ -60,10 +61,9 @@ class CategoriesPageResource extends Resource
             Text::make('Текст отображения писком', 'list_title'),
             Flexible::make('Отображаемые категории', 'display_category')
                 ->addLayout('Категория', 'category', [
-                    Select::make('Выберите категорию', 'category')->options([
-                        'Test' => 'test',
-
-                    ])
+                    Select::make('Выберите категорию', 'category')->options(
+                        OneCategoryModel::all()->pluck('category_title', 'id'),
+                    )
             ])
         ];
     }
