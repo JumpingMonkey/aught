@@ -120,7 +120,7 @@ class OneArticleResource extends Resource
                 ->addLayout('Фото + видео ', 'img_and_video', [
                     MediaLibrary::make('Фото', 'img'),
                     MediaLibrary::make('Видео', 'video'),
-                ]),
+                ])->button('Добавить блок'),
         ];
     }
 
