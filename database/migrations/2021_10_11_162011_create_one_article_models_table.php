@@ -18,10 +18,11 @@ class CreateOneArticleModelsTable extends Migration
             $table->json('meta_title');
             $table->json('meta_description');
             $table->json('meta_keywords');
+            $table->string('visible');
 
             $table->date('create_date')->nullable();
             $table->json('article_title');
-            $table->string('slug');
+            $table->string('slug')->nullable();
             $table->foreignId('author_id')->nullable()->constrained('one_author_models')->onDelete('set null');
             $table->json('interview');
             $table->json('video_maker');

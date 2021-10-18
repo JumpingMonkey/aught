@@ -8,6 +8,7 @@ use ClassicO\NovaMediaLibrary\MediaLibrary;
 use Digitalcloud\MultilingualNova\Multilingual;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsToMany;
+use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Select;
@@ -64,7 +65,9 @@ class OneArticleResource extends Resource
             Text::make('Meta-description', 'meta_description')->hideFromIndex(),
             Text::make('Meta-keywords', 'meta_keywords')->hideFromIndex(),
             BelongsToMany::make('OneCategory'),
-
+            Boolean::make('Отображать на сайте?', 'visible')
+                ->trueValue('true')
+                ->falseValue('false'),
             Date::make('Дата создания', 'create_date')->nullable(),
             Text::make('Заголовок', 'article_title'),
             Text::make('Слаг', 'slug'),

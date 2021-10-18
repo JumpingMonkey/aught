@@ -21,6 +21,7 @@ class OneArticleModel extends Model
         'meta_title',
         'meta_description',
         'meta_keywords',
+        'visible',
         'create_date',
         'article_title',
         'slug',
