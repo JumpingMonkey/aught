@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Pages\PrivacyPolicyController;
+use App\Http\Controllers\PopupsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -22,5 +23,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('locale')->group(function (){
 
     Route::get('/privacy', [PrivacyPolicyController::class, 'privacy']);
+
+    Route::post('/request', [PopupsController::class, 'request_popup_post']);
 
 });
