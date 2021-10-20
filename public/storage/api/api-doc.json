@@ -1,0 +1,219 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "api-doc",
+    "version": "1.0",
+    "summary": "Aught api documentation",
+    "description": "Aught api documentation",
+    "contact": {
+      "name": "No name",
+      "email": "No mail",
+      "url": "No contact"
+    },
+    "termsOfService": "No terms"
+  },
+  "servers": [
+    {
+      "url": "http://aught.dev/api",
+      "description": ""
+    }
+  ],
+  "paths": {
+    "/privacy": {
+      "get": {
+        "summary": "GET Privacy Policy Page",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "x-examples": {
+                    "example-1": {
+                      "status": "success",
+                      "data": {
+                        "meta_title": "Privacy Policy",
+                        "meta_description": "Privacy Policy",
+                        "meta_keywords": "Privacy Policy",
+                        "title": "Privacy Policy",
+                        "blocks": [
+                          {
+                            "block_title": "YOUR RIGHTS",
+                            "block_description": "4.1. You have the right to know what information we are collecting on you, and to amend it if it is inaccurate.\n4.2. If you feel for some reason we have information we should not be keeping, or it is out of date or otherwise wrong, please let us know and we will take appropriate action. Most of the information we hold is not based          on your individual consent but is based on our needing  the information to run our business and provide our products and services.\n4.3. If you want to know what information we have about you (if any) email us at the email address set out above and give us your name, email address(es) and we will happily do a search and let you know what information we hold on you and how we are using it/have used it.\n4.4. You have a “right to be forgotten”, but that does have some legal limits to it.  If you want us to remove information about you, let us know.\n4.5. You can, at any time, object to the processing                 of your Personal Data on grounds relating to your particular situation. You have the right to object your Personal Data being processed for direct marketing purposes."
+                          },
+                          {
+                            "block_title": "WHAT DATA DO WE COLLECT?",
+                            "block_description": "5.1. You may browse our Site without providing your personal information.\n5.1.1. Data you provide us with. Through our Site, you may provide us with your Personal Data to send your project request or to send your career request. Data which you may provide to us include:\n5.1.2. Full name;\n5.1.3. Phone number;\n5.1.4. Email address;\n5.1.5. City;\n5.1.6. CV;\n5.1.7. Portfolio;\n5.2.1. Data collected automatically. We use this data to constantly improve our site. Therefore, when you access our Site, certain data may be collected automatically. Such data include:\n5.2.2. Cookies.\n5.2.3. Device data (device model, OS type etc.);\n5.2.4. IP address;\n5.2.5. Connection type (WiFi, LTE, 3G);\n5.2.6. Language and region;\n5.2.7. Your interactions with Site.\n5.3. If you sign up to a newsletter list, you will be sent what you asked for. We operate “double opt-in” lists and you will need to reconfirm your subscription before anything is sent. You can unsubscribe at any time by clicking the unsubscribe button on any email.\n5.4. You are not automatically subscribed to any other lists, but may be invited to join an appropriate one.\n5.5. If you make an enquiry via our site, we will keep details of that enquiry and response for our data retention period.\n5.6. We do not routinely keep special category data.  To the extent we hold this, it was supplied or made publicly available by you.\n5.7. Automatically collected data is aggregated and anonymized."
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "meta_title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "meta_description": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "meta_keywords": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "blocks": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "block_title": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "block_description": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/404-error"
+          }
+        },
+        "operationId": "get-privacy",
+        "description": "Get privacy policy page",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/lang"
+          }
+        ]
+      },
+      "parameters": []
+    }
+  },
+  "components": {
+    "schemas": {
+      "User": {
+        "title": "User",
+        "type": "object",
+        "description": "",
+        "examples": [
+          {
+            "id": 142,
+            "firstName": "Alice",
+            "lastName": "Smith",
+            "email": "alice.smith@gmail.com",
+            "dateOfBirth": "1997-10-31",
+            "emailVerified": true,
+            "signUpDate": "2019-08-24"
+          }
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Unique identifier for the given user."
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date",
+            "example": "1997-10-31"
+          },
+          "emailVerified": {
+            "type": "boolean",
+            "description": "Set to true if the user's email has been verified."
+          },
+          "createDate": {
+            "type": "string",
+            "format": "date",
+            "description": "The date that the user was created."
+          }
+        },
+        "required": [
+          "id",
+          "firstName",
+          "lastName",
+          "email",
+          "emailVerified"
+        ]
+      }
+    },
+    "responses": {
+      "404-error": {
+        "description": "Example response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "status"
+              ]
+            },
+            "examples": {
+              "example-1": {
+                "value": {
+                  "status": "error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "parameters": {
+      "lang": {
+        "name": "lang",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string",
+          "enum": [
+            "en",
+            "ru"
+          ],
+          "default": "ru"
+        },
+        "description": "Current language"
+      }
+    }
+  }
+}
