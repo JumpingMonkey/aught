@@ -24,6 +24,8 @@ Route::middleware('locale')->group(function (){
 
     Route::get('/privacy', [PrivacyPolicyController::class, 'privacy']);
 
+    //popup
+    Route::get('/request', [PopupsController::class, 'getRequestPage']);
     Route::post('/request', [PopupsController::class, 'request_popup_post']);
 
 });
