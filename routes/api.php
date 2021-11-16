@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Pages\AboutPageController;
 use App\Http\Controllers\Pages\CareerPageController;
+use App\Http\Controllers\Pages\CategoriesPageController;
 use App\Http\Controllers\Pages\Page404Controller;
 use App\Http\Controllers\Pages\PrivacyPolicyController;
 use App\Http\Controllers\PopupsController;
@@ -29,6 +30,7 @@ Route::middleware('locale')->group(function (){
     Route::get('/about', [AboutPageController::class, 'index']);
     Route::get('/career', [CareerPageController::class, 'index']);
     Route::get('/page-404', [Page404Controller::class, 'index']);
+    Route::get('/categories', [CategoriesPageController::class, 'index']);
 
     //popup
     Route::get('/request', [PopupsController::class, 'getRequestPage']);
