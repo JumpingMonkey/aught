@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Pages\AboutPageController;
+use App\Http\Controllers\Pages\CareerPageController;
 use App\Http\Controllers\Pages\PrivacyPolicyController;
 use App\Http\Controllers\PopupsController;
 use Illuminate\Http\Request;
@@ -23,6 +25,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('locale')->group(function (){
 
     Route::get('/privacy', [PrivacyPolicyController::class, 'privacy']);
+    Route::get('/about', [AboutPageController::class, 'index']);
+    Route::get('/career', [CareerPageController::class, 'index']);
 
     //popup
     Route::get('/request', [PopupsController::class, 'getRequestPage']);
