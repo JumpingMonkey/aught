@@ -1,10 +1,13 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\Pages\AboutPageController;
 use App\Http\Controllers\Pages\CareerPageController;
 use App\Http\Controllers\Pages\CategoriesPageController;
+use App\Http\Controllers\Pages\MainPageController;
 use App\Http\Controllers\Pages\Page404Controller;
 use App\Http\Controllers\Pages\PrivacyPolicyController;
+use App\Http\Controllers\Parts\PartsController;
 use App\Http\Controllers\PopupsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -26,11 +29,20 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('locale')->group(function (){
 
+    //Pages
     Route::get('/privacy', [PrivacyPolicyController::class, 'privacy']);
     Route::get('/about', [AboutPageController::class, 'index']);
     Route::get('/career', [CareerPageController::class, 'index']);
     Route::get('/page-404', [Page404Controller::class, 'index']);
     Route::get('/categories', [CategoriesPageController::class, 'index']);
+    Route::get('/main', [MainPageController::class, 'index']);
+
+    //Parts
+    Route::get('/parts', [PartsController::class, 'index']);
+
+    //Objects
+    Route::get('/articles', [PartsController::class, 'index']);
+    Route::get('/article/{id}', [ArticleController::class, 'getOneArticle']);
 
     //popup
     Route::get('/request', [PopupsController::class, 'getRequestPage']);
