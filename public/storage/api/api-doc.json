@@ -114,6 +114,165 @@
         ]
       },
       "parameters": []
+    },
+    "/about": {
+      "get": {
+        "summary": "GET About Page",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "x-examples": {
+                    "example-1": {
+                      "status": "success",
+                      "data": {
+                        "meta_title": "1",
+                        "meta_description": "1",
+                        "meta_keywords": "1",
+                        "title": "1",
+                        "based": "1",
+                        "big_img": "/storage/screenshot-13-1634144521Ndd8M.png",
+                        "small_img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                        "title_to_the_left_of_the_img": "1",
+                        "text_to_the_left_of_the_img": "1",
+                        "large_text": "1",
+                        "left_small_text": "1",
+                        "right_small_text": "1",
+                        "gallery": [
+                          {
+                            "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                          }
+                        ],
+                        "creeping_line": "1"
+                      }
+                    }
+                  },
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "meta_title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "meta_description": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "meta_keywords": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "based": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "big_img": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "small_img": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "title_to_the_left_of_the_img": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "text_to_the_left_of_the_img": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "large_text": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "left_small_text": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "right_small_text": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "gallery": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "img": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            }
+                          }
+                        },
+                        "creeping_line": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "status": "success",
+                      "data": {
+                        "meta_title": "1",
+                        "meta_description": "1",
+                        "meta_keywords": "1",
+                        "title": "1",
+                        "based": "1",
+                        "big_img": "/storage/screenshot-13-1634144521Ndd8M.png",
+                        "small_img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                        "title_to_the_left_of_the_img": "1",
+                        "text_to_the_left_of_the_img": "1",
+                        "large_text": "1",
+                        "left_small_text": "1",
+                        "right_small_text": "1",
+                        "gallery": [
+                          {
+                            "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                          }
+                        ],
+                        "creeping_line": "1"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/404-error"
+          }
+        },
+        "operationId": "get-about",
+        "description": "Get About page",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/lang"
+          }
+        ]
+      },
+      "parameters": []
     }
   },
   "components": {
