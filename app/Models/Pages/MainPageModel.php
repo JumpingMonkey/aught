@@ -5,6 +5,7 @@ namespace App\Models\Pages;
 use App\Traits\TranslateAndConvertMediaUrl;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Spatie\Translatable\HasTranslations;
 
 class MainPageModel extends Model
@@ -33,4 +34,27 @@ class MainPageModel extends Model
     public $mediaToUrl = [
         'logo',
     ];
+
+    public static function normalizeData($object)
+    {
+
+        self::getNormalizedField($object, 'hero_slider_articles', 'article', 'true', 'true' );
+        self::getNormalizedField($object, 'display_articles_2_block', 'article', 'true', 'true' );
+        self::getNormalizedField($object, 'display_articles_4_block', 'article', 'true', 'true' );
+
+        return $object;
+    }
+
+    public function getFullData()
+    {
+        try {
+
+            $data = $this->getAllWithMediaUrlWithout(['id', 'created_at', 'updated_at']);
+            return self::normalizeData($data);
+
+        } catch (\Exception $ex) {
+            throw new ModelNotFoundException();
+        }
+
+    }
 }
