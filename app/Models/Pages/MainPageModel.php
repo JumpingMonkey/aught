@@ -2,6 +2,7 @@
 
 namespace App\Models\Pages;
 
+use App\Models\OneArticleModel;
 use App\Traits\TranslateAndConvertMediaUrl;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -42,6 +43,33 @@ class MainPageModel extends Model
         self::getNormalizedField($object, 'display_articles_2_block', 'article', 'true', 'true' );
         self::getNormalizedField($object, 'display_articles_4_block', 'article', 'true', 'true' );
 
+
+        return $object;
+    }
+
+    public static function getArticles ($object, $fieldName) {
+        $articleIds = [];
+        foreach ($object[$fieldName] as $value){
+            $articleIds[] = $value['article'];
+        }
+
+        $articles = OneArticleModel::query()->whereIn("id", $articleIds)->get();
+
+        foreach ($articles as $article){
+            $content[] = $article->getDataForMain();
+        }
+
+        $object[$fieldName] = $content;
+
+        return $object;
+    }
+
+    public static function getOneArticle ($object, $fieldName) {
+
+        $article = OneArticleModel::query()->where("id", $object[$fieldName])->firstOrFail();
+
+        $object[$fieldName] = $article->getDataForMain();
+
         return $object;
     }
 
@@ -50,7 +78,15 @@ class MainPageModel extends Model
         try {
 
             $data = $this->getAllWithMediaUrlWithout(['id', 'created_at', 'updated_at']);
-            return self::normalizeData($data);
+            $data = self::normalizeData($data);
+
+                $data = self::getArticles($data, 'hero_slider_articles');
+                $data = self::getArticles($data, 'display_articles_2_block');
+                $data = self::getArticles($data, 'display_articles_4_block');
+                $data = self::getOneArticle($data, 'article_for_3_block');
+
+
+            return $data;
 
         } catch (\Exception $ex) {
             throw new ModelNotFoundException();

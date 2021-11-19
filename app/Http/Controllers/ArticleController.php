@@ -20,6 +20,8 @@ class ArticleController extends Controller
 
 //        $author = OneAuthorModel::query()->where('id', $content['author_id'])->firstOrFail();
 //        $authorContent = $author->getFullData();
+//dd($authorContent);
+//        $content['author_id'] = $authorContent;
 
         /*return json obj*/
         return response()->json([

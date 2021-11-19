@@ -491,6 +491,1952 @@
         ]
       },
       "parameters": []
+    },
+    "/main": {
+      "get": {
+        "summary": "GET Main Page",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "logo": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "hero_slider_articles": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "required": [
+                              "visible",
+                              "create_date",
+                              "article_title",
+                              "slug",
+                              "author_id",
+                              "interview",
+                              "video_maker",
+                              "main_image"
+                            ],
+                            "properties": {
+                              "visible": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "create_date": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "article_title": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "slug": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "author_id": {
+                                "type": "number"
+                              },
+                              "interview": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "video_maker": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "main_image": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "social_network": {
+                                "type": "array",
+                                "uniqueItems": true,
+                                "minItems": 1,
+                                "items": {
+                                  "required": [
+                                    "social",
+                                    "social_link"
+                                  ],
+                                  "properties": {
+                                    "social": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "social_link": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    }
+                                  }
+                                }
+                              },
+                              "blocks": {
+                                "type": "object",
+                                "properties": {
+                                  "one_social": {
+                                    "type": "object",
+                                    "properties": {
+                                      "quote_label": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "textarea_md_font": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "textarea_lg_font_quote": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "textarea_sm_font_2_col": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "quote_label",
+                                      "textarea_md_font",
+                                      "textarea_lg_font_quote",
+                                      "textarea_sm_font_2_col"
+                                    ]
+                                  },
+                                  "left_img_title_desc": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "image": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "title": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "image",
+                                      "title"
+                                    ]
+                                  },
+                                  "right_img_title_desc": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "image": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "title": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "image",
+                                      "title"
+                                    ]
+                                  },
+                                  "img_quote": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "quote": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "img_label": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "quote",
+                                      "img_label"
+                                    ]
+                                  },
+                                  "gallery_and_audio": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "array",
+                                        "items": {
+                                          "required": [],
+                                          "properties": {}
+                                        }
+                                      },
+                                      "text": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "audio": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "text",
+                                      "audio"
+                                    ]
+                                  },
+                                  "img_and_video": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "video": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "video"
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "one_social",
+                                  "left_img_title_desc",
+                                  "right_img_title_desc",
+                                  "img_quote",
+                                  "gallery_and_audio",
+                                  "img_and_video"
+                                ]
+                              },
+                              "author": {
+                                "type": "object",
+                                "properties": {
+                                  "meta_title": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "meta_description": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "meta_keywords": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "name": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "slug": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "position": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "photo": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "description": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "facebook": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "instagram": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "twitter": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "youtube": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  }
+                                },
+                                "required": [
+                                  "meta_title",
+                                  "meta_description",
+                                  "meta_keywords",
+                                  "name",
+                                  "slug",
+                                  "position",
+                                  "photo",
+                                  "description",
+                                  "facebook",
+                                  "instagram",
+                                  "twitter",
+                                  "youtube"
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        "hero_btn_title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "display_articles_2_block": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "required": [
+                              "visible",
+                              "create_date",
+                              "article_title",
+                              "slug",
+                              "author_id",
+                              "interview",
+                              "video_maker",
+                              "main_image"
+                            ],
+                            "properties": {
+                              "visible": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "create_date": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "article_title": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "slug": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "author_id": {
+                                "type": "number"
+                              },
+                              "interview": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "video_maker": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "main_image": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "social_network": {
+                                "type": "array",
+                                "uniqueItems": true,
+                                "minItems": 1,
+                                "items": {
+                                  "required": [
+                                    "social",
+                                    "social_link"
+                                  ],
+                                  "properties": {
+                                    "social": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "social_link": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    }
+                                  }
+                                }
+                              },
+                              "blocks": {
+                                "type": "object",
+                                "properties": {
+                                  "one_social": {
+                                    "type": "object",
+                                    "properties": {
+                                      "quote_label": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "textarea_md_font": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "textarea_lg_font_quote": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "textarea_sm_font_2_col": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "quote_label",
+                                      "textarea_md_font",
+                                      "textarea_lg_font_quote",
+                                      "textarea_sm_font_2_col"
+                                    ]
+                                  },
+                                  "left_img_title_desc": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "image": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "title": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "image",
+                                      "title"
+                                    ]
+                                  },
+                                  "right_img_title_desc": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "image": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "title": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "image",
+                                      "title"
+                                    ]
+                                  },
+                                  "img_quote": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "quote": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "img_label": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "quote",
+                                      "img_label"
+                                    ]
+                                  },
+                                  "gallery_and_audio": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "array",
+                                        "items": {
+                                          "required": [],
+                                          "properties": {}
+                                        }
+                                      },
+                                      "text": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "audio": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "text",
+                                      "audio"
+                                    ]
+                                  },
+                                  "img_and_video": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "video": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "video"
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "one_social",
+                                  "left_img_title_desc",
+                                  "right_img_title_desc",
+                                  "img_quote",
+                                  "gallery_and_audio",
+                                  "img_and_video"
+                                ]
+                              },
+                              "author": {
+                                "type": "object",
+                                "properties": {
+                                  "meta_title": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "meta_description": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "meta_keywords": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "name": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "slug": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "position": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "photo": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "description": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "facebook": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "instagram": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "twitter": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "youtube": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  }
+                                },
+                                "required": [
+                                  "meta_title",
+                                  "meta_description",
+                                  "meta_keywords",
+                                  "name",
+                                  "slug",
+                                  "position",
+                                  "photo",
+                                  "description",
+                                  "facebook",
+                                  "instagram",
+                                  "twitter",
+                                  "youtube"
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        "article_for_3_block": {
+                          "type": "object",
+                          "properties": {
+                            "visible": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "create_date": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "article_title": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "slug": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "author_id": {
+                              "type": "number"
+                            },
+                            "interview": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "video_maker": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "main_image": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "social_network": {
+                              "type": "array",
+                              "uniqueItems": true,
+                              "minItems": 1,
+                              "items": {
+                                "required": [
+                                  "social",
+                                  "social_link"
+                                ],
+                                "properties": {
+                                  "social": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "social_link": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  }
+                                }
+                              }
+                            },
+                            "blocks": {
+                              "type": "object",
+                              "properties": {
+                                "one_social": {
+                                  "type": "object",
+                                  "properties": {
+                                    "quote_label": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "textarea_md_font": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "textarea_lg_font_quote": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "textarea_sm_font_2_col": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    }
+                                  },
+                                  "required": [
+                                    "quote_label",
+                                    "textarea_md_font",
+                                    "textarea_lg_font_quote",
+                                    "textarea_sm_font_2_col"
+                                  ]
+                                },
+                                "left_img_title_desc": {
+                                  "type": "object",
+                                  "properties": {
+                                    "img": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "image": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "title": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    }
+                                  },
+                                  "required": [
+                                    "img",
+                                    "image",
+                                    "title"
+                                  ]
+                                },
+                                "right_img_title_desc": {
+                                  "type": "object",
+                                  "properties": {
+                                    "img": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "image": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "title": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    }
+                                  },
+                                  "required": [
+                                    "img",
+                                    "image",
+                                    "title"
+                                  ]
+                                },
+                                "img_quote": {
+                                  "type": "object",
+                                  "properties": {
+                                    "img": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "quote": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "img_label": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    }
+                                  },
+                                  "required": [
+                                    "img",
+                                    "quote",
+                                    "img_label"
+                                  ]
+                                },
+                                "gallery_and_audio": {
+                                  "type": "object",
+                                  "properties": {
+                                    "img": {
+                                      "type": "array",
+                                      "items": {
+                                        "required": [],
+                                        "properties": {}
+                                      }
+                                    },
+                                    "text": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "audio": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    }
+                                  },
+                                  "required": [
+                                    "img",
+                                    "text",
+                                    "audio"
+                                  ]
+                                },
+                                "img_and_video": {
+                                  "type": "object",
+                                  "properties": {
+                                    "img": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "video": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    }
+                                  },
+                                  "required": [
+                                    "img",
+                                    "video"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "one_social",
+                                "left_img_title_desc",
+                                "right_img_title_desc",
+                                "img_quote",
+                                "gallery_and_audio",
+                                "img_and_video"
+                              ]
+                            },
+                            "author": {
+                              "type": "object",
+                              "properties": {
+                                "meta_title": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "meta_description": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "meta_keywords": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "name": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "slug": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "position": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "photo": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "description": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "facebook": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "instagram": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "twitter": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "youtube": {
+                                  "type": "string",
+                                  "minLength": 1
+                                }
+                              },
+                              "required": [
+                                "meta_title",
+                                "meta_description",
+                                "meta_keywords",
+                                "name",
+                                "slug",
+                                "position",
+                                "photo",
+                                "description",
+                                "facebook",
+                                "instagram",
+                                "twitter",
+                                "youtube"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "visible",
+                            "create_date",
+                            "article_title",
+                            "slug",
+                            "author_id",
+                            "interview",
+                            "video_maker",
+                            "main_image",
+                            "social_network",
+                            "blocks",
+                            "author"
+                          ]
+                        },
+                        "display_articles_4_block": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "required": [
+                              "visible",
+                              "create_date",
+                              "article_title",
+                              "slug",
+                              "author_id",
+                              "interview",
+                              "video_maker",
+                              "main_image"
+                            ],
+                            "properties": {
+                              "visible": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "create_date": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "article_title": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "slug": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "author_id": {
+                                "type": "number"
+                              },
+                              "interview": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "video_maker": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "main_image": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "social_network": {
+                                "type": "array",
+                                "uniqueItems": true,
+                                "minItems": 1,
+                                "items": {
+                                  "required": [
+                                    "social",
+                                    "social_link"
+                                  ],
+                                  "properties": {
+                                    "social": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "social_link": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    }
+                                  }
+                                }
+                              },
+                              "blocks": {
+                                "type": "object",
+                                "properties": {
+                                  "one_social": {
+                                    "type": "object",
+                                    "properties": {
+                                      "quote_label": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "textarea_md_font": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "textarea_lg_font_quote": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "textarea_sm_font_2_col": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "quote_label",
+                                      "textarea_md_font",
+                                      "textarea_lg_font_quote",
+                                      "textarea_sm_font_2_col"
+                                    ]
+                                  },
+                                  "left_img_title_desc": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "image": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "title": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "image",
+                                      "title"
+                                    ]
+                                  },
+                                  "right_img_title_desc": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "image": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "title": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "image",
+                                      "title"
+                                    ]
+                                  },
+                                  "img_quote": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "quote": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "img_label": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "quote",
+                                      "img_label"
+                                    ]
+                                  },
+                                  "gallery_and_audio": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "array",
+                                        "items": {
+                                          "required": [],
+                                          "properties": {}
+                                        }
+                                      },
+                                      "text": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "audio": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "text",
+                                      "audio"
+                                    ]
+                                  },
+                                  "img_and_video": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "video": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "video"
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "one_social",
+                                  "left_img_title_desc",
+                                  "right_img_title_desc",
+                                  "img_quote",
+                                  "gallery_and_audio",
+                                  "img_and_video"
+                                ]
+                              },
+                              "author": {
+                                "type": "object",
+                                "properties": {
+                                  "meta_title": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "meta_description": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "meta_keywords": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "name": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "slug": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "position": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "photo": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "description": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "facebook": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "instagram": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "twitter": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "youtube": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  }
+                                },
+                                "required": [
+                                  "meta_title",
+                                  "meta_description",
+                                  "meta_keywords",
+                                  "name",
+                                  "slug",
+                                  "position",
+                                  "photo",
+                                  "description",
+                                  "facebook",
+                                  "instagram",
+                                  "twitter",
+                                  "youtube"
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "required": [
+                        "logo",
+                        "hero_slider_articles",
+                        "hero_btn_title",
+                        "display_articles_2_block",
+                        "article_for_3_block",
+                        "display_articles_4_block"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "status",
+                    "data"
+                  ],
+                  "x-examples": {
+                    "example-1": {
+                      "status": "success",
+                      "data": {
+                        "logo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                        "hero_slider_articles": [
+                          {
+                            "visible": "true",
+                            "create_date": "2021-11-17T00:00:00.000000Z",
+                            "article_title": "1",
+                            "slug": "1",
+                            "author_id": 1,
+                            "interview": "1",
+                            "video_maker": "1",
+                            "main_image": "1",
+                            "social_network": [
+                              {
+                                "social": "FB",
+                                "social_link": "11"
+                              },
+                              {
+                                "social": "SC",
+                                "social_link": "11"
+                              }
+                            ],
+                            "blocks": {
+                              "one_social": {
+                                "quote_label": "1",
+                                "textarea_md_font": "1",
+                                "textarea_lg_font_quote": "1",
+                                "textarea_sm_font_2_col": "1"
+                              },
+                              "left_img_title_desc": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "title": "1"
+                              },
+                              "right_img_title_desc": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "title": "1"
+                              },
+                              "img_quote": {
+                                "img": "/storage/screenshot-13-1634144521Ndd8M.png",
+                                "quote": "1",
+                                "img_label": "11"
+                              },
+                              "gallery_and_audio": {
+                                "img": [
+                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                  "/storage/screenshot-13-1634144521Ndd8M.png"
+                                ],
+                                "text": "1",
+                                "audio": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                              },
+                              "img_and_video": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "video": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                              }
+                            },
+                            "author": {
+                              "meta_title": "1",
+                              "meta_description": "1",
+                              "meta_keywords": "1",
+                              "name": "1",
+                              "slug": "2",
+                              "position": "1",
+                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "description": "1",
+                              "facebook": "1",
+                              "instagram": "1",
+                              "twitter": "1",
+                              "youtube": "1"
+                            }
+                          },
+                          {
+                            "visible": "true",
+                            "create_date": "2021-11-18T00:00:00.000000Z",
+                            "article_title": "2",
+                            "slug": "12",
+                            "author_id": 1,
+                            "interview": "2",
+                            "video_maker": "2",
+                            "main_image": "2",
+                            "social_label": "2",
+                            "author": {
+                              "meta_title": "1",
+                              "meta_description": "1",
+                              "meta_keywords": "1",
+                              "name": "1",
+                              "slug": "2",
+                              "position": "1",
+                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "description": "1",
+                              "facebook": "1",
+                              "instagram": "1",
+                              "twitter": "1",
+                              "youtube": "1"
+                            }
+                          }
+                        ],
+                        "hero_btn_title": "1",
+                        "display_articles_2_block": [
+                          {
+                            "visible": "true",
+                            "create_date": "2021-11-17T00:00:00.000000Z",
+                            "article_title": "1",
+                            "slug": "1",
+                            "author_id": 1,
+                            "interview": "1",
+                            "video_maker": "1",
+                            "main_image": "1",
+                            "social_network": [
+                              {
+                                "social": "FB",
+                                "social_link": "11"
+                              },
+                              {
+                                "social": "SC",
+                                "social_link": "11"
+                              }
+                            ],
+                            "blocks": {
+                              "one_social": {
+                                "quote_label": "1",
+                                "textarea_md_font": "1",
+                                "textarea_lg_font_quote": "1",
+                                "textarea_sm_font_2_col": "1"
+                              },
+                              "left_img_title_desc": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "title": "1"
+                              },
+                              "right_img_title_desc": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "title": "1"
+                              },
+                              "img_quote": {
+                                "img": "/storage/screenshot-13-1634144521Ndd8M.png",
+                                "quote": "1",
+                                "img_label": "11"
+                              },
+                              "gallery_and_audio": {
+                                "img": [
+                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                  "/storage/screenshot-13-1634144521Ndd8M.png"
+                                ],
+                                "text": "1",
+                                "audio": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                              },
+                              "img_and_video": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "video": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                              }
+                            },
+                            "author": {
+                              "meta_title": "1",
+                              "meta_description": "1",
+                              "meta_keywords": "1",
+                              "name": "1",
+                              "slug": "2",
+                              "position": "1",
+                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "description": "1",
+                              "facebook": "1",
+                              "instagram": "1",
+                              "twitter": "1",
+                              "youtube": "1"
+                            }
+                          },
+                          {
+                            "visible": "true",
+                            "create_date": "2021-11-18T00:00:00.000000Z",
+                            "article_title": "2",
+                            "slug": "12",
+                            "author_id": 1,
+                            "interview": "2",
+                            "video_maker": "2",
+                            "main_image": "2",
+                            "social_label": "2",
+                            "author": {
+                              "meta_title": "1",
+                              "meta_description": "1",
+                              "meta_keywords": "1",
+                              "name": "1",
+                              "slug": "2",
+                              "position": "1",
+                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "description": "1",
+                              "facebook": "1",
+                              "instagram": "1",
+                              "twitter": "1",
+                              "youtube": "1"
+                            }
+                          }
+                        ],
+                        "article_for_3_block": {
+                          "visible": "true",
+                          "create_date": "2021-11-17T00:00:00.000000Z",
+                          "article_title": "1",
+                          "slug": "1",
+                          "author_id": 1,
+                          "interview": "1",
+                          "video_maker": "1",
+                          "main_image": "1",
+                          "social_network": [
+                            {
+                              "social": "FB",
+                              "social_link": "11"
+                            },
+                            {
+                              "social": "SC",
+                              "social_link": "11"
+                            }
+                          ],
+                          "blocks": {
+                            "one_social": {
+                              "quote_label": "1",
+                              "textarea_md_font": "1",
+                              "textarea_lg_font_quote": "1",
+                              "textarea_sm_font_2_col": "1"
+                            },
+                            "left_img_title_desc": {
+                              "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "title": "1"
+                            },
+                            "right_img_title_desc": {
+                              "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "title": "1"
+                            },
+                            "img_quote": {
+                              "img": "/storage/screenshot-13-1634144521Ndd8M.png",
+                              "quote": "1",
+                              "img_label": "11"
+                            },
+                            "gallery_and_audio": {
+                              "img": [
+                                "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "/storage/screenshot-13-1634144521Ndd8M.png"
+                              ],
+                              "text": "1",
+                              "audio": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                            },
+                            "img_and_video": {
+                              "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "video": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                            }
+                          },
+                          "author": {
+                            "meta_title": "1",
+                            "meta_description": "1",
+                            "meta_keywords": "1",
+                            "name": "1",
+                            "slug": "2",
+                            "position": "1",
+                            "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                            "description": "1",
+                            "facebook": "1",
+                            "instagram": "1",
+                            "twitter": "1",
+                            "youtube": "1"
+                          }
+                        },
+                        "display_articles_4_block": [
+                          {
+                            "visible": "true",
+                            "create_date": "2021-11-17T00:00:00.000000Z",
+                            "article_title": "1",
+                            "slug": "1",
+                            "author_id": 1,
+                            "interview": "1",
+                            "video_maker": "1",
+                            "main_image": "1",
+                            "social_network": [
+                              {
+                                "social": "FB",
+                                "social_link": "11"
+                              },
+                              {
+                                "social": "SC",
+                                "social_link": "11"
+                              }
+                            ],
+                            "blocks": {
+                              "one_social": {
+                                "quote_label": "1",
+                                "textarea_md_font": "1",
+                                "textarea_lg_font_quote": "1",
+                                "textarea_sm_font_2_col": "1"
+                              },
+                              "left_img_title_desc": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "title": "1"
+                              },
+                              "right_img_title_desc": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "title": "1"
+                              },
+                              "img_quote": {
+                                "img": "/storage/screenshot-13-1634144521Ndd8M.png",
+                                "quote": "1",
+                                "img_label": "11"
+                              },
+                              "gallery_and_audio": {
+                                "img": [
+                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                  "/storage/screenshot-13-1634144521Ndd8M.png"
+                                ],
+                                "text": "1",
+                                "audio": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                              },
+                              "img_and_video": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "video": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                              }
+                            },
+                            "author": {
+                              "meta_title": "1",
+                              "meta_description": "1",
+                              "meta_keywords": "1",
+                              "name": "1",
+                              "slug": "2",
+                              "position": "1",
+                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "description": "1",
+                              "facebook": "1",
+                              "instagram": "1",
+                              "twitter": "1",
+                              "youtube": "1"
+                            }
+                          },
+                          {
+                            "visible": "true",
+                            "create_date": "2021-11-18T00:00:00.000000Z",
+                            "article_title": "2",
+                            "slug": "12",
+                            "author_id": 1,
+                            "interview": "2",
+                            "video_maker": "2",
+                            "main_image": "2",
+                            "social_label": "2",
+                            "author": {
+                              "meta_title": "1",
+                              "meta_description": "1",
+                              "meta_keywords": "1",
+                              "name": "1",
+                              "slug": "2",
+                              "position": "1",
+                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "description": "1",
+                              "facebook": "1",
+                              "instagram": "1",
+                              "twitter": "1",
+                              "youtube": "1"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "status": "success",
+                      "data": {
+                        "logo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                        "hero_slider_articles": [
+                          {
+                            "visible": "true",
+                            "create_date": "2021-11-17T00:00:00.000000Z",
+                            "article_title": "1",
+                            "slug": "1",
+                            "author_id": 1,
+                            "interview": "1",
+                            "video_maker": "1",
+                            "main_image": "1",
+                            "social_network": [
+                              {
+                                "social": "FB",
+                                "social_link": "11"
+                              },
+                              {
+                                "social": "SC",
+                                "social_link": "11"
+                              }
+                            ],
+                            "blocks": {
+                              "one_social": {
+                                "quote_label": "1",
+                                "textarea_md_font": "1",
+                                "textarea_lg_font_quote": "1",
+                                "textarea_sm_font_2_col": "1"
+                              },
+                              "left_img_title_desc": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "title": "1"
+                              },
+                              "right_img_title_desc": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "title": "1"
+                              },
+                              "img_quote": {
+                                "img": "/storage/screenshot-13-1634144521Ndd8M.png",
+                                "quote": "1",
+                                "img_label": "11"
+                              },
+                              "gallery_and_audio": {
+                                "img": [
+                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                  "/storage/screenshot-13-1634144521Ndd8M.png"
+                                ],
+                                "text": "1",
+                                "audio": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                              },
+                              "img_and_video": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "video": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                              }
+                            },
+                            "author": {
+                              "meta_title": "1",
+                              "meta_description": "1",
+                              "meta_keywords": "1",
+                              "name": "1",
+                              "slug": "2",
+                              "position": "1",
+                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "description": "1",
+                              "facebook": "1",
+                              "instagram": "1",
+                              "twitter": "1",
+                              "youtube": "1"
+                            }
+                          },
+                          {
+                            "visible": "true",
+                            "create_date": "2021-11-18T00:00:00.000000Z",
+                            "article_title": "2",
+                            "slug": "12",
+                            "author_id": 1,
+                            "interview": "2",
+                            "video_maker": "2",
+                            "main_image": "2",
+                            "social_label": "2",
+                            "author": {
+                              "meta_title": "1",
+                              "meta_description": "1",
+                              "meta_keywords": "1",
+                              "name": "1",
+                              "slug": "2",
+                              "position": "1",
+                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "description": "1",
+                              "facebook": "1",
+                              "instagram": "1",
+                              "twitter": "1",
+                              "youtube": "1"
+                            }
+                          }
+                        ],
+                        "hero_btn_title": "1",
+                        "display_articles_2_block": [
+                          {
+                            "visible": "true",
+                            "create_date": "2021-11-17T00:00:00.000000Z",
+                            "article_title": "1",
+                            "slug": "1",
+                            "author_id": 1,
+                            "interview": "1",
+                            "video_maker": "1",
+                            "main_image": "1",
+                            "social_network": [
+                              {
+                                "social": "FB",
+                                "social_link": "11"
+                              },
+                              {
+                                "social": "SC",
+                                "social_link": "11"
+                              }
+                            ],
+                            "blocks": {
+                              "one_social": {
+                                "quote_label": "1",
+                                "textarea_md_font": "1",
+                                "textarea_lg_font_quote": "1",
+                                "textarea_sm_font_2_col": "1"
+                              },
+                              "left_img_title_desc": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "title": "1"
+                              },
+                              "right_img_title_desc": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "title": "1"
+                              },
+                              "img_quote": {
+                                "img": "/storage/screenshot-13-1634144521Ndd8M.png",
+                                "quote": "1",
+                                "img_label": "11"
+                              },
+                              "gallery_and_audio": {
+                                "img": [
+                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                  "/storage/screenshot-13-1634144521Ndd8M.png"
+                                ],
+                                "text": "1",
+                                "audio": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                              },
+                              "img_and_video": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "video": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                              }
+                            },
+                            "author": {
+                              "meta_title": "1",
+                              "meta_description": "1",
+                              "meta_keywords": "1",
+                              "name": "1",
+                              "slug": "2",
+                              "position": "1",
+                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "description": "1",
+                              "facebook": "1",
+                              "instagram": "1",
+                              "twitter": "1",
+                              "youtube": "1"
+                            }
+                          },
+                          {
+                            "visible": "true",
+                            "create_date": "2021-11-18T00:00:00.000000Z",
+                            "article_title": "2",
+                            "slug": "12",
+                            "author_id": 1,
+                            "interview": "2",
+                            "video_maker": "2",
+                            "main_image": "2",
+                            "social_label": "2",
+                            "author": {
+                              "meta_title": "1",
+                              "meta_description": "1",
+                              "meta_keywords": "1",
+                              "name": "1",
+                              "slug": "2",
+                              "position": "1",
+                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "description": "1",
+                              "facebook": "1",
+                              "instagram": "1",
+                              "twitter": "1",
+                              "youtube": "1"
+                            }
+                          }
+                        ],
+                        "article_for_3_block": {
+                          "visible": "true",
+                          "create_date": "2021-11-17T00:00:00.000000Z",
+                          "article_title": "1",
+                          "slug": "1",
+                          "author_id": 1,
+                          "interview": "1",
+                          "video_maker": "1",
+                          "main_image": "1",
+                          "social_network": [
+                            {
+                              "social": "FB",
+                              "social_link": "11"
+                            },
+                            {
+                              "social": "SC",
+                              "social_link": "11"
+                            }
+                          ],
+                          "blocks": {
+                            "one_social": {
+                              "quote_label": "1",
+                              "textarea_md_font": "1",
+                              "textarea_lg_font_quote": "1",
+                              "textarea_sm_font_2_col": "1"
+                            },
+                            "left_img_title_desc": {
+                              "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "title": "1"
+                            },
+                            "right_img_title_desc": {
+                              "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "title": "1"
+                            },
+                            "img_quote": {
+                              "img": "/storage/screenshot-13-1634144521Ndd8M.png",
+                              "quote": "1",
+                              "img_label": "11"
+                            },
+                            "gallery_and_audio": {
+                              "img": [
+                                "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "/storage/screenshot-13-1634144521Ndd8M.png"
+                              ],
+                              "text": "1",
+                              "audio": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                            },
+                            "img_and_video": {
+                              "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "video": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                            }
+                          },
+                          "author": {
+                            "meta_title": "1",
+                            "meta_description": "1",
+                            "meta_keywords": "1",
+                            "name": "1",
+                            "slug": "2",
+                            "position": "1",
+                            "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                            "description": "1",
+                            "facebook": "1",
+                            "instagram": "1",
+                            "twitter": "1",
+                            "youtube": "1"
+                          }
+                        },
+                        "display_articles_4_block": [
+                          {
+                            "visible": "true",
+                            "create_date": "2021-11-17T00:00:00.000000Z",
+                            "article_title": "1",
+                            "slug": "1",
+                            "author_id": 1,
+                            "interview": "1",
+                            "video_maker": "1",
+                            "main_image": "1",
+                            "social_network": [
+                              {
+                                "social": "FB",
+                                "social_link": "11"
+                              },
+                              {
+                                "social": "SC",
+                                "social_link": "11"
+                              }
+                            ],
+                            "blocks": {
+                              "one_social": {
+                                "quote_label": "1",
+                                "textarea_md_font": "1",
+                                "textarea_lg_font_quote": "1",
+                                "textarea_sm_font_2_col": "1"
+                              },
+                              "left_img_title_desc": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "title": "1"
+                              },
+                              "right_img_title_desc": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "title": "1"
+                              },
+                              "img_quote": {
+                                "img": "/storage/screenshot-13-1634144521Ndd8M.png",
+                                "quote": "1",
+                                "img_label": "11"
+                              },
+                              "gallery_and_audio": {
+                                "img": [
+                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                  "/storage/screenshot-13-1634144521Ndd8M.png"
+                                ],
+                                "text": "1",
+                                "audio": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                              },
+                              "img_and_video": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "video": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                              }
+                            },
+                            "author": {
+                              "meta_title": "1",
+                              "meta_description": "1",
+                              "meta_keywords": "1",
+                              "name": "1",
+                              "slug": "2",
+                              "position": "1",
+                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "description": "1",
+                              "facebook": "1",
+                              "instagram": "1",
+                              "twitter": "1",
+                              "youtube": "1"
+                            }
+                          },
+                          {
+                            "visible": "true",
+                            "create_date": "2021-11-18T00:00:00.000000Z",
+                            "article_title": "2",
+                            "slug": "12",
+                            "author_id": 1,
+                            "interview": "2",
+                            "video_maker": "2",
+                            "main_image": "2",
+                            "social_label": "2",
+                            "author": {
+                              "meta_title": "1",
+                              "meta_description": "1",
+                              "meta_keywords": "1",
+                              "name": "1",
+                              "slug": "2",
+                              "position": "1",
+                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "description": "1",
+                              "facebook": "1",
+                              "instagram": "1",
+                              "twitter": "1",
+                              "youtube": "1"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/404-error"
+          }
+        },
+        "operationId": "get-main",
+        "description": "Get main page",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/lang"
+          }
+        ]
+      },
+      "parameters": []
     }
   },
   "components": {

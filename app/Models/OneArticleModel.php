@@ -76,14 +76,40 @@ class OneArticleModel extends Model
         return $object;
     }
 
+    public static function getAuthor ($object, $fieldName) {
 
+        $author = OneAuthorModel::query()->where("id", $fieldName)->firstOrFail();
+        $author = $author->getFullData();
+
+        $object['author'] = $author;
+
+        return $object;
+    }
 
     public function getFullData()
     {
         try {
 
             $data = $this->getAllWithMediaUrlWithout(['id', 'created_at', 'updated_at']);
-            return self::normalizeData($data);
+            $data = self::normalizeData($data);
+            $data = self::getAuthor($data, $data['author_id']);
+            return $data;
+
+        } catch (\Exception $ex) {
+            throw new ModelNotFoundException();
+        }
+
+    }
+
+    public function getDataForMain()
+    {
+        try {
+
+            $data = $this->getAllWithMediaUrlWithout(['id', 'created_at', 'updated_at', 'meta_title',
+                'meta_description', 'meta_keywords']);
+            $data = self::normalizeData($data);
+            $data = self::getAuthor($data, $data['author_id']);
+            return $data;
 
         } catch (\Exception $ex) {
             throw new ModelNotFoundException();

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\Pages\AboutPageController;
 use App\Http\Controllers\Pages\CareerPageController;
 use App\Http\Controllers\Pages\CategoriesPageController;
@@ -41,8 +42,9 @@ Route::middleware('locale')->group(function (){
     Route::get('/parts', [PartsController::class, 'index']);
 
     //Objects
-    Route::get('/articles', [PartsController::class, 'index']);
+//    Route::get('/articles', [PartsController::class, 'index']);
     Route::get('/article/{id}', [ArticleController::class, 'getOneArticle']);
+    Route::get('/author/{id}', [AuthorController::class, 'getOneAuthor']);
 
     //popup
     Route::get('/request', [PopupsController::class, 'getRequestPage']);

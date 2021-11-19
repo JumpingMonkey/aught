@@ -1,23 +1,20 @@
 <?php
 
-namespace App\Http\Controllers\Pages;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\Controller;
-use App\Models\Pages\MainPageModel;
+use App\Models\OneAuthorModel;
 use Illuminate\Http\Request;
 
-class MainPageController extends Controller
+class AuthorController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    public function index()
+    public function getOneAuthor(Request $request)
     {
-        $data = MainPageModel::firstOrFail();
-
+        $data = OneAuthorModel::query()->where('id', $request->id)->firstOrFail();
         $content = $data->getFullData();
 
         /*return json obj*/
