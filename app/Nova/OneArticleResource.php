@@ -70,7 +70,7 @@ class OneArticleResource extends Resource
                 ->falseValue('false'),
             Date::make('Дата создания', 'create_date')->nullable(),
             Text::make('Заголовок', 'article_title'),
-            Text::make('Слаг', 'slug'),
+            Text::make('Слаг', 'slug')->creationRules('unique:one_article_models,slug'),
             Select::make('Автор статьи', 'author_id')->options(
                 OneAuthorModel::all()->pluck('name', 'id')
             )->displayUsingLabels(),
@@ -98,7 +98,7 @@ class OneArticleResource extends Resource
                     Textarea::make('Многострочное поле мал. шрифт две кол.', 'textarea_sm_font_2_col'),
                     Textarea::make('Многострочное поле мал. шрифт две кол.', 'textarea_sm_font_2_col'),
                     Textarea::make('Цитата бол. шрифт', 'textarea_lg_font_quote'),
-                    Text::make('Подмись к цитате', 'quote_label'),
+                    Text::make('Подпись к цитате', 'quote_label'),
                 ])
                 ->addLayout('Фото слева + заг. опис.', 'left_img_title_desc', [
                     Text::make('Заголовок', 'title'),

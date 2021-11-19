@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Traits\TranslateAndConvertMediaUrl;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Spatie\Translatable\HasTranslations;
 
 class OneArticleModel extends Model
@@ -47,6 +48,15 @@ class OneArticleModel extends Model
         'blocks',
     ];
 
+    public $mediaToUrl = [
+        'blocks',
+        'img',
+        'image',
+        'video',
+        'audio',
+
+    ];
+
     public function oneCategory()
     {
         return $this->belongsToMany(OneCategoryModel::class, 'article_category', 'article_id', 'category_id');
@@ -55,6 +65,30 @@ class OneArticleModel extends Model
     public function author()
     {
         return $this->belongsTo(OneAuthorModel::class);
+    }
+
+    public static function normalizeData($object)
+    {
+
+        self::getNormalizedField($object, 'social_network', 'social', 'true', 'true', false);
+        self::getNormalizedField($object, 'blocks', 'quote_label', 'true', 'true', true);
+
+        return $object;
+    }
+
+
+
+    public function getFullData()
+    {
+        try {
+
+            $data = $this->getAllWithMediaUrlWithout(['id', 'created_at', 'updated_at']);
+            return self::normalizeData($data);
+
+        } catch (\Exception $ex) {
+            throw new ModelNotFoundException();
+        }
+
     }
 
 }
