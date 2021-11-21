@@ -25,6 +25,7 @@ class OneArticleModel extends Model
         'visible',
         'create_date',
         'article_title',
+        'article_preview_description',
         'slug',
         'author_id',
         'interview',
@@ -40,6 +41,7 @@ class OneArticleModel extends Model
         'meta_description',
         'meta_keywords',
         'article_title',
+        'article_preview_description',
 //        'author_id',
         'interview',
         'video_maker',
@@ -54,6 +56,7 @@ class OneArticleModel extends Model
         'image',
         'video',
         'audio',
+        'main_image',
 
     ];
 
@@ -90,7 +93,7 @@ class OneArticleModel extends Model
     {
         try {
 
-            $data = $this->getAllWithMediaUrlWithout(['id', 'created_at', 'updated_at']);
+            $data = $this->getAllWithMediaUrlWithout(['created_at', 'updated_at']);
             $data = self::normalizeData($data);
             $data = self::getAuthor($data, $data['author_id']);
             return $data;
@@ -105,7 +108,7 @@ class OneArticleModel extends Model
     {
         try {
 
-            $data = $this->getAllWithMediaUrlWithout(['id', 'created_at', 'updated_at', 'meta_title',
+            $data = $this->getAllWithMediaUrlWithout(['created_at', 'updated_at', 'meta_title',
                 'meta_description', 'meta_keywords']);
             $data = self::normalizeData($data);
             $data = self::getAuthor($data, $data['author_id']);
@@ -116,5 +119,23 @@ class OneArticleModel extends Model
         }
 
     }
+
+    public function getDataForCategory()
+    {
+        try {
+
+            $data = $this->getAllWithMediaUrlWithout(['created_at', 'updated_at', 'meta_title', 'meta_description', 'meta_keywords', 'author_id',
+                'interview', 'video_maker', 'social_label', 'social_network', 'blocks', ]);
+            $data = self::normalizeData($data);
+
+            return $data;
+
+        } catch (\Exception $ex) {
+            throw new ModelNotFoundException();
+        }
+
+    }
+
+
 
 }

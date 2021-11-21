@@ -70,6 +70,7 @@ class OneArticleResource extends Resource
                 ->falseValue('false'),
             Date::make('Дата создания', 'create_date')->nullable(),
             Text::make('Заголовок', 'article_title'),
+            Text::make('Описание для превью', 'article_preview_description'),
             Text::make('Слаг', 'slug')->creationRules('unique:one_article_models,slug'),
             Select::make('Автор статьи', 'author_id')->options(
                 OneAuthorModel::all()->pluck('name', 'id')

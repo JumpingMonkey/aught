@@ -65,7 +65,7 @@ class OneAuthorModel extends Model
     {
         try {
 
-            $data = $this->getAllWithMediaUrlWithout(['id', 'created_at', 'updated_at']);
+            $data = $this->getAllWithMediaUrlWithout([ 'created_at', 'updated_at']);
             return self::normalizeData($data);
 
         } catch (\Exception $ex) {
