@@ -35,7 +35,6 @@ class OneAuthorModel extends Model
         'meta_keywords',
         'name',
         'position',
-        'photo',
         'description',
         'facebook',
         'instagram',

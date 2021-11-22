@@ -13,6 +13,26 @@ class AuthorController extends Controller
      *
      * @return \Illuminate\Http\JsonResponse
      */
+    public function getAuthorList()
+    {
+        $data = OneAuthorModel::query()->select('name', 'id')->get();
+        $authorsData = [];
+        foreach ($data as $author){
+            $authorsData[] = $author->getFullData();
+        }
+        $content = $authorsData;
+        /*return json obj*/
+        return response()->json([
+            'status' => 'success',
+            'data' => $content
+        ]);
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function getOneAuthor(Request $request)
     {
         $data = OneAuthorModel::query()->where('id', $request->id)->firstOrFail();
