@@ -79,9 +79,14 @@ class OneArticleModel extends Model
         return $object;
     }
 
-    public static function getAuthor ($object, $fieldName) {
+    public static function getAuthor ($object, $fieldName, $getFullData = true) {
 
-        $author = OneAuthorModel::query()->where("id", $fieldName)->firstOrFail();
+        if ($getFullData){
+            $author = OneAuthorModel::query()->where("id", $fieldName)->firstOrFail();
+        } else {
+            $author = OneAuthorModel::query()->select('id', 'name', )->where("id", $fieldName)->firstOrFail();
+        }
+
         $author = $author->getFullData();
 
         $object['author'] = $author;
@@ -89,13 +94,13 @@ class OneArticleModel extends Model
         return $object;
     }
 
-    public function getFullData()
+    public function getFullData($getAuthorFullData = true)
     {
         try {
 
             $data = $this->getAllWithMediaUrlWithout(['created_at', 'updated_at']);
             $data = self::normalizeData($data);
-            $data = self::getAuthor($data, $data['author_id']);
+            $data = self::getAuthor($data, $data['author_id'], $getAuthorFullData);
             return $data;
 
         } catch (\Exception $ex) {

@@ -29,4 +29,46 @@ class ArticleController extends Controller
             'data' => $content
         ]);
     }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function getArticleList(Request $request)
+    {
+        $data = OneArticleModel::query()->select('id', 'article_title', 'create_date', 'author_id')->get();
+        $content = [];
+        foreach ($data as $article){
+            $content[] = $article->getFullData(false);
+        }
+
+        /*return json obj*/
+        return response()->json([
+            'status' => 'success',
+            'data' => $content
+        ]);
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function getArticleListSearchResponse(Request $request)
+    {
+        $data = OneArticleModel::query()->select('id', 'article_title', 'main_image', 'create_date', 'author_id')
+            ->where('article_title', 'LIKE',  "%$request->search%")->get();
+
+        $content = [];
+        foreach ($data as $article){
+            $content[] = $article->getFullData(false);
+        }
+
+        /*return json obj*/
+        return response()->json([
+            'status' => 'success',
+            'data' => $content
+        ]);
+    }
 }
