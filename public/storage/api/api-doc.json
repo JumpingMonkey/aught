@@ -14,7 +14,7 @@
     },
     "servers": [
         {
-            "url": "http://aught.dev/api",
+            "url": "https://aught-api.dev-onfire.work/api/",
             "description": ""
         }
     ],
