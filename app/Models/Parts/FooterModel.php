@@ -30,6 +30,7 @@ class FooterModel extends Model
         'display_category',
         'email_field_title',
         'email_field_description',
+        'contact_email',
     ];
 
     public $mediaToUrl = [

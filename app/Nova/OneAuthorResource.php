@@ -59,10 +59,10 @@ class OneAuthorResource extends Resource
             Text::make('Meta-keywords', 'meta_keywords')->hideFromIndex(),
 
             Text::make('Имя', 'name'),
-            Text::make('Слаг', 'slug')->creationRules('unique:one_author_models, slug'),
+            Text::make('Слаг', 'slug')->rules('required')->creationRules('unique:one_author_models,slug'),
             Text::make('Должность', 'position'),
-            MediaLibrary::make('Фото', 'photo'),
-            Textarea::make('Описание', 'description'),
+            MediaLibrary::make('Фото', 'photo')->rules('required'),
+            Textarea::make('Описание', 'description')->rules('required'),
             Text::make('Facebook сылка', 'facebook'),
             Text::make('instagram сылка', 'instagram'),
             Text::make('Twitter сылка', 'twitter'),

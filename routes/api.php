@@ -35,7 +35,7 @@ Route::middleware('locale')->group(function (){
     Route::get('/about', [AboutPageController::class, 'index']);
     Route::get('/career', [CareerPageController::class, 'index']);
     Route::get('/page-404', [Page404Controller::class, 'index']);
-    Route::get('/categories', [CategoriesPageController::class, 'index']);
+    Route::get('/categories', [CategoriesPageController::class, 'getCategories']);
     Route::get('/main', [MainPageController::class, 'index']);
 
     //Parts
@@ -44,7 +44,11 @@ Route::middleware('locale')->group(function (){
     //Objects
 //    Route::get('/articles', [PartsController::class, 'index']);
     Route::get('/article/{id}', [ArticleController::class, 'getOneArticle']);
+    Route::get('/articles', [ArticleController::class, 'getArticleList']);
+    Route::get('/articles-search/{search}', [ArticleController::class, 'getArticleListSearchResponse']);
     Route::get('/author/{id}', [AuthorController::class, 'getOneAuthor']);
+    Route::get('/authors', [AuthorController::class, 'getAuthorList']);
+    Route::get('/category/{id}', [CategoriesPageController::class, 'getOneCategory']);
 
     //popup
     Route::get('/request', [PopupsController::class, 'getRequestPage']);

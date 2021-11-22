@@ -2,6 +2,7 @@
 
 namespace App\Models\Pages;
 
+use App\Models\OneCategoryModel;
 use App\Traits\TranslateAndConvertMediaUrl;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -36,12 +37,32 @@ class CategoriesPageModel extends Model
         return $object;
     }
 
+    public static function getCategories ($object, $fieldName) {
+        $categoryIds = [];
+        foreach ($object[$fieldName] as $value){
+            $categoryIds[] = $value['category'];
+        }
+
+        $categories = OneCategoryModel::query()->whereIn("id", $categoryIds)->get();
+
+        foreach ($categories as $category){
+            $content[] = $category->getDataForCategoriesPage();
+        }
+
+        $object[$fieldName] = $content;
+
+        return $object;
+    }
+
     public function getFullData()
     {
         try {
 
             $data = $this->getAllWithMediaUrlWithout(['id', 'created_at', 'updated_at']);
-            return self::normalizeData($data);
+            $data = self::normalizeData($data);
+            $data = self::getCategories($data, 'display_category');
+
+            return $data;
 
         } catch (\Exception $ex) {
             throw new ModelNotFoundException();
