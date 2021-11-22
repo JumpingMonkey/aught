@@ -62,15 +62,28 @@ class FooterResource extends Resource
                     Select::make('Выберите категорию', 'category')->options(
                         OneCategoryModel::all()->pluck('category_title', 'id'),
                     )
-                ])->button('Добавить категорию'),
-            MediaLibrary::make('Логотип', 'logo'),
-            Text::make('Название email поля', 'email_field_title'),
-            Text::make('Подпись под email полем', 'email_field_description'),
-            Text::make('Контактный email', 'contact_email'),
-            Text::make('Facebook сылка', 'facebook'),
-            Text::make('instagram сылка', 'instagram'),
-            Text::make('Twitter сылка', 'twitter'),
-            Text::make('Youtube сылка', 'youtube'),
+                ])->button('Добавить категорию')->rules('required'),
+            MediaLibrary::make('Логотип', 'logo')->rules('required'),
+            Text::make('Название email поля', 'email_field_title')
+                ->rules('required')
+                ->hideFromIndex(),
+            Text::make('Подпись под email полем', 'email_field_description')
+                ->rules('required')
+                ->hideFromIndex(),
+            Text::make('Контактный email', 'contact_email')
+                ->rules('required'),
+            Text::make('Facebook сылка', 'facebook')
+                ->rules('required')
+                ->hideFromIndex(),
+            Text::make('instagram сылка', 'instagram')
+                ->rules('required')
+                ->hideFromIndex(),
+            Text::make('Twitter сылка', 'twitter')
+                ->rules('required')
+                ->hideFromIndex(),
+            Text::make('Youtube сылка', 'youtube')
+                ->rules('required')
+                ->hideFromIndex(),
         ];
     }
 
