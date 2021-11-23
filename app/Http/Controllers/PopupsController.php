@@ -12,7 +12,7 @@ class PopupsController extends Controller
 {
     public function request_popup_post(RequestPopupRequest $request){
 
-        $postData = $request->input();
+        $postData = $request->post();
 
         if($request->file !== null) {
             $postData['file']=$request->file->store('/');
