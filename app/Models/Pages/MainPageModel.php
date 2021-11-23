@@ -53,9 +53,21 @@ class MainPageModel extends Model
             $articleIds[] = $value['article'];
         }
 
-        $articles = OneArticleModel::query()->whereIn("id", $articleIds)->get();
+        $articles = OneArticleModel::query()->select(
+            'article_title',
+            'main_image',
+            'article_preview_description',
+            'create_date',
+            'id'
+        )->with(['oneCategory' => function($query) {
+            $query->select(
+                'one_category_models.id',
+                'category_title',
+            );
+        }])->whereIn("id", $articleIds)->get();
 
         foreach ($articles as $article){
+
             $content[] = $article->getDataForMain();
         }
 
@@ -66,7 +78,20 @@ class MainPageModel extends Model
 
     public static function getOneArticle ($object, $fieldName) {
 
-        $article = OneArticleModel::query()->where("id", $object[$fieldName])->firstOrFail();
+        $article = OneArticleModel::query()
+            ->select(
+                'article_title',
+                'main_image',
+                'article_preview_description',
+                'create_date',
+                'id'
+            )->with(['oneCategory' => function($query) {
+                $query->select(
+                    'one_category_models.id',
+                    'category_title',
+                );
+            }])
+            ->where("id", $object[$fieldName])->firstOrFail();
 
         $object[$fieldName] = $article->getDataForMain();
 
