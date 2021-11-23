@@ -100,7 +100,9 @@ class OneArticleModel extends Model
 
             $data = $this->getAllWithMediaUrlWithout(['created_at', 'updated_at']);
             $data = self::normalizeData($data);
-            $data = self::getAuthor($data, $data['author_id'], $getAuthorFullData);
+            if(array_key_exists('author_id', $data)){
+                $data = self::getAuthor($data, $data['author_id'], $getAuthorFullData);
+            }
             return $data;
 
         } catch (\Exception $ex) {
