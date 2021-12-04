@@ -37,7 +37,7 @@ class ArticleController extends Controller
      */
     public function getArticleList(Request $request)
     {
-        $data = OneArticleModel::query()->select('id', 'article_title', 'create_date', 'author_id', 'main_image')->get();
+        $data = OneArticleModel::query()->select('id', 'article_title', 'create_date', 'author_id', 'main_image', 'slug')->get();
         $content = [];
         foreach ($data as $article){
             $content[] = $article->getFullData(false);
