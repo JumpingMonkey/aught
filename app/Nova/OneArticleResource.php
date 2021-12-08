@@ -96,8 +96,8 @@ class OneArticleResource extends Resource
             Flexible::make('Блоки', 'blocks')->hideFromIndex()
                 ->addLayout('Соцсеть', 'one_social',[
                     Textarea::make('Многострочное поле ср. шрифт', 'textarea_md_font'),
-                    Textarea::make('Многострочное поле мал. шрифт две кол.', 'textarea_sm_font_2_col'),
-                    Textarea::make('Многострочное поле мал. шрифт две кол.', 'textarea_sm_font_2_col'),
+                    Textarea::make('Многострочное поле мал. шрифт две кол. 1', 'textarea_sm_font_1_col'),
+                    Textarea::make('Многострочное поле мал. шрифт две кол. 2', 'textarea_sm_font_2_col'),
                     Textarea::make('Цитата бол. шрифт', 'textarea_lg_font_quote'),
                     Text::make('Подпись к цитате', 'quote_label'),
                 ])
@@ -120,6 +120,11 @@ class OneArticleResource extends Resource
                     MediaLibrary::make('Фото', 'img')->array(),
                     Textarea::make('Текст', 'text'),
                     MediaLibrary::make('Аудио', 'audio'),
+                ])
+                ->addLayout('Текстовый блок', 'text_content_block', [
+                    Textarea::make('Текст 1', 'text_1'),
+                    Trix::make('Список', 'list'),
+                    Textarea::make('Текст 2', 'text_2'),
                 ])
                 ->addLayout('Фото + видео ', 'img_and_video', [
                     MediaLibrary::make('Фото', 'img'),
