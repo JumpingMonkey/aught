@@ -17,7 +17,7 @@
     window.onload = function () {
         window.ui = SwaggerUIBundle({
                         {{--url: {{url('/storage/api-doc/qude-doc-api.json')}},--}}
-            url: '/storage/api/api-doc.json',
+            url: '/api/api-doc.json',
             dom_id: '#swagger-ui',
             deepLinking: true,
             presets: [
