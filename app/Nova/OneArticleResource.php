@@ -67,21 +67,21 @@ class OneArticleResource extends Resource
             BelongsToMany::make('OneCategory'),
             Boolean::make('Отображать на сайте?', 'visible')
                 ->trueValue('true')
-                ->falseValue('false'),
-            Date::make('Дата создания', 'create_date')->nullable(),
+                ->falseValue('false')->hideFromIndex(),
+            Date::make('Дата создания', 'create_date')->nullable()->hideFromIndex(),
             Text::make('Заголовок', 'article_title'),
-            Text::make('Описание для превью', 'article_preview_description'),
-            Text::make('Слаг', 'slug')->creationRules('unique:one_article_models,slug'),
+            Text::make('Описание для превью', 'article_preview_description')->hideFromIndex(),
+            Text::make('Слаг', 'slug')->creationRules('unique:one_article_models,slug')->hideFromIndex(),
             Select::make('Автор статьи', 'author_id')->options(
                 OneAuthorModel::all()->pluck('name', 'id')
-            )->displayUsingLabels(),
-            Text::make('Интервьюер', 'interview'),
-            Text::make('Видео', 'video_maker'),
+            )->displayUsingLabels()->hideFromIndex(),
+            Text::make('Интервьюер', 'interview')->hideFromIndex(),
+            Text::make('Видео', 'video_maker')->hideFromIndex(),
 
-            MediaLibrary::make('Фото', 'main_image')->rules('required'),
+            MediaLibrary::make('Фото', 'main_image')->rules('required')->hideFromIndex(),
 
-            Text::make('Подпись к соц сетям', 'social_label'),
-            Flexible::make('Соцсети', 'social_network')
+            Text::make('Подпись к соц сетям', 'social_label')->hideFromIndex(),
+            Flexible::make('Соцсети', 'social_network')->hideFromIndex()
             ->addLayout('Соцсеть', 'one_social',[
                 Select::make('Соцсеть', 'social')->options([
                     'FB' => 'FB',
@@ -93,7 +93,7 @@ class OneArticleResource extends Resource
                 Text::make('Ccылка на соцсеть', 'social_link')
             ])->button('Добавить соцсеть'),
 
-            Flexible::make('Блоки', 'blocks')
+            Flexible::make('Блоки', 'blocks')->hideFromIndex()
                 ->addLayout('Соцсеть', 'one_social',[
                     Textarea::make('Многострочное поле ср. шрифт', 'textarea_md_font'),
                     Textarea::make('Многострочное поле мал. шрифт две кол.', 'textarea_sm_font_2_col'),
