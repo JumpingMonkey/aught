@@ -48,6 +48,11 @@ class MainPageModel extends Model
     }
 
     public static function getArticles ($object, $fieldName) {
+
+        if (!array_key_exists($fieldName, $object)) {
+            return $object;
+        }
+
         $articleIds = [];
         foreach ($object[$fieldName] as $value){
             $articleIds[] = $value['article'];
@@ -77,6 +82,10 @@ class MainPageModel extends Model
     }
 
     public static function getOneArticle ($object, $fieldName) {
+
+        if (!array_key_exists($fieldName, $object)) {
+            return $object;
+        }
 
         $article = OneArticleModel::query()
             ->select(
