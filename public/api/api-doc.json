@@ -1,0 +1,4400 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "api-doc",
+    "version": "1.0",
+    "summary": "Aught api documentation",
+    "description": "Aught api documentation",
+    "contact": {
+      "name": "No name",
+      "email": "No mail",
+      "url": "No contact"
+    },
+    "termsOfService": "No terms"
+  },
+  "servers": [
+    {
+      "url": "https://aught-api.dev-onfire.work/api/",
+      "description": ""
+    }
+  ],
+  "paths": {
+    "/privacy": {
+      "get": {
+        "summary": "GET Privacy Policy Page",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "x-examples": {
+                    "example-1": {
+                      "status": "success",
+                      "data": {
+                        "meta_title": "Privacy Policy",
+                        "meta_description": "Privacy Policy",
+                        "meta_keywords": "Privacy Policy",
+                        "title": "Privacy Policy",
+                        "blocks": [
+                          {
+                            "block_title": "YOUR RIGHTS",
+                            "block_description": "4.1. You have the right to know what information we are collecting on you, and to amend it if it is inaccurate.\n4.2. If you feel for some reason we have information we should not be keeping, or it is out of date or otherwise wrong, please let us know and we will take appropriate action. Most of the information we hold is not based          on your individual consent but is based on our needing  the information to run our business and provide our products and services.\n4.3. If you want to know what information we have about you (if any) email us at the email address set out above and give us your name, email address(es) and we will happily do a search and let you know what information we hold on you and how we are using it/have used it.\n4.4. You have a “right to be forgotten”, but that does have some legal limits to it.  If you want us to remove information about you, let us know.\n4.5. You can, at any time, object to the processing                 of your Personal Data on grounds relating to your particular situation. You have the right to object your Personal Data being processed for direct marketing purposes."
+                          },
+                          {
+                            "block_title": "WHAT DATA DO WE COLLECT?",
+                            "block_description": "5.1. You may browse our Site without providing your personal information.\n5.1.1. Data you provide us with. Through our Site, you may provide us with your Personal Data to send your project request or to send your career request. Data which you may provide to us include:\n5.1.2. Full name;\n5.1.3. Phone number;\n5.1.4. Email address;\n5.1.5. City;\n5.1.6. CV;\n5.1.7. Portfolio;\n5.2.1. Data collected automatically. We use this data to constantly improve our site. Therefore, when you access our Site, certain data may be collected automatically. Such data include:\n5.2.2. Cookies.\n5.2.3. Device data (device model, OS type etc.);\n5.2.4. IP address;\n5.2.5. Connection type (WiFi, LTE, 3G);\n5.2.6. Language and region;\n5.2.7. Your interactions with Site.\n5.3. If you sign up to a newsletter list, you will be sent what you asked for. We operate “double opt-in” lists and you will need to reconfirm your subscription before anything is sent. You can unsubscribe at any time by clicking the unsubscribe button on any email.\n5.4. You are not automatically subscribed to any other lists, but may be invited to join an appropriate one.\n5.5. If you make an enquiry via our site, we will keep details of that enquiry and response for our data retention period.\n5.6. We do not routinely keep special category data.  To the extent we hold this, it was supplied or made publicly available by you.\n5.7. Automatically collected data is aggregated and anonymized."
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "meta_title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "meta_description": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "meta_keywords": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "blocks": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "block_title": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "block_description": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/404-error"
+          }
+        },
+        "operationId": "get-privacy",
+        "description": "Get privacy policy page",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/lang"
+          }
+        ]
+      },
+      "parameters": []
+    },
+    "/about": {
+      "get": {
+        "summary": "GET About Page",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "x-examples": {
+                    "example-1": {
+                      "status": "success",
+                      "data": {
+                        "meta_title": "1",
+                        "meta_description": "1",
+                        "meta_keywords": "1",
+                        "title": "1",
+                        "based": "1",
+                        "big_img": "/storage/screenshot-13-1634144521Ndd8M.png",
+                        "small_img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                        "title_to_the_left_of_the_img": "1",
+                        "text_to_the_left_of_the_img": "1",
+                        "large_text": "1",
+                        "left_small_text": "1",
+                        "right_small_text": "1",
+                        "gallery": [
+                          {
+                            "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                          }
+                        ],
+                        "creeping_line": "1"
+                      }
+                    }
+                  },
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "meta_title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "meta_description": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "meta_keywords": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "based": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "big_img": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "small_img": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "title_to_the_left_of_the_img": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "text_to_the_left_of_the_img": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "large_text": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "left_small_text": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "right_small_text": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "gallery": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "img": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            }
+                          }
+                        },
+                        "creeping_line": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "status": "success",
+                      "data": {
+                        "meta_title": "1",
+                        "meta_description": "1",
+                        "meta_keywords": "1",
+                        "title": "1",
+                        "based": "1",
+                        "big_img": "/storage/screenshot-13-1634144521Ndd8M.png",
+                        "small_img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                        "title_to_the_left_of_the_img": "1",
+                        "text_to_the_left_of_the_img": "1",
+                        "large_text": "1",
+                        "left_small_text": "1",
+                        "right_small_text": "1",
+                        "gallery": [
+                          {
+                            "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                          }
+                        ],
+                        "creeping_line": "1"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/404-error"
+          }
+        },
+        "operationId": "get-about",
+        "description": "Get About page",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/lang"
+          }
+        ]
+      },
+      "parameters": []
+    },
+    "/career": {
+      "get": {
+        "summary": "GET Career Page",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "x-examples": {
+                    "example-1": {
+                      "status": "success",
+                      "data": {
+                        "meta_title": "11",
+                        "meta_description": "11",
+                        "meta_keywords": "11",
+                        "title": "11",
+                        "description": "11",
+                        "vacancies": [
+                          {
+                            "img": "/storage/screenshot-13-1634144521Ndd8M.png",
+                            "vacancy_title": "11",
+                            "location_title": "11",
+                            "type_cooperation": "11",
+                            "vacancy_description": "11"
+                          },
+                          {
+                            "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                            "vacancy_title": "11",
+                            "location_title": "11",
+                            "type_cooperation": "11",
+                            "vacancy_description": "11"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "meta_title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "meta_description": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "meta_keywords": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "description": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "vacancies": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "img": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "vacancy_title": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "location_title": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "type_cooperation": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "vacancy_description": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "status": "success",
+                      "data": {
+                        "meta_title": "11",
+                        "meta_description": "11",
+                        "meta_keywords": "11",
+                        "title": "11",
+                        "description": "11",
+                        "vacancies": [
+                          {
+                            "img": "/storage/screenshot-13-1634144521Ndd8M.png",
+                            "vacancy_title": "11",
+                            "location_title": "11",
+                            "type_cooperation": "11",
+                            "vacancy_description": "11"
+                          },
+                          {
+                            "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                            "vacancy_title": "11",
+                            "location_title": "11",
+                            "type_cooperation": "11",
+                            "vacancy_description": "11"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/404-error"
+          }
+        },
+        "operationId": "get-career",
+        "description": "Get Career page",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/lang"
+          }
+        ]
+      },
+      "parameters": []
+    },
+    "/page-404": {
+      "get": {
+        "summary": "GET 404 Page",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "x-examples": {
+                    "example-1": {
+                      "status": "success",
+                      "data": {
+                        "title": "22",
+                        "sub_title": "22"
+                      }
+                    }
+                  },
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "sub_title": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "status": "success",
+                      "data": {
+                        "title": "22",
+                        "sub_title": "22"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/404-error"
+          }
+        },
+        "operationId": "get-404",
+        "description": "Get 404 page",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/lang"
+          }
+        ]
+      },
+      "parameters": []
+    },
+    "/main": {
+      "get": {
+        "summary": "GET Main Page",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "logo": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "hero_slider_articles": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "required": [
+                              "visible",
+                              "create_date",
+                              "article_title",
+                              "slug",
+                              "author_id",
+                              "interview",
+                              "video_maker",
+                              "main_image"
+                            ],
+                            "properties": {
+                              "visible": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "create_date": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "article_title": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "slug": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "author_id": {
+                                "type": "number"
+                              },
+                              "interview": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "video_maker": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "main_image": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "social_network": {
+                                "type": "array",
+                                "uniqueItems": true,
+                                "minItems": 1,
+                                "items": {
+                                  "required": [
+                                    "social",
+                                    "social_link"
+                                  ],
+                                  "properties": {
+                                    "social": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "social_link": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    }
+                                  }
+                                }
+                              },
+                              "blocks": {
+                                "type": "object",
+                                "properties": {
+                                  "one_social": {
+                                    "type": "object",
+                                    "properties": {
+                                      "quote_label": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "textarea_md_font": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "textarea_lg_font_quote": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "textarea_sm_font_2_col": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "quote_label",
+                                      "textarea_md_font",
+                                      "textarea_lg_font_quote",
+                                      "textarea_sm_font_2_col"
+                                    ]
+                                  },
+                                  "left_img_title_desc": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "image": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "title": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "image",
+                                      "title"
+                                    ]
+                                  },
+                                  "right_img_title_desc": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "image": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "title": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "image",
+                                      "title"
+                                    ]
+                                  },
+                                  "img_quote": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "quote": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "img_label": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "quote",
+                                      "img_label"
+                                    ]
+                                  },
+                                  "gallery_and_audio": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "array",
+                                        "items": {
+                                          "required": [],
+                                          "properties": {}
+                                        }
+                                      },
+                                      "text": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "audio": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "text",
+                                      "audio"
+                                    ]
+                                  },
+                                  "img_and_video": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "video": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "video"
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "one_social",
+                                  "left_img_title_desc",
+                                  "right_img_title_desc",
+                                  "img_quote",
+                                  "gallery_and_audio",
+                                  "img_and_video"
+                                ]
+                              },
+                              "author": {
+                                "type": "object",
+                                "properties": {
+                                  "meta_title": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "meta_description": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "meta_keywords": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "name": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "slug": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "position": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "photo": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "description": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "facebook": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "instagram": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "twitter": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "youtube": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  }
+                                },
+                                "required": [
+                                  "meta_title",
+                                  "meta_description",
+                                  "meta_keywords",
+                                  "name",
+                                  "slug",
+                                  "position",
+                                  "photo",
+                                  "description",
+                                  "facebook",
+                                  "instagram",
+                                  "twitter",
+                                  "youtube"
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        "hero_btn_title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "display_articles_2_block": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "required": [
+                              "visible",
+                              "create_date",
+                              "article_title",
+                              "slug",
+                              "author_id",
+                              "interview",
+                              "video_maker",
+                              "main_image"
+                            ],
+                            "properties": {
+                              "visible": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "create_date": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "article_title": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "slug": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "author_id": {
+                                "type": "number"
+                              },
+                              "interview": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "video_maker": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "main_image": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "social_network": {
+                                "type": "array",
+                                "uniqueItems": true,
+                                "minItems": 1,
+                                "items": {
+                                  "required": [
+                                    "social",
+                                    "social_link"
+                                  ],
+                                  "properties": {
+                                    "social": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "social_link": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    }
+                                  }
+                                }
+                              },
+                              "blocks": {
+                                "type": "object",
+                                "properties": {
+                                  "one_social": {
+                                    "type": "object",
+                                    "properties": {
+                                      "quote_label": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "textarea_md_font": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "textarea_lg_font_quote": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "textarea_sm_font_2_col": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "quote_label",
+                                      "textarea_md_font",
+                                      "textarea_lg_font_quote",
+                                      "textarea_sm_font_2_col"
+                                    ]
+                                  },
+                                  "left_img_title_desc": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "image": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "title": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "image",
+                                      "title"
+                                    ]
+                                  },
+                                  "right_img_title_desc": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "image": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "title": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "image",
+                                      "title"
+                                    ]
+                                  },
+                                  "img_quote": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "quote": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "img_label": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "quote",
+                                      "img_label"
+                                    ]
+                                  },
+                                  "gallery_and_audio": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "array",
+                                        "items": {
+                                          "required": [],
+                                          "properties": {}
+                                        }
+                                      },
+                                      "text": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "audio": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "text",
+                                      "audio"
+                                    ]
+                                  },
+                                  "img_and_video": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "video": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "video"
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "one_social",
+                                  "left_img_title_desc",
+                                  "right_img_title_desc",
+                                  "img_quote",
+                                  "gallery_and_audio",
+                                  "img_and_video"
+                                ]
+                              },
+                              "author": {
+                                "type": "object",
+                                "properties": {
+                                  "meta_title": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "meta_description": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "meta_keywords": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "name": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "slug": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "position": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "photo": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "description": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "facebook": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "instagram": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "twitter": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "youtube": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  }
+                                },
+                                "required": [
+                                  "meta_title",
+                                  "meta_description",
+                                  "meta_keywords",
+                                  "name",
+                                  "slug",
+                                  "position",
+                                  "photo",
+                                  "description",
+                                  "facebook",
+                                  "instagram",
+                                  "twitter",
+                                  "youtube"
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        "article_for_3_block": {
+                          "type": "object",
+                          "properties": {
+                            "visible": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "create_date": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "article_title": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "slug": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "author_id": {
+                              "type": "number"
+                            },
+                            "interview": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "video_maker": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "main_image": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "social_network": {
+                              "type": "array",
+                              "uniqueItems": true,
+                              "minItems": 1,
+                              "items": {
+                                "required": [
+                                  "social",
+                                  "social_link"
+                                ],
+                                "properties": {
+                                  "social": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "social_link": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  }
+                                }
+                              }
+                            },
+                            "blocks": {
+                              "type": "object",
+                              "properties": {
+                                "one_social": {
+                                  "type": "object",
+                                  "properties": {
+                                    "quote_label": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "textarea_md_font": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "textarea_lg_font_quote": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "textarea_sm_font_2_col": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    }
+                                  },
+                                  "required": [
+                                    "quote_label",
+                                    "textarea_md_font",
+                                    "textarea_lg_font_quote",
+                                    "textarea_sm_font_2_col"
+                                  ]
+                                },
+                                "left_img_title_desc": {
+                                  "type": "object",
+                                  "properties": {
+                                    "img": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "image": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "title": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    }
+                                  },
+                                  "required": [
+                                    "img",
+                                    "image",
+                                    "title"
+                                  ]
+                                },
+                                "right_img_title_desc": {
+                                  "type": "object",
+                                  "properties": {
+                                    "img": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "image": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "title": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    }
+                                  },
+                                  "required": [
+                                    "img",
+                                    "image",
+                                    "title"
+                                  ]
+                                },
+                                "img_quote": {
+                                  "type": "object",
+                                  "properties": {
+                                    "img": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "quote": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "img_label": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    }
+                                  },
+                                  "required": [
+                                    "img",
+                                    "quote",
+                                    "img_label"
+                                  ]
+                                },
+                                "gallery_and_audio": {
+                                  "type": "object",
+                                  "properties": {
+                                    "img": {
+                                      "type": "array",
+                                      "items": {
+                                        "required": [],
+                                        "properties": {}
+                                      }
+                                    },
+                                    "text": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "audio": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    }
+                                  },
+                                  "required": [
+                                    "img",
+                                    "text",
+                                    "audio"
+                                  ]
+                                },
+                                "img_and_video": {
+                                  "type": "object",
+                                  "properties": {
+                                    "img": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "video": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    }
+                                  },
+                                  "required": [
+                                    "img",
+                                    "video"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "one_social",
+                                "left_img_title_desc",
+                                "right_img_title_desc",
+                                "img_quote",
+                                "gallery_and_audio",
+                                "img_and_video"
+                              ]
+                            },
+                            "author": {
+                              "type": "object",
+                              "properties": {
+                                "meta_title": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "meta_description": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "meta_keywords": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "name": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "slug": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "position": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "photo": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "description": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "facebook": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "instagram": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "twitter": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "youtube": {
+                                  "type": "string",
+                                  "minLength": 1
+                                }
+                              },
+                              "required": [
+                                "meta_title",
+                                "meta_description",
+                                "meta_keywords",
+                                "name",
+                                "slug",
+                                "position",
+                                "photo",
+                                "description",
+                                "facebook",
+                                "instagram",
+                                "twitter",
+                                "youtube"
+                              ]
+                            }
+                          },
+                          "required": [
+                            "visible",
+                            "create_date",
+                            "article_title",
+                            "slug",
+                            "author_id",
+                            "interview",
+                            "video_maker",
+                            "main_image",
+                            "social_network",
+                            "blocks",
+                            "author"
+                          ]
+                        },
+                        "display_articles_4_block": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "required": [
+                              "visible",
+                              "create_date",
+                              "article_title",
+                              "slug",
+                              "author_id",
+                              "interview",
+                              "video_maker",
+                              "main_image"
+                            ],
+                            "properties": {
+                              "visible": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "create_date": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "article_title": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "slug": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "author_id": {
+                                "type": "number"
+                              },
+                              "interview": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "video_maker": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "main_image": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "social_network": {
+                                "type": "array",
+                                "uniqueItems": true,
+                                "minItems": 1,
+                                "items": {
+                                  "required": [
+                                    "social",
+                                    "social_link"
+                                  ],
+                                  "properties": {
+                                    "social": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    },
+                                    "social_link": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    }
+                                  }
+                                }
+                              },
+                              "blocks": {
+                                "type": "object",
+                                "properties": {
+                                  "one_social": {
+                                    "type": "object",
+                                    "properties": {
+                                      "quote_label": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "textarea_md_font": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "textarea_lg_font_quote": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "textarea_sm_font_2_col": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "quote_label",
+                                      "textarea_md_font",
+                                      "textarea_lg_font_quote",
+                                      "textarea_sm_font_2_col"
+                                    ]
+                                  },
+                                  "left_img_title_desc": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "image": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "title": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "image",
+                                      "title"
+                                    ]
+                                  },
+                                  "right_img_title_desc": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "image": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "title": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "image",
+                                      "title"
+                                    ]
+                                  },
+                                  "img_quote": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "quote": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "img_label": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "quote",
+                                      "img_label"
+                                    ]
+                                  },
+                                  "gallery_and_audio": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "array",
+                                        "items": {
+                                          "required": [],
+                                          "properties": {}
+                                        }
+                                      },
+                                      "text": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "audio": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "text",
+                                      "audio"
+                                    ]
+                                  },
+                                  "img_and_video": {
+                                    "type": "object",
+                                    "properties": {
+                                      "img": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      },
+                                      "video": {
+                                        "type": "string",
+                                        "minLength": 1
+                                      }
+                                    },
+                                    "required": [
+                                      "img",
+                                      "video"
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "one_social",
+                                  "left_img_title_desc",
+                                  "right_img_title_desc",
+                                  "img_quote",
+                                  "gallery_and_audio",
+                                  "img_and_video"
+                                ]
+                              },
+                              "author": {
+                                "type": "object",
+                                "properties": {
+                                  "meta_title": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "meta_description": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "meta_keywords": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "name": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "slug": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "position": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "photo": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "description": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "facebook": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "instagram": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "twitter": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  },
+                                  "youtube": {
+                                    "type": "string",
+                                    "minLength": 1
+                                  }
+                                },
+                                "required": [
+                                  "meta_title",
+                                  "meta_description",
+                                  "meta_keywords",
+                                  "name",
+                                  "slug",
+                                  "position",
+                                  "photo",
+                                  "description",
+                                  "facebook",
+                                  "instagram",
+                                  "twitter",
+                                  "youtube"
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "required": [
+                        "logo",
+                        "hero_slider_articles",
+                        "hero_btn_title",
+                        "display_articles_2_block",
+                        "article_for_3_block",
+                        "display_articles_4_block"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "status",
+                    "data"
+                  ],
+                  "x-examples": {
+                    "example-1": {
+                      "status": "success",
+                      "data": {
+                        "logo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                        "hero_slider_articles": [
+                          {
+                            "visible": "true",
+                            "create_date": "2021-11-17T00:00:00.000000Z",
+                            "article_title": "1",
+                            "slug": "1",
+                            "author_id": 1,
+                            "interview": "1",
+                            "video_maker": "1",
+                            "main_image": "1",
+                            "social_network": [
+                              {
+                                "social": "FB",
+                                "social_link": "11"
+                              },
+                              {
+                                "social": "SC",
+                                "social_link": "11"
+                              }
+                            ],
+                            "blocks": {
+                              "one_social": {
+                                "quote_label": "1",
+                                "textarea_md_font": "1",
+                                "textarea_lg_font_quote": "1",
+                                "textarea_sm_font_2_col": "1"
+                              },
+                              "left_img_title_desc": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "title": "1"
+                              },
+                              "right_img_title_desc": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "title": "1"
+                              },
+                              "img_quote": {
+                                "img": "/storage/screenshot-13-1634144521Ndd8M.png",
+                                "quote": "1",
+                                "img_label": "11"
+                              },
+                              "gallery_and_audio": {
+                                "img": [
+                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                  "/storage/screenshot-13-1634144521Ndd8M.png"
+                                ],
+                                "text": "1",
+                                "audio": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                              },
+                              "img_and_video": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "video": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                              }
+                            },
+                            "author": {
+                              "meta_title": "1",
+                              "meta_description": "1",
+                              "meta_keywords": "1",
+                              "name": "1",
+                              "slug": "2",
+                              "position": "1",
+                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "description": "1",
+                              "facebook": "1",
+                              "instagram": "1",
+                              "twitter": "1",
+                              "youtube": "1"
+                            }
+                          },
+                          {
+                            "visible": "true",
+                            "create_date": "2021-11-18T00:00:00.000000Z",
+                            "article_title": "2",
+                            "slug": "12",
+                            "author_id": 1,
+                            "interview": "2",
+                            "video_maker": "2",
+                            "main_image": "2",
+                            "social_label": "2",
+                            "author": {
+                              "meta_title": "1",
+                              "meta_description": "1",
+                              "meta_keywords": "1",
+                              "name": "1",
+                              "slug": "2",
+                              "position": "1",
+                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "description": "1",
+                              "facebook": "1",
+                              "instagram": "1",
+                              "twitter": "1",
+                              "youtube": "1"
+                            }
+                          }
+                        ],
+                        "hero_btn_title": "1",
+                        "display_articles_2_block": [
+                          {
+                            "visible": "true",
+                            "create_date": "2021-11-17T00:00:00.000000Z",
+                            "article_title": "1",
+                            "slug": "1",
+                            "author_id": 1,
+                            "interview": "1",
+                            "video_maker": "1",
+                            "main_image": "1",
+                            "social_network": [
+                              {
+                                "social": "FB",
+                                "social_link": "11"
+                              },
+                              {
+                                "social": "SC",
+                                "social_link": "11"
+                              }
+                            ],
+                            "blocks": {
+                              "one_social": {
+                                "quote_label": "1",
+                                "textarea_md_font": "1",
+                                "textarea_lg_font_quote": "1",
+                                "textarea_sm_font_2_col": "1"
+                              },
+                              "left_img_title_desc": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "title": "1"
+                              },
+                              "right_img_title_desc": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "title": "1"
+                              },
+                              "img_quote": {
+                                "img": "/storage/screenshot-13-1634144521Ndd8M.png",
+                                "quote": "1",
+                                "img_label": "11"
+                              },
+                              "gallery_and_audio": {
+                                "img": [
+                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                  "/storage/screenshot-13-1634144521Ndd8M.png"
+                                ],
+                                "text": "1",
+                                "audio": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                              },
+                              "img_and_video": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "video": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                              }
+                            },
+                            "author": {
+                              "meta_title": "1",
+                              "meta_description": "1",
+                              "meta_keywords": "1",
+                              "name": "1",
+                              "slug": "2",
+                              "position": "1",
+                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "description": "1",
+                              "facebook": "1",
+                              "instagram": "1",
+                              "twitter": "1",
+                              "youtube": "1"
+                            }
+                          },
+                          {
+                            "visible": "true",
+                            "create_date": "2021-11-18T00:00:00.000000Z",
+                            "article_title": "2",
+                            "slug": "12",
+                            "author_id": 1,
+                            "interview": "2",
+                            "video_maker": "2",
+                            "main_image": "2",
+                            "social_label": "2",
+                            "author": {
+                              "meta_title": "1",
+                              "meta_description": "1",
+                              "meta_keywords": "1",
+                              "name": "1",
+                              "slug": "2",
+                              "position": "1",
+                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "description": "1",
+                              "facebook": "1",
+                              "instagram": "1",
+                              "twitter": "1",
+                              "youtube": "1"
+                            }
+                          }
+                        ],
+                        "article_for_3_block": {
+                          "visible": "true",
+                          "create_date": "2021-11-17T00:00:00.000000Z",
+                          "article_title": "1",
+                          "slug": "1",
+                          "author_id": 1,
+                          "interview": "1",
+                          "video_maker": "1",
+                          "main_image": "1",
+                          "social_network": [
+                            {
+                              "social": "FB",
+                              "social_link": "11"
+                            },
+                            {
+                              "social": "SC",
+                              "social_link": "11"
+                            }
+                          ],
+                          "blocks": {
+                            "one_social": {
+                              "quote_label": "1",
+                              "textarea_md_font": "1",
+                              "textarea_lg_font_quote": "1",
+                              "textarea_sm_font_2_col": "1"
+                            },
+                            "left_img_title_desc": {
+                              "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "title": "1"
+                            },
+                            "right_img_title_desc": {
+                              "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "title": "1"
+                            },
+                            "img_quote": {
+                              "img": "/storage/screenshot-13-1634144521Ndd8M.png",
+                              "quote": "1",
+                              "img_label": "11"
+                            },
+                            "gallery_and_audio": {
+                              "img": [
+                                "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "/storage/screenshot-13-1634144521Ndd8M.png"
+                              ],
+                              "text": "1",
+                              "audio": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                            },
+                            "img_and_video": {
+                              "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "video": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                            }
+                          },
+                          "author": {
+                            "meta_title": "1",
+                            "meta_description": "1",
+                            "meta_keywords": "1",
+                            "name": "1",
+                            "slug": "2",
+                            "position": "1",
+                            "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                            "description": "1",
+                            "facebook": "1",
+                            "instagram": "1",
+                            "twitter": "1",
+                            "youtube": "1"
+                          }
+                        },
+                        "display_articles_4_block": [
+                          {
+                            "visible": "true",
+                            "create_date": "2021-11-17T00:00:00.000000Z",
+                            "article_title": "1",
+                            "slug": "1",
+                            "author_id": 1,
+                            "interview": "1",
+                            "video_maker": "1",
+                            "main_image": "1",
+                            "social_network": [
+                              {
+                                "social": "FB",
+                                "social_link": "11"
+                              },
+                              {
+                                "social": "SC",
+                                "social_link": "11"
+                              }
+                            ],
+                            "blocks": {
+                              "one_social": {
+                                "quote_label": "1",
+                                "textarea_md_font": "1",
+                                "textarea_lg_font_quote": "1",
+                                "textarea_sm_font_2_col": "1"
+                              },
+                              "left_img_title_desc": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "title": "1"
+                              },
+                              "right_img_title_desc": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "title": "1"
+                              },
+                              "img_quote": {
+                                "img": "/storage/screenshot-13-1634144521Ndd8M.png",
+                                "quote": "1",
+                                "img_label": "11"
+                              },
+                              "gallery_and_audio": {
+                                "img": [
+                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                  "/storage/screenshot-13-1634144521Ndd8M.png"
+                                ],
+                                "text": "1",
+                                "audio": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                              },
+                              "img_and_video": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "video": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                              }
+                            },
+                            "author": {
+                              "meta_title": "1",
+                              "meta_description": "1",
+                              "meta_keywords": "1",
+                              "name": "1",
+                              "slug": "2",
+                              "position": "1",
+                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "description": "1",
+                              "facebook": "1",
+                              "instagram": "1",
+                              "twitter": "1",
+                              "youtube": "1"
+                            }
+                          },
+                          {
+                            "visible": "true",
+                            "create_date": "2021-11-18T00:00:00.000000Z",
+                            "article_title": "2",
+                            "slug": "12",
+                            "author_id": 1,
+                            "interview": "2",
+                            "video_maker": "2",
+                            "main_image": "2",
+                            "social_label": "2",
+                            "author": {
+                              "meta_title": "1",
+                              "meta_description": "1",
+                              "meta_keywords": "1",
+                              "name": "1",
+                              "slug": "2",
+                              "position": "1",
+                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "description": "1",
+                              "facebook": "1",
+                              "instagram": "1",
+                              "twitter": "1",
+                              "youtube": "1"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "status": "success",
+                      "data": {
+                        "logo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                        "hero_slider_articles": [
+                          {
+                            "visible": "true",
+                            "create_date": "2021-11-17T00:00:00.000000Z",
+                            "article_title": "1",
+                            "slug": "1",
+                            "author_id": 1,
+                            "interview": "1",
+                            "video_maker": "1",
+                            "main_image": "1",
+                            "social_network": [
+                              {
+                                "social": "FB",
+                                "social_link": "11"
+                              },
+                              {
+                                "social": "SC",
+                                "social_link": "11"
+                              }
+                            ],
+                            "blocks": {
+                              "one_social": {
+                                "quote_label": "1",
+                                "textarea_md_font": "1",
+                                "textarea_lg_font_quote": "1",
+                                "textarea_sm_font_2_col": "1"
+                              },
+                              "left_img_title_desc": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "title": "1"
+                              },
+                              "right_img_title_desc": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "title": "1"
+                              },
+                              "img_quote": {
+                                "img": "/storage/screenshot-13-1634144521Ndd8M.png",
+                                "quote": "1",
+                                "img_label": "11"
+                              },
+                              "gallery_and_audio": {
+                                "img": [
+                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                  "/storage/screenshot-13-1634144521Ndd8M.png"
+                                ],
+                                "text": "1",
+                                "audio": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                              },
+                              "img_and_video": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "video": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                              }
+                            },
+                            "author": {
+                              "meta_title": "1",
+                              "meta_description": "1",
+                              "meta_keywords": "1",
+                              "name": "1",
+                              "slug": "2",
+                              "position": "1",
+                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "description": "1",
+                              "facebook": "1",
+                              "instagram": "1",
+                              "twitter": "1",
+                              "youtube": "1"
+                            }
+                          },
+                          {
+                            "visible": "true",
+                            "create_date": "2021-11-18T00:00:00.000000Z",
+                            "article_title": "2",
+                            "slug": "12",
+                            "author_id": 1,
+                            "interview": "2",
+                            "video_maker": "2",
+                            "main_image": "2",
+                            "social_label": "2",
+                            "author": {
+                              "meta_title": "1",
+                              "meta_description": "1",
+                              "meta_keywords": "1",
+                              "name": "1",
+                              "slug": "2",
+                              "position": "1",
+                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "description": "1",
+                              "facebook": "1",
+                              "instagram": "1",
+                              "twitter": "1",
+                              "youtube": "1"
+                            }
+                          }
+                        ],
+                        "hero_btn_title": "1",
+                        "display_articles_2_block": [
+                          {
+                            "visible": "true",
+                            "create_date": "2021-11-17T00:00:00.000000Z",
+                            "article_title": "1",
+                            "slug": "1",
+                            "author_id": 1,
+                            "interview": "1",
+                            "video_maker": "1",
+                            "main_image": "1",
+                            "social_network": [
+                              {
+                                "social": "FB",
+                                "social_link": "11"
+                              },
+                              {
+                                "social": "SC",
+                                "social_link": "11"
+                              }
+                            ],
+                            "blocks": {
+                              "one_social": {
+                                "quote_label": "1",
+                                "textarea_md_font": "1",
+                                "textarea_lg_font_quote": "1",
+                                "textarea_sm_font_2_col": "1"
+                              },
+                              "left_img_title_desc": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "title": "1"
+                              },
+                              "right_img_title_desc": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "title": "1"
+                              },
+                              "img_quote": {
+                                "img": "/storage/screenshot-13-1634144521Ndd8M.png",
+                                "quote": "1",
+                                "img_label": "11"
+                              },
+                              "gallery_and_audio": {
+                                "img": [
+                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                  "/storage/screenshot-13-1634144521Ndd8M.png"
+                                ],
+                                "text": "1",
+                                "audio": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                              },
+                              "img_and_video": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "video": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                              }
+                            },
+                            "author": {
+                              "meta_title": "1",
+                              "meta_description": "1",
+                              "meta_keywords": "1",
+                              "name": "1",
+                              "slug": "2",
+                              "position": "1",
+                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "description": "1",
+                              "facebook": "1",
+                              "instagram": "1",
+                              "twitter": "1",
+                              "youtube": "1"
+                            }
+                          },
+                          {
+                            "visible": "true",
+                            "create_date": "2021-11-18T00:00:00.000000Z",
+                            "article_title": "2",
+                            "slug": "12",
+                            "author_id": 1,
+                            "interview": "2",
+                            "video_maker": "2",
+                            "main_image": "2",
+                            "social_label": "2",
+                            "author": {
+                              "meta_title": "1",
+                              "meta_description": "1",
+                              "meta_keywords": "1",
+                              "name": "1",
+                              "slug": "2",
+                              "position": "1",
+                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "description": "1",
+                              "facebook": "1",
+                              "instagram": "1",
+                              "twitter": "1",
+                              "youtube": "1"
+                            }
+                          }
+                        ],
+                        "article_for_3_block": {
+                          "visible": "true",
+                          "create_date": "2021-11-17T00:00:00.000000Z",
+                          "article_title": "1",
+                          "slug": "1",
+                          "author_id": 1,
+                          "interview": "1",
+                          "video_maker": "1",
+                          "main_image": "1",
+                          "social_network": [
+                            {
+                              "social": "FB",
+                              "social_link": "11"
+                            },
+                            {
+                              "social": "SC",
+                              "social_link": "11"
+                            }
+                          ],
+                          "blocks": {
+                            "one_social": {
+                              "quote_label": "1",
+                              "textarea_md_font": "1",
+                              "textarea_lg_font_quote": "1",
+                              "textarea_sm_font_2_col": "1"
+                            },
+                            "left_img_title_desc": {
+                              "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "title": "1"
+                            },
+                            "right_img_title_desc": {
+                              "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "title": "1"
+                            },
+                            "img_quote": {
+                              "img": "/storage/screenshot-13-1634144521Ndd8M.png",
+                              "quote": "1",
+                              "img_label": "11"
+                            },
+                            "gallery_and_audio": {
+                              "img": [
+                                "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "/storage/screenshot-13-1634144521Ndd8M.png"
+                              ],
+                              "text": "1",
+                              "audio": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                            },
+                            "img_and_video": {
+                              "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "video": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                            }
+                          },
+                          "author": {
+                            "meta_title": "1",
+                            "meta_description": "1",
+                            "meta_keywords": "1",
+                            "name": "1",
+                            "slug": "2",
+                            "position": "1",
+                            "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                            "description": "1",
+                            "facebook": "1",
+                            "instagram": "1",
+                            "twitter": "1",
+                            "youtube": "1"
+                          }
+                        },
+                        "display_articles_4_block": [
+                          {
+                            "visible": "true",
+                            "create_date": "2021-11-17T00:00:00.000000Z",
+                            "article_title": "1",
+                            "slug": "1",
+                            "author_id": 1,
+                            "interview": "1",
+                            "video_maker": "1",
+                            "main_image": "1",
+                            "social_network": [
+                              {
+                                "social": "FB",
+                                "social_link": "11"
+                              },
+                              {
+                                "social": "SC",
+                                "social_link": "11"
+                              }
+                            ],
+                            "blocks": {
+                              "one_social": {
+                                "quote_label": "1",
+                                "textarea_md_font": "1",
+                                "textarea_lg_font_quote": "1",
+                                "textarea_sm_font_2_col": "1"
+                              },
+                              "left_img_title_desc": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "title": "1"
+                              },
+                              "right_img_title_desc": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "title": "1"
+                              },
+                              "img_quote": {
+                                "img": "/storage/screenshot-13-1634144521Ndd8M.png",
+                                "quote": "1",
+                                "img_label": "11"
+                              },
+                              "gallery_and_audio": {
+                                "img": [
+                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                  "/storage/screenshot-13-1634144521Ndd8M.png"
+                                ],
+                                "text": "1",
+                                "audio": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                              },
+                              "img_and_video": {
+                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                                "video": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                              }
+                            },
+                            "author": {
+                              "meta_title": "1",
+                              "meta_description": "1",
+                              "meta_keywords": "1",
+                              "name": "1",
+                              "slug": "2",
+                              "position": "1",
+                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "description": "1",
+                              "facebook": "1",
+                              "instagram": "1",
+                              "twitter": "1",
+                              "youtube": "1"
+                            }
+                          },
+                          {
+                            "visible": "true",
+                            "create_date": "2021-11-18T00:00:00.000000Z",
+                            "article_title": "2",
+                            "slug": "12",
+                            "author_id": 1,
+                            "interview": "2",
+                            "video_maker": "2",
+                            "main_image": "2",
+                            "social_label": "2",
+                            "author": {
+                              "meta_title": "1",
+                              "meta_description": "1",
+                              "meta_keywords": "1",
+                              "name": "1",
+                              "slug": "2",
+                              "position": "1",
+                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "description": "1",
+                              "facebook": "1",
+                              "instagram": "1",
+                              "twitter": "1",
+                              "youtube": "1"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/404-error"
+          }
+        },
+        "operationId": "get-main",
+        "description": "Get main page",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/lang"
+          }
+        ]
+      },
+      "parameters": []
+    },
+    "/author/{id}": {
+      "get": {
+        "summary": "GET One Author",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "x-examples": {
+                    "example-1": {
+                      "status": "success",
+                      "data": {
+                        "id": 1,
+                        "meta_title": "фффффффф",
+                        "meta_description": "фффффффф",
+                        "meta_keywords": "фффффффф",
+                        "name": "фффффффф",
+                        "slug": "ffffffff",
+                        "position": "фффффффф",
+                        "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                        "description": "фффффффф",
+                        "facebook": "фффффффф",
+                        "instagram": "фффффффф",
+                        "twitter": "фффффффф",
+                        "youtube": "фффффффф",
+                        "articles": [
+                          {
+                            "id": 2,
+                            "visible": "true",
+                            "create_date": "2021-11-17T00:00:00.000000Z",
+                            "article_title": "1",
+                            "slug": "1",
+                            "main_image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                            "article_preview_description": "asdfasdf",
+                            "oneCategory": [
+                              {
+                                "id": 1,
+                                "category_title": "цццц"
+                              },
+                              {
+                                "id": 2,
+                                "category_title": "ццццц"
+                              }
+                            ]
+                          },
+                          {
+                            "id": 3,
+                            "visible": "true",
+                            "create_date": "2021-11-18T00:00:00.000000Z",
+                            "article_title": "цццц",
+                            "slug": "ssss",
+                            "main_image": "/storage/screenshot-13-1634144521Ndd8M.png",
+                            "article_preview_description": "цццц",
+                            "oneCategory": [
+                              {
+                                "id": 1,
+                                "category_title": "цццц"
+                              },
+                              {
+                                "id": 2,
+                                "category_title": "ццццц"
+                              }
+                            ]
+                          },
+                          {
+                            "id": 4,
+                            "visible": "true",
+                            "create_date": "2021-11-27T00:00:00.000000Z",
+                            "article_title": "выафывавф",
+                            "slug": "ddddd",
+                            "main_image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                            "article_preview_description": "фвыафвыафыва"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "meta_title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "meta_description": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "meta_keywords": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "name": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "slug": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "position": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "photo": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "description": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "facebook": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "instagram": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "twitter": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "youtube": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "articles": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "visible": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "create_date": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "article_title": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "slug": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "main_image": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "article_preview_description": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "oneCategory": {
+                                "type": "array",
+                                "uniqueItems": true,
+                                "minItems": 1,
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "number"
+                                    },
+                                    "category_title": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    }
+                                  },
+                                  "required": [
+                                    "id",
+                                    "category_title"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "status": "success",
+                      "data": {
+                        "id": 1,
+                        "meta_title": "фффффффф",
+                        "meta_description": "фффффффф",
+                        "meta_keywords": "фффффффф",
+                        "name": "фффффффф",
+                        "slug": "ffffffff",
+                        "position": "фффффффф",
+                        "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                        "description": "фффффффф",
+                        "facebook": "фффффффф",
+                        "instagram": "фффффффф",
+                        "twitter": "фффффффф",
+                        "youtube": "фффффффф",
+                        "articles": [
+                          {
+                            "id": 2,
+                            "visible": "true",
+                            "create_date": "2021-11-17T00:00:00.000000Z",
+                            "article_title": "1",
+                            "slug": "1",
+                            "main_image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                            "article_preview_description": "asdfasdf",
+                            "oneCategory": [
+                              {
+                                "id": 1,
+                                "category_title": "цццц"
+                              },
+                              {
+                                "id": 2,
+                                "category_title": "ццццц"
+                              }
+                            ]
+                          },
+                          {
+                            "id": 3,
+                            "visible": "true",
+                            "create_date": "2021-11-18T00:00:00.000000Z",
+                            "article_title": "цццц",
+                            "slug": "ssss",
+                            "main_image": "/storage/screenshot-13-1634144521Ndd8M.png",
+                            "article_preview_description": "цццц",
+                            "oneCategory": [
+                              {
+                                "id": 1,
+                                "category_title": "цццц"
+                              },
+                              {
+                                "id": 2,
+                                "category_title": "ццццц"
+                              }
+                            ]
+                          },
+                          {
+                            "id": 4,
+                            "visible": "true",
+                            "create_date": "2021-11-27T00:00:00.000000Z",
+                            "article_title": "выафывавф",
+                            "slug": "ddddd",
+                            "main_image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                            "article_preview_description": "фвыафвыафыва"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/404-error"
+          }
+        },
+        "operationId": "get-author",
+        "description": "Get one author",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/lang"
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "id",
+          "in": "path",
+          "required": true
+        }
+      ]
+    },
+    "/authors": {
+      "get": {
+        "summary": "GET Authors list",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "x-examples": {
+                    "example-1": {
+                      "status": "success",
+                      "data": [
+                        {
+                          "name": "фффффффф",
+                          "id": 1
+                        },
+                        {
+                          "name": "ыыыыы",
+                          "id": 2
+                        },
+                        {
+                          "name": "йййй",
+                          "id": 3
+                        }
+                      ]
+                    }
+                  },
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "data": {
+                      "type": "array",
+                      "uniqueItems": true,
+                      "minItems": 1,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "id": {
+                            "type": "number"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "status": "success",
+                      "data": [
+                        {
+                          "name": "фффффффф",
+                          "id": 1
+                        },
+                        {
+                          "name": "ыыыыы",
+                          "id": 2
+                        },
+                        {
+                          "name": "йййй",
+                          "id": 3
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/404-error"
+          }
+        },
+        "operationId": "get-authors",
+        "description": "Get authors list",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/lang"
+          }
+        ]
+      },
+      "parameters": []
+    },
+    "/articles": {
+      "get": {
+        "summary": "GET Article list",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "x-examples": {
+                    "example-1": {
+                      "status": "success",
+                      "data": [
+                        {
+                          "id": 2,
+                          "article_title": "1",
+                          "create_date": "2021-11-17T00:00:00.000000Z",
+                          "author_id": 1,
+                          "author": {
+                            "id": 1,
+                            "name": "фффффффф"
+                          }
+                        },
+                        {
+                          "id": 3,
+                          "article_title": "цццц",
+                          "create_date": "2021-11-18T00:00:00.000000Z",
+                          "author_id": 1,
+                          "author": {
+                            "id": 1,
+                            "name": "фффффффф"
+                          }
+                        },
+                        {
+                          "id": 4,
+                          "article_title": "выафывавф",
+                          "create_date": "2021-11-27T00:00:00.000000Z",
+                          "author_id": 1,
+                          "author": {
+                            "id": 1,
+                            "name": "фффффффф"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "data": {
+                      "type": "array",
+                      "uniqueItems": true,
+                      "minItems": 1,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "number"
+                          },
+                          "article_title": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "create_date": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "author_id": {
+                            "type": "number"
+                          },
+                          "author": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "name": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            },
+                            "required": [
+                              "name"
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "status": "success",
+                      "data": [
+                        {
+                          "id": 2,
+                          "article_title": "1",
+                          "create_date": "2021-11-17T00:00:00.000000Z",
+                          "author_id": 1,
+                          "author": {
+                            "id": 1,
+                            "name": "фффффффф"
+                          }
+                        },
+                        {
+                          "id": 3,
+                          "article_title": "цццц",
+                          "create_date": "2021-11-18T00:00:00.000000Z",
+                          "author_id": 1,
+                          "author": {
+                            "id": 1,
+                            "name": "фффффффф"
+                          }
+                        },
+                        {
+                          "id": 4,
+                          "article_title": "выафывавф",
+                          "create_date": "2021-11-27T00:00:00.000000Z",
+                          "author_id": 1,
+                          "author": {
+                            "id": 1,
+                            "name": "фффффффф"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/404-error"
+          }
+        },
+        "operationId": "get-articles-list",
+        "description": "Get articles list",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/lang"
+          }
+        ]
+      },
+      "parameters": []
+    },
+    "/article/{id}": {
+      "get": {
+        "summary": "GET One Article",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "x-examples": {
+                    "example-1": {
+                      "status": "success",
+                      "data": {
+                        "id": 2,
+                        "meta_title": "1",
+                        "meta_description": "1",
+                        "meta_keywords": "1",
+                        "visible": "true",
+                        "create_date": "2021-11-17T00:00:00.000000Z",
+                        "article_title": "1",
+                        "slug": "1",
+                        "author_id": 1,
+                        "interview": "1",
+                        "video_maker": "1",
+                        "main_image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                        "social_network": [
+                          {
+                            "social": "FB",
+                            "social_link": "11"
+                          },
+                          {
+                            "social": "SC",
+                            "social_link": "11"
+                          }
+                        ],
+                        "blocks": {
+                          "one_social": {
+                            "quote_label": "1",
+                            "textarea_md_font": "1",
+                            "textarea_lg_font_quote": "1",
+                            "textarea_sm_font_2_col": "1"
+                          },
+                          "left_img_title_desc": {
+                            "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                            "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                            "title": "1"
+                          },
+                          "right_img_title_desc": {
+                            "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                            "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                            "title": "1"
+                          },
+                          "img_quote": {
+                            "img": "/storage/screenshot-13-1634144521Ndd8M.png",
+                            "quote": "1",
+                            "img_label": "11"
+                          },
+                          "gallery_and_audio": {
+                            "img": [
+                              "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "/storage/screenshot-13-1634144521Ndd8M.png"
+                            ],
+                            "text": "1",
+                            "audio": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                          },
+                          "img_and_video": {
+                            "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                            "video": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                          }
+                        },
+                        "article_preview_description": "asdfasdf",
+                        "author": {
+                          "id": 1,
+                          "meta_title": "фффффффф",
+                          "meta_description": "фффффффф",
+                          "meta_keywords": "фффффффф",
+                          "name": "фффффффф",
+                          "slug": "ffffffff",
+                          "position": "фффффффф",
+                          "photo": "/storage/No_image_available.svg",
+                          "description": "фффффффф",
+                          "facebook": "фффффффф",
+                          "instagram": "фффффффф",
+                          "twitter": "фффффффф",
+                          "youtube": "фффффффф"
+                        }
+                      }
+                    }
+                  },
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "meta_title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "meta_description": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "meta_keywords": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "visible": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "create_date": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "article_title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "slug": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "author_id": {
+                          "type": "number"
+                        },
+                        "interview": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "video_maker": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "main_image": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "social_network": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "social": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "social_link": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            }
+                          }
+                        },
+                        "blocks": {
+                          "type": "object",
+                          "properties": {
+                            "one_social": {
+                              "type": "object",
+                              "properties": {
+                                "quote_label": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "textarea_md_font": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "textarea_lg_font_quote": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "textarea_sm_font_2_col": {
+                                  "type": "string",
+                                  "minLength": 1
+                                }
+                              }
+                            },
+                            "left_img_title_desc": {
+                              "type": "object",
+                              "properties": {
+                                "img": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "image": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "title": {
+                                  "type": "string",
+                                  "minLength": 1
+                                }
+                              }
+                            },
+                            "right_img_title_desc": {
+                              "type": "object",
+                              "properties": {
+                                "img": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "image": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "title": {
+                                  "type": "string",
+                                  "minLength": 1
+                                }
+                              }
+                            },
+                            "img_quote": {
+                              "type": "object",
+                              "properties": {
+                                "img": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "quote": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "img_label": {
+                                  "type": "string",
+                                  "minLength": 1
+                                }
+                              }
+                            },
+                            "gallery_and_audio": {
+                              "type": "object",
+                              "properties": {
+                                "img": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object"
+                                  }
+                                },
+                                "text": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "audio": {
+                                  "type": "string",
+                                  "minLength": 1
+                                }
+                              }
+                            },
+                            "img_and_video": {
+                              "type": "object",
+                              "properties": {
+                                "img": {
+                                  "type": "string",
+                                  "minLength": 1
+                                },
+                                "video": {
+                                  "type": "string",
+                                  "minLength": 1
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "article_preview_description": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "author": {
+                          "type": "object",
+                          "properties": {
+                            "id": {
+                              "type": "number"
+                            },
+                            "meta_title": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "meta_description": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "meta_keywords": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "name": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "slug": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "position": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "photo": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "description": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "facebook": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "instagram": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "twitter": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "youtube": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "status": "success",
+                      "data": {
+                        "id": 2,
+                        "meta_title": "1",
+                        "meta_description": "1",
+                        "meta_keywords": "1",
+                        "visible": "true",
+                        "create_date": "2021-11-17T00:00:00.000000Z",
+                        "article_title": "1",
+                        "slug": "1",
+                        "author_id": 1,
+                        "interview": "1",
+                        "video_maker": "1",
+                        "main_image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                        "social_network": [
+                          {
+                            "social": "FB",
+                            "social_link": "11"
+                          },
+                          {
+                            "social": "SC",
+                            "social_link": "11"
+                          }
+                        ],
+                        "blocks": {
+                          "one_social": {
+                            "quote_label": "1",
+                            "textarea_md_font": "1",
+                            "textarea_lg_font_quote": "1",
+                            "textarea_sm_font_2_col": "1"
+                          },
+                          "left_img_title_desc": {
+                            "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                            "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                            "title": "1"
+                          },
+                          "right_img_title_desc": {
+                            "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                            "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                            "title": "1"
+                          },
+                          "img_quote": {
+                            "img": "/storage/screenshot-13-1634144521Ndd8M.png",
+                            "quote": "1",
+                            "img_label": "11"
+                          },
+                          "gallery_and_audio": {
+                            "img": [
+                              "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                              "/storage/screenshot-13-1634144521Ndd8M.png"
+                            ],
+                            "text": "1",
+                            "audio": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                          },
+                          "img_and_video": {
+                            "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                            "video": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
+                          }
+                        },
+                        "article_preview_description": "asdfasdf",
+                        "author": {
+                          "id": 1,
+                          "meta_title": "фффффффф",
+                          "meta_description": "фффффффф",
+                          "meta_keywords": "фффффффф",
+                          "name": "фффффффф",
+                          "slug": "ffffffff",
+                          "position": "фффффффф",
+                          "photo": "/storage/No_image_available.svg",
+                          "description": "фффффффф",
+                          "facebook": "фффффффф",
+                          "instagram": "фффффффф",
+                          "twitter": "фффффффф",
+                          "youtube": "фффффффф"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/404-error"
+          }
+        },
+        "operationId": "get-one-article",
+        "description": "Get one article",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/lang"
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "id",
+          "in": "path",
+          "required": true
+        }
+      ]
+    },
+    "/articles-search/{search}": {
+      "get": {
+        "summary": "GET Article search response",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "x-examples": {
+                    "example-1": {
+                      "status": "success",
+                      "data": [
+                        {
+                          "id": 3,
+                          "article_title": "цццц",
+                          "main_image": "/storage/screenshot-13-1634144521Ndd8M.png",
+                          "create_date": "2021-11-18T00:00:00.000000Z",
+                          "author_id": 1,
+                          "author": {
+                            "id": 1,
+                            "name": "фффффффф"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "data": {
+                      "type": "array",
+                      "uniqueItems": true,
+                      "minItems": 1,
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "number"
+                          },
+                          "article_title": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "main_image": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "create_date": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "author_id": {
+                            "type": "number"
+                          },
+                          "author": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "name": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "status": "success",
+                      "data": [
+                        {
+                          "id": 3,
+                          "article_title": "цццц",
+                          "main_image": "/storage/screenshot-13-1634144521Ndd8M.png",
+                          "create_date": "2021-11-18T00:00:00.000000Z",
+                          "author_id": 1,
+                          "author": {
+                            "id": 1,
+                            "name": "фффффффф"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/404-error"
+          }
+        },
+        "operationId": "get-article by search query",
+        "description": "Get article by search",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/lang"
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "search",
+          "in": "path",
+          "required": true,
+          "description": "цц"
+        }
+      ]
+    },
+    "/categories": {
+      "get": {
+        "summary": "GET Category Page",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "x-examples": {
+                    "example-1": {
+                      "status": "success",
+                      "data": {
+                        "sort_title": "1",
+                        "grid_title": "1",
+                        "list_title": "1",
+                        "display_category": [
+                          {
+                            "id": 1,
+                            "category_title": "цццц"
+                          },
+                          {
+                            "id": 2,
+                            "category_title": "ццццц"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "sort_title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "grid_title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "list_title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "display_category": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "category_title": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "status": "success",
+                      "data": {
+                        "sort_title": "1",
+                        "grid_title": "1",
+                        "list_title": "1",
+                        "display_category": [
+                          {
+                            "id": 1,
+                            "category_title": "цццц"
+                          },
+                          {
+                            "id": 2,
+                            "category_title": "ццццц"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/404-error"
+          }
+        },
+        "operationId": "get-categories-page",
+        "description": "Get category page",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/lang"
+          }
+        ]
+      },
+      "parameters": []
+    },
+    "/category/{id}": {
+      "get": {
+        "summary": "GET One Category",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "x-examples": {
+                    "example-1": {
+                      "status": "success",
+                      "category": {
+                        "id": 1,
+                        "category_title": "Soulmates",
+                        "slug": "Soulmates",
+                        "category_description": "Lorem Ipsum is a fish text often used in print and web design. Lorem Ipsum has been the standard \"fish\" for Latin texts since the early 16th century.",
+                        "articles": [
+                          {
+                            "id": 5,
+                            "visible": "true",
+                            "create_date": "2021-06-05T00:00:00.000000Z",
+                            "slug": "Video interview Dmitry Gordon",
+                            "article_title": "Видео Интервью: Дмитрий Гордон",
+                            "main_image": "/storage/chb-kotenok-belyy-chernyy-ten-malysh-1068-1920x1080-1637582769ZvKKi.jpg",
+                            "oneCategory": [
+                              {
+                                "id": 1,
+                                "category_title": "Soulmates"
+                              },
+                              {
+                                "id": 2,
+                                "category_title": "Interviews"
+                              },
+                              {
+                                "id": 6,
+                                "category_title": "Video"
+                              }
+                            ]
+                          },
+                          {
+                            "id": 3,
+                            "visible": "true",
+                            "create_date": "2020-06-02T00:00:00.000000Z",
+                            "slug": "BLACK LIVES MATTER",
+                            "article_title": "BLACK LIVES MATTER",
+                            "main_image": "/storage/chb-pyatna-figury-smazannye-9785-1920x1080-1637582769TPjlk.jpg",
+                            "oneCategory": [
+                              {
+                                "id": 1,
+                                "category_title": "Soulmates"
+                              },
+                              {
+                                "id": 2,
+                                "category_title": "Interviews"
+                              },
+                              {
+                                "id": 3,
+                                "category_title": "Quinque"
+                              },
+                              {
+                                "id": 4,
+                                "category_title": "Confession"
+                              },
+                              {
+                                "id": 5,
+                                "category_title": "Afflatus"
+                              },
+                              {
+                                "id": 6,
+                                "category_title": "Video"
+                              }
+                            ]
+                          },
+                          {
+                            "id": 7,
+                            "visible": "true",
+                            "create_date": "2021-04-19T00:00:00.000000Z",
+                            "slug": "video interview Konstantyn Kofta",
+                            "article_title": "Видео Интервью: Константин Кофта",
+                            "main_image": "/storage/rectangle-203-1-1637433614pfmDn.png",
+                            "oneCategory": [
+                              {
+                                "id": 1,
+                                "category_title": "Soulmates"
+                              },
+                              {
+                                "id": 2,
+                                "category_title": "Interviews"
+                              },
+                              {
+                                "id": 6,
+                                "category_title": "Video"
+                              }
+                            ]
+                          },
+                          {
+                            "id": 8,
+                            "visible": "true",
+                            "create_date": "2021-07-15T00:00:00.000000Z",
+                            "slug": "video-intervyu-dasha-astafeva",
+                            "article_title": "Видео Интервью: Даша Астафьева",
+                            "article_preview_description": "Видео Интервью: Даша Астафьева",
+                            "main_image": "/storage/rectangle-203-1637433624ROl7e.png",
+                            "oneCategory": [
+                              {
+                                "id": 1,
+                                "category_title": "Soulmates"
+                              },
+                              {
+                                "id": 2,
+                                "category_title": "Interviews"
+                              },
+                              {
+                                "id": 6,
+                                "category_title": "Video"
+                              }
+                            ]
+                          },
+                          {
+                            "id": 9,
+                            "visible": "true",
+                            "create_date": "2021-09-10T00:00:00.000000Z",
+                            "slug": "video-intervyu-karen-chiftalaryan",
+                            "article_title": "Видео Интервью: Карен Чифталарян",
+                            "main_image": "/storage/rectangle-203-1-1637433614pfmDn.png",
+                            "oneCategory": [
+                              {
+                                "id": 1,
+                                "category_title": "Soulmates"
+                              },
+                              {
+                                "id": 2,
+                                "category_title": "Interviews"
+                              },
+                              {
+                                "id": 6,
+                                "category_title": "Video"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "category": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "number"
+                        },
+                        "category_title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "slug": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "category_description": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "articles": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "visible": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "create_date": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "slug": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "article_title": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "article_preview_description": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "main_image": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "oneCategory": {
+                                "type": "array",
+                                "uniqueItems": true,
+                                "minItems": 1,
+                                "items": {
+                                  "type": "object",
+                                  "properties": {
+                                    "id": {
+                                      "type": "number"
+                                    },
+                                    "category_title": {
+                                      "type": "string",
+                                      "minLength": 1
+                                    }
+                                  },
+                                  "required": [
+                                    "id",
+                                    "category_title"
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "status": "success",
+                      "category": {
+                        "id": 1,
+                        "category_title": "Soulmates",
+                        "slug": "Soulmates",
+                        "category_description": "Lorem Ipsum is a fish text often used in print and web design. Lorem Ipsum has been the standard \"fish\" for Latin texts since the early 16th century.",
+                        "articles": [
+                          {
+                            "id": 5,
+                            "visible": "true",
+                            "create_date": "2021-06-05T00:00:00.000000Z",
+                            "slug": "Video interview Dmitry Gordon",
+                            "article_title": "Видео Интервью: Дмитрий Гордон",
+                            "main_image": "/storage/chb-kotenok-belyy-chernyy-ten-malysh-1068-1920x1080-1637582769ZvKKi.jpg",
+                            "oneCategory": [
+                              {
+                                "id": 1,
+                                "category_title": "Soulmates"
+                              },
+                              {
+                                "id": 2,
+                                "category_title": "Interviews"
+                              },
+                              {
+                                "id": 6,
+                                "category_title": "Video"
+                              }
+                            ]
+                          },
+                          {
+                            "id": 3,
+                            "visible": "true",
+                            "create_date": "2020-06-02T00:00:00.000000Z",
+                            "slug": "BLACK LIVES MATTER",
+                            "article_title": "BLACK LIVES MATTER",
+                            "main_image": "/storage/chb-pyatna-figury-smazannye-9785-1920x1080-1637582769TPjlk.jpg",
+                            "oneCategory": [
+                              {
+                                "id": 1,
+                                "category_title": "Soulmates"
+                              },
+                              {
+                                "id": 2,
+                                "category_title": "Interviews"
+                              },
+                              {
+                                "id": 3,
+                                "category_title": "Quinque"
+                              },
+                              {
+                                "id": 4,
+                                "category_title": "Confession"
+                              },
+                              {
+                                "id": 5,
+                                "category_title": "Afflatus"
+                              },
+                              {
+                                "id": 6,
+                                "category_title": "Video"
+                              }
+                            ]
+                          },
+                          {
+                            "id": 7,
+                            "visible": "true",
+                            "create_date": "2021-04-19T00:00:00.000000Z",
+                            "slug": "video interview Konstantyn Kofta",
+                            "article_title": "Видео Интервью: Константин Кофта",
+                            "main_image": "/storage/rectangle-203-1-1637433614pfmDn.png",
+                            "oneCategory": [
+                              {
+                                "id": 1,
+                                "category_title": "Soulmates"
+                              },
+                              {
+                                "id": 2,
+                                "category_title": "Interviews"
+                              },
+                              {
+                                "id": 6,
+                                "category_title": "Video"
+                              }
+                            ]
+                          },
+                          {
+                            "id": 8,
+                            "visible": "true",
+                            "create_date": "2021-07-15T00:00:00.000000Z",
+                            "slug": "video-intervyu-dasha-astafeva",
+                            "article_title": "Видео Интервью: Даша Астафьева",
+                            "article_preview_description": "Видео Интервью: Даша Астафьева",
+                            "main_image": "/storage/rectangle-203-1637433624ROl7e.png",
+                            "oneCategory": [
+                              {
+                                "id": 1,
+                                "category_title": "Soulmates"
+                              },
+                              {
+                                "id": 2,
+                                "category_title": "Interviews"
+                              },
+                              {
+                                "id": 6,
+                                "category_title": "Video"
+                              }
+                            ]
+                          },
+                          {
+                            "id": 9,
+                            "visible": "true",
+                            "create_date": "2021-09-10T00:00:00.000000Z",
+                            "slug": "video-intervyu-karen-chiftalaryan",
+                            "article_title": "Видео Интервью: Карен Чифталарян",
+                            "main_image": "/storage/rectangle-203-1-1637433614pfmDn.png",
+                            "oneCategory": [
+                              {
+                                "id": 1,
+                                "category_title": "Soulmates"
+                              },
+                              {
+                                "id": 2,
+                                "category_title": "Interviews"
+                              },
+                              {
+                                "id": 6,
+                                "category_title": "Video"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/404-error"
+          }
+        },
+        "operationId": "get-one-category",
+        "description": "Get one category",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/lang"
+          }
+        ]
+      },
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "id",
+          "in": "path",
+          "required": true
+        }
+      ]
+    },
+    "/request": {
+      "get": {
+        "summary": "GET request content",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "x-examples": {
+                    "example-1": {
+                      "status": "success",
+                      "data": {
+                        "title": "Whant to work with Us&",
+                        "description": "Lorem Ipsum is a fish text often used in print and web design. Lorem Ipsum has been the standard \"fish\" for Latin texts since the early 16th century.",
+                        "name_field_title": "Имя",
+                        "phone_field_title": "Телефон",
+                        "email_field_title": "Е-меил",
+                        "massage_field_title": "Сообщение",
+                        "file_field_title": "Добавить файл",
+                        "file_field_description": "До 3 мб",
+                        "btn_title": "Отправить"
+                      }
+                    }
+                  },
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "description": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "name_field_title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "phone_field_title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "email_field_title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "massage_field_title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "file_field_title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "file_field_description": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "btn_title": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "status": "success",
+                      "data": {
+                        "title": "Whant to work with Us&",
+                        "description": "Lorem Ipsum is a fish text often used in print and web design. Lorem Ipsum has been the standard \"fish\" for Latin texts since the early 16th century.",
+                        "name_field_title": "Имя",
+                        "phone_field_title": "Телефон",
+                        "email_field_title": "Е-меил",
+                        "massage_field_title": "Сообщение",
+                        "file_field_title": "Добавить файл",
+                        "file_field_description": "До 3 мб",
+                        "btn_title": "Отправить"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/404-error"
+          }
+        },
+        "operationId": "get-request",
+        "description": "Get request content",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/lang"
+          }
+        ]
+      },
+      "parameters": [],
+      "post": {
+        "summary": "Send post request",
+        "operationId": "post-request",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "description": "Send post request",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-Requested-With"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "description": "",
+                "type": "object",
+                "x-examples": {
+                  "example-1": {
+                    "name": "string",
+                    "phone": "string",
+                    "email": "string",
+                    "message": "string",
+                    "file": "file"
+                  }
+                },
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "phone": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "email": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "message": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "name",
+                  "phone",
+                  "email",
+                  "message"
+                ]
+              },
+              "examples": {
+                "example-1": {
+                  "value": {
+                    "name": "string",
+                    "phone": "string",
+                    "email": "string",
+                    "message": "string"
+                  }
+                }
+              }
+            }
+          },
+          "description": ""
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "User": {
+        "title": "User",
+        "type": "object",
+        "description": "",
+        "examples": [
+          {
+            "id": 142,
+            "firstName": "Alice",
+            "lastName": "Smith",
+            "email": "alice.smith@gmail.com",
+            "dateOfBirth": "1997-10-31",
+            "emailVerified": true,
+            "signUpDate": "2019-08-24"
+          }
+        ],
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Unique identifier for the given user."
+          },
+          "firstName": {
+            "type": "string"
+          },
+          "lastName": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date",
+            "example": "1997-10-31"
+          },
+          "emailVerified": {
+            "type": "boolean",
+            "description": "Set to true if the user's email has been verified."
+          },
+          "createDate": {
+            "type": "string",
+            "format": "date",
+            "description": "The date that the user was created."
+          }
+        },
+        "required": [
+          "id",
+          "firstName",
+          "lastName",
+          "email",
+          "emailVerified"
+        ]
+      }
+    },
+    "responses": {
+      "404-error": {
+        "description": "Example response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "status"
+              ]
+            },
+            "examples": {
+              "example-1": {
+                "value": {
+                  "status": "error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "parameters": {
+      "lang": {
+        "name": "lang",
+        "in": "query",
+        "required": false,
+        "schema": {
+          "type": "string",
+          "enum": [
+            "en",
+            "ru"
+          ],
+          "default": "ru"
+        },
+        "description": "Current language"
+      },
+      "X-Requested-With": {
+        "name": "X-Requested-With",
+        "in": "header",
+        "required": true,
+        "schema": {
+          "type": "string",
+          "default": "XMLHttpRequest",
+          "example": "XMLHttpRequest"
+        }
+      },
+      "Content-Type": {
+        "name": "Content-Type",
+        "in": "header",
+        "required": false,
+        "schema": {
+          "type": "string",
+          "default": "application/json",
+          "example": "application/json"
+        }
+      },
+      "Accept": {
+        "name": "Accept",
+        "in": "header",
+        "required": false,
+        "schema": {
+          "type": "string",
+          "default": "*/*",
+          "example": "*/*"
+        },
+        "description": "*/*"
+      },
+      "Accept-Encoding": {
+        "name": "Accept-Encoding",
+        "in": "header",
+        "required": false,
+        "schema": {
+          "type": "string",
+          "default": "gzip, deflate, br",
+          "example": "gzip, deflate, br"
+        },
+        "description": "gzip, deflate, br"
+      },
+      "Connection": {
+        "name": "Connection",
+        "in": "header",
+        "required": false,
+        "schema": {
+          "type": "string",
+          "default": "keep-alive",
+          "example": "keep-alive"
+        }
+      }
+    }
+  }
+}
