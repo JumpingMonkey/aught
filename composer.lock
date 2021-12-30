@@ -4674,7 +4674,7 @@
             "require": {
                 "illuminate/database": "^7.0|^8.0",
                 "illuminate/support": "^7.0|^8.0",
-                "php": "^8.0",
+                "php": "^7.0|^8.0",
                 "spatie/laravel-package-tools": "^1.6"
             },
             "require-dev": {
