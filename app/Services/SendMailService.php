@@ -34,7 +34,7 @@ class SendMailService
 //        });
 //    }
 
-    public static function sendEmailToAdmin($popup,$postData, RequestPopupRequest $request = null)
+    public static function sendEmailToAdmin($popup, $postData, RequestPopupRequest $request = null)
     {
 
         $emailSetting = SendMailService::config();
@@ -44,6 +44,10 @@ class SendMailService
                 $email = $emailSetting->email_for_request;
                 $postData['clientMessage'] = $postData['message'];
                 $view = 'toAdminFromRequest';
+                break;
+            case 'newsletter':
+                $email = $emailSetting->email_for_request;
+                $view = 'toAdminFromNewsLetter';
                 break;
         }
 

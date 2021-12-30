@@ -52,6 +52,7 @@ Route::middleware('locale')->group(function (){
 
     //popup
     Route::get('/request', [PopupsController::class, 'getRequestPage']);
-    Route::post('/request', [PopupsController::class, 'request_popup_post']);
+    Route::post('/request', [PopupsController::class, 'requestPopupPost']);
+    Route::post('/email_newsletter', [PopupsController::class, 'emailNewsletterPost']);
 
 });
