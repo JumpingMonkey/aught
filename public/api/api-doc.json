@@ -16,6 +16,10 @@
     {
       "url": "https://aught-api.dev-onfire.work/api/",
       "description": ""
+    },
+    {
+      "description": "",
+      "url": "http://aught.dev/api/"
     }
   ],
   "paths": {
@@ -4235,6 +4239,59 @@
                     "phone": "string",
                     "email": "string",
                     "message": "string"
+                  }
+                }
+              }
+            }
+          },
+          "description": ""
+        }
+      }
+    },
+    "/email_newsletter": {
+      "parameters": [],
+      "post": {
+        "summary": "Send post request",
+        "operationId": "email-newsletter",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "description": "Send email for email newsletter ",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/X-Requested-With"
+          },
+          {
+            "$ref": "#/components/parameters/Accept"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "description": "",
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "email"
+                ],
+                "x-examples": {
+                  "example-1": {
+                    "email": "string"
+                  }
+                }
+              },
+              "examples": {
+                "example-1": {
+                  "value": {
+                    "email": "string@dsf"
                   }
                 }
               }
