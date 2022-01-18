@@ -2758,16 +2758,24 @@
                       "status": "success",
                       "data": [
                         {
-                          "name": "фффффффф",
-                          "id": 1
+                          "name": "Ljubov Dzuzhynska",
+                          "id": 1,
+                          "facebook": "https://ru.wikipedia.org/wiki/",
+                          "instagram": "https://ru.wikipedia.org/wiki/",
+                          "twitter": "https://ru.wikipedia.org/wiki/",
+                          "youtube": "https://www.youtube.com/"
                         },
                         {
-                          "name": "ыыыыы",
+                          "name": "Elena Savlokhova",
                           "id": 2
                         },
                         {
-                          "name": "йййй",
+                          "name": "Anastasia Gorbunova",
                           "id": 3
+                        },
+                        {
+                          "name": "Любов Дзеджинская",
+                          "id": 4
                         }
                       ]
                     }
@@ -2790,6 +2798,22 @@
                           },
                           "id": {
                             "type": "number"
+                          },
+                          "facebook": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "instagram": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "twitter": {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          "youtube": {
+                            "type": "string",
+                            "minLength": 1
                           }
                         }
                       }
@@ -2802,16 +2826,24 @@
                       "status": "success",
                       "data": [
                         {
-                          "name": "фффффффф",
-                          "id": 1
+                          "name": "Ljubov Dzuzhynska",
+                          "id": 1,
+                          "facebook": "https://ru.wikipedia.org/wiki/",
+                          "instagram": "https://ru.wikipedia.org/wiki/",
+                          "twitter": "https://ru.wikipedia.org/wiki/",
+                          "youtube": "https://www.youtube.com/"
                         },
                         {
-                          "name": "ыыыыы",
+                          "name": "Elena Savlokhova",
                           "id": 2
                         },
                         {
-                          "name": "йййй",
+                          "name": "Anastasia Gorbunova",
                           "id": 3
+                        },
+                        {
+                          "name": "Любов Дзеджинская",
+                          "id": 4
                         }
                       ]
                     }
