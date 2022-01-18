@@ -3001,79 +3001,44 @@
                     "example-1": {
                       "status": "success",
                       "data": {
-                        "id": 2,
-                        "meta_title": "1",
-                        "meta_description": "1",
-                        "meta_keywords": "1",
+                        "id": 16,
+                        "meta_title": "Видео Интервью: Влад Иваненко",
                         "visible": "true",
-                        "create_date": "2021-11-17T00:00:00.000000Z",
-                        "article_title": "1",
-                        "slug": "1",
+                        "create_date": "2021-08-30T00:00:00.000000Z",
+                        "article_title": "Видео Интервью: Влад Иваненко",
+                        "slug": "vlad_ivanenko",
                         "author_id": 1,
-                        "interview": "1",
-                        "video_maker": "1",
-                        "main_image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                        "interview": "Любовь Дзюжинская",
+                        "video_maker": "Елена Савлохова",
+                        "main_image": "/storage/1993afcf-16403546616yVI0.jpg",
+                        "social_label": "Видео-интервью",
                         "social_network": [
                           {
-                            "social": "FB",
-                            "social_link": "11"
+                            "social": "YT",
+                            "social_link": "https://youtu.be/cPafutSWQ58"
                           },
                           {
-                            "social": "SC",
-                            "social_link": "11"
+                            "social": "IN",
+                            "social_link": "https://www.instagram.com/vladmegavlad/"
+                          },
+                          {
+                            "social": "FB",
+                            "social_link": "https://www.facebook.com/profile.php?id=100001248975086"
                           }
                         ],
-                        "blocks": {
-                          "one_social": {
-                            "quote_label": "1",
-                            "textarea_md_font": "1",
-                            "textarea_lg_font_quote": "1",
-                            "textarea_sm_font_2_col": "1"
-                          },
-                          "left_img_title_desc": {
-                            "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                            "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                            "title": "1"
-                          },
-                          "right_img_title_desc": {
-                            "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                            "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                            "title": "1"
-                          },
-                          "img_quote": {
-                            "img": "/storage/screenshot-13-1634144521Ndd8M.png",
-                            "quote": "1",
-                            "img_label": "11"
-                          },
-                          "gallery_and_audio": {
-                            "img": [
-                              "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                              "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                              "/storage/screenshot-13-1634144521Ndd8M.png"
-                            ],
-                            "text": "1",
-                            "audio": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
-                          },
-                          "img_and_video": {
-                            "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                            "video": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
-                          }
-                        },
-                        "article_preview_description": "asdfasdf",
+                        "article_preview_description": "владелец и главный редактор Playboy Украина",
                         "author": {
                           "id": 1,
-                          "meta_title": "фффффффф",
-                          "meta_description": "фффффффф",
-                          "meta_keywords": "фффффффф",
-                          "name": "фффффффф",
-                          "slug": "ffffffff",
-                          "position": "фффффффф",
-                          "photo": "/storage/No_image_available.svg",
-                          "description": "фффффффф",
-                          "facebook": "фффффффф",
-                          "instagram": "фффффффф",
-                          "twitter": "фффффффф",
-                          "youtube": "фффффффф"
+                          "meta_title": "Ljubov Dzuzhynska",
+                          "name": "Ljubov Dzuzhynska",
+                          "slug": "Ljubov Dzuzhynska",
+                          "position": "Interview",
+                          "photo": "/storage/rectangle-203-1-1637433614pfmDn.png",
+                          "description": "Ljubov Dzuzhynska",
+                          "facebook": "https://ru.wikipedia.org/wiki/",
+                          "instagram": "https://ru.wikipedia.org/wiki/",
+                          "twitter": "https://ru.wikipedia.org/wiki/",
+                          "youtube": "https://www.youtube.com/"
                         }
                       }
                     }
@@ -3090,14 +3055,6 @@
                           "type": "number"
                         },
                         "meta_title": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "meta_description": {
-                          "type": "string",
-                          "minLength": 1
-                        },
-                        "meta_keywords": {
                           "type": "string",
                           "minLength": 1
                         },
@@ -3132,6 +3089,10 @@
                           "type": "string",
                           "minLength": 1
                         },
+                        "social_label": {
+                          "type": "string",
+                          "minLength": 1
+                        },
                         "social_network": {
                           "type": "array",
                           "uniqueItems": true,
@@ -3150,115 +3111,6 @@
                             }
                           }
                         },
-                        "blocks": {
-                          "type": "object",
-                          "properties": {
-                            "one_social": {
-                              "type": "object",
-                              "properties": {
-                                "quote_label": {
-                                  "type": "string",
-                                  "minLength": 1
-                                },
-                                "textarea_md_font": {
-                                  "type": "string",
-                                  "minLength": 1
-                                },
-                                "textarea_lg_font_quote": {
-                                  "type": "string",
-                                  "minLength": 1
-                                },
-                                "textarea_sm_font_2_col": {
-                                  "type": "string",
-                                  "minLength": 1
-                                }
-                              }
-                            },
-                            "left_img_title_desc": {
-                              "type": "object",
-                              "properties": {
-                                "img": {
-                                  "type": "string",
-                                  "minLength": 1
-                                },
-                                "image": {
-                                  "type": "string",
-                                  "minLength": 1
-                                },
-                                "title": {
-                                  "type": "string",
-                                  "minLength": 1
-                                }
-                              }
-                            },
-                            "right_img_title_desc": {
-                              "type": "object",
-                              "properties": {
-                                "img": {
-                                  "type": "string",
-                                  "minLength": 1
-                                },
-                                "image": {
-                                  "type": "string",
-                                  "minLength": 1
-                                },
-                                "title": {
-                                  "type": "string",
-                                  "minLength": 1
-                                }
-                              }
-                            },
-                            "img_quote": {
-                              "type": "object",
-                              "properties": {
-                                "img": {
-                                  "type": "string",
-                                  "minLength": 1
-                                },
-                                "quote": {
-                                  "type": "string",
-                                  "minLength": 1
-                                },
-                                "img_label": {
-                                  "type": "string",
-                                  "minLength": 1
-                                }
-                              }
-                            },
-                            "gallery_and_audio": {
-                              "type": "object",
-                              "properties": {
-                                "img": {
-                                  "type": "array",
-                                  "items": {
-                                    "type": "object"
-                                  }
-                                },
-                                "text": {
-                                  "type": "string",
-                                  "minLength": 1
-                                },
-                                "audio": {
-                                  "type": "string",
-                                  "minLength": 1
-                                }
-                              }
-                            },
-                            "img_and_video": {
-                              "type": "object",
-                              "properties": {
-                                "img": {
-                                  "type": "string",
-                                  "minLength": 1
-                                },
-                                "video": {
-                                  "type": "string",
-                                  "minLength": 1
-                                }
-                              }
-                            }
-                          }
-                        },
                         "article_preview_description": {
                           "type": "string",
                           "minLength": 1
@@ -3270,14 +3122,6 @@
                               "type": "number"
                             },
                             "meta_title": {
-                              "type": "string",
-                              "minLength": 1
-                            },
-                            "meta_description": {
-                              "type": "string",
-                              "minLength": 1
-                            },
-                            "meta_keywords": {
                               "type": "string",
                               "minLength": 1
                             },
@@ -3328,79 +3172,44 @@
                     "value": {
                       "status": "success",
                       "data": {
-                        "id": 2,
-                        "meta_title": "1",
-                        "meta_description": "1",
-                        "meta_keywords": "1",
+                        "id": 16,
+                        "meta_title": "Видео Интервью: Влад Иваненко",
                         "visible": "true",
-                        "create_date": "2021-11-17T00:00:00.000000Z",
-                        "article_title": "1",
-                        "slug": "1",
+                        "create_date": "2021-08-30T00:00:00.000000Z",
+                        "article_title": "Видео Интервью: Влад Иваненко",
+                        "slug": "vlad_ivanenko",
                         "author_id": 1,
-                        "interview": "1",
-                        "video_maker": "1",
-                        "main_image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                        "interview": "Любовь Дзюжинская",
+                        "video_maker": "Елена Савлохова",
+                        "main_image": "/storage/1993afcf-16403546616yVI0.jpg",
+                        "social_label": "Видео-интервью",
                         "social_network": [
                           {
-                            "social": "FB",
-                            "social_link": "11"
+                            "social": "YT",
+                            "social_link": "https://youtu.be/cPafutSWQ58"
                           },
                           {
-                            "social": "SC",
-                            "social_link": "11"
+                            "social": "IN",
+                            "social_link": "https://www.instagram.com/vladmegavlad/"
+                          },
+                          {
+                            "social": "FB",
+                            "social_link": "https://www.facebook.com/profile.php?id=100001248975086"
                           }
                         ],
-                        "blocks": {
-                          "one_social": {
-                            "quote_label": "1",
-                            "textarea_md_font": "1",
-                            "textarea_lg_font_quote": "1",
-                            "textarea_sm_font_2_col": "1"
-                          },
-                          "left_img_title_desc": {
-                            "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                            "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                            "title": "1"
-                          },
-                          "right_img_title_desc": {
-                            "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                            "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                            "title": "1"
-                          },
-                          "img_quote": {
-                            "img": "/storage/screenshot-13-1634144521Ndd8M.png",
-                            "quote": "1",
-                            "img_label": "11"
-                          },
-                          "gallery_and_audio": {
-                            "img": [
-                              "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                              "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                              "/storage/screenshot-13-1634144521Ndd8M.png"
-                            ],
-                            "text": "1",
-                            "audio": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
-                          },
-                          "img_and_video": {
-                            "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                            "video": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
-                          }
-                        },
-                        "article_preview_description": "asdfasdf",
+                        "article_preview_description": "владелец и главный редактор Playboy Украина",
                         "author": {
                           "id": 1,
-                          "meta_title": "фффффффф",
-                          "meta_description": "фффффффф",
-                          "meta_keywords": "фффффффф",
-                          "name": "фффффффф",
-                          "slug": "ffffffff",
-                          "position": "фффффффф",
-                          "photo": "/storage/No_image_available.svg",
-                          "description": "фффффффф",
-                          "facebook": "фффффффф",
-                          "instagram": "фффффффф",
-                          "twitter": "фффффффф",
-                          "youtube": "фффффффф"
+                          "meta_title": "Ljubov Dzuzhynska",
+                          "name": "Ljubov Dzuzhynska",
+                          "slug": "Ljubov Dzuzhynska",
+                          "position": "Interview",
+                          "photo": "/storage/rectangle-203-1-1637433614pfmDn.png",
+                          "description": "Ljubov Dzuzhynska",
+                          "facebook": "https://ru.wikipedia.org/wiki/",
+                          "instagram": "https://ru.wikipedia.org/wiki/",
+                          "twitter": "https://ru.wikipedia.org/wiki/",
+                          "youtube": "https://www.youtube.com/"
                         }
                       }
                     }
@@ -4237,7 +4046,7 @@
                   "value": {
                     "name": "string",
                     "phone": "string",
-                    "email": "string",
+                    "email": "string@re",
                     "message": "string"
                   }
                 }
