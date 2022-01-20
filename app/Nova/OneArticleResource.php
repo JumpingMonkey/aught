@@ -76,7 +76,7 @@ class OneArticleResource extends Resource
                 OneAuthorModel::all()->pluck('name', 'id')
             )->displayUsingLabels()->hideFromIndex(),
             Text::make('Интервьюер', 'interview')->hideFromIndex(),
-            Text::make('Видео', 'video_maker')->hideFromIndex(),
+            Text::make('Видеоограф/фотограф', 'video_maker')->hideFromIndex(),
 
             MediaLibrary::make('Фото', 'main_image')->rules('required')->hideFromIndex(),
 
