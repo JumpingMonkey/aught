@@ -63,7 +63,8 @@ class MainPageModel extends Model
             'main_image',
             'article_preview_description',
             'create_date',
-            'id'
+            'id',
+            'author_id',
         )->with(['oneCategory' => function($query) {
             $query->select(
                 'one_category_models.id',
