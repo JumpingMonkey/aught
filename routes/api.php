@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\Pages\AboutPageController;
 use App\Http\Controllers\Pages\CareerPageController;
 use App\Http\Controllers\Pages\CategoriesPageController;
+use App\Http\Controllers\Pages\ContactsPageController;
 use App\Http\Controllers\Pages\MainPageController;
 use App\Http\Controllers\Pages\Page404Controller;
 use App\Http\Controllers\Pages\PrivacyPolicyController;
@@ -37,6 +38,7 @@ Route::middleware('locale')->group(function (){
     Route::get('/page-404', [Page404Controller::class, 'index']);
     Route::get('/categories', [CategoriesPageController::class, 'getCategories']);
     Route::get('/main', [MainPageController::class, 'index']);
+    Route::get('/contacts', [ContactsPageController::class, 'index']);
 
     //Parts
     Route::get('/parts', [PartsController::class, 'index']);
