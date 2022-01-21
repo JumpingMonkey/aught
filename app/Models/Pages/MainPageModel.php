@@ -35,6 +35,7 @@ class MainPageModel extends Model
 
     public $mediaToUrl = [
         'logo',
+        'og_img',
     ];
 
     public static function normalizeData($object)

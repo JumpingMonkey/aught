@@ -8,6 +8,7 @@ use App\Nova\Resource;
 use ClassicO\NovaMediaLibrary\MediaLibrary;
 use Digitalcloud\MultilingualNova\Multilingual;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Heading;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Text;
@@ -56,7 +57,14 @@ class MainPageResource extends Resource
         return [
             ID::make(__('ID'), 'id')->sortable(),
             Multilingual::make('Language'),
-
+            Heading::make('Meta tag'),
+            Text::make('Meta title', 'meta_title')->hideFromIndex(),
+            Text::make('Meta description', 'meta_description')->hideFromIndex(),
+            Text::make('Meta keyword', 'meta_keywords')->hideFromIndex(),
+            Text::make('Og title', 'og_title')->hideFromIndex(),
+            Text::make('Og description', 'og_description')->hideFromIndex(),
+            MediaLibrary::make('Og image', 'og_img')->hideFromIndex(),
+            Heading::make('Данные страницы'),
             MediaLibrary::make('Логотип', 'logo'),
             Flexible::make('Отображаемые в слайдере статьи', 'hero_slider_articles')
                 ->addLayout('Статья', 'article', [
