@@ -508,6 +508,389 @@
                 "schema": {
                   "description": "",
                   "type": "object",
+                  "x-examples": {
+                    "example-1": {
+                      "status": "success",
+                      "data": {
+                        "logo": "/storage/aught-1637698504vK2uJ.png",
+                        "hero_slider_articles": [
+                          {
+                            "article_title": "Влад Иваненко",
+                            "main_image": "/storage/1993afcf-16403546616yVI0.jpg",
+                            "article_preview_description": "владелец и главный редактор Playboy Украина",
+                            "create_date": "2021-08-30T00:00:00.000000Z",
+                            "id": 16,
+                            "author_id": 1,
+                            "oneCategory": [
+                              {
+                                "id": 1,
+                                "category_title": "Soulmates"
+                              },
+                              {
+                                "id": 6,
+                                "category_title": "Видео"
+                              },
+                              {
+                                "id": 2,
+                                "category_title": "Интервью"
+                              }
+                            ],
+                            "author": {
+                              "id": 1,
+                              "meta_title": "Ljubov Dzuzhynska",
+                              "name": "Ljubov Dzuzhynska",
+                              "slug": "Ljubov Dzuzhynska",
+                              "position": "Interview",
+                              "photo": "/storage/rectangle-203-1-1637433614pfmDn.png",
+                              "description": "Ljubov Dzuzhynska",
+                              "facebook": "https://ru.wikipedia.org/wiki/",
+                              "instagram": "https://ru.wikipedia.org/wiki/",
+                              "twitter": "https://ru.wikipedia.org/wiki/",
+                              "youtube": "https://www.youtube.com/"
+                            }
+                          },
+                          {
+                            "article_title": "Blue Foundation",
+                            "main_image": "/storage/listia-vetki-temnyj-144597-1920x1080-16375827697h8or.jpg",
+                            "article_preview_description": "датская шугейз и электронная поп-группа",
+                            "create_date": "2021-12-07T00:00:00.000000Z",
+                            "id": 17,
+                            "author_id": 1,
+                            "oneCategory": [
+                              {
+                                "id": 2,
+                                "category_title": "Интервью"
+                              }
+                            ],
+                            "author": {
+                              "id": 1,
+                              "meta_title": "Ljubov Dzuzhynska",
+                              "name": "Ljubov Dzuzhynska",
+                              "slug": "Ljubov Dzuzhynska",
+                              "position": "Interview",
+                              "photo": "/storage/rectangle-203-1-1637433614pfmDn.png",
+                              "description": "Ljubov Dzuzhynska",
+                              "facebook": "https://ru.wikipedia.org/wiki/",
+                              "instagram": "https://ru.wikipedia.org/wiki/",
+                              "twitter": "https://ru.wikipedia.org/wiki/",
+                              "youtube": "https://www.youtube.com/"
+                            }
+                          },
+                          {
+                            "article_title": "BLACK LIVES MATTER",
+                            "main_image": "/storage/9-1638879826Whe5G.jpg",
+                            "article_preview_description": "Документ составлен Сарой Софи Фликер, Алиссой Кляйн в мае 2020 года.",
+                            "create_date": "2020-06-02T00:00:00.000000Z",
+                            "id": 20,
+                            "oneCategory": [
+                              {
+                                "id": 5,
+                                "category_title": "Afflatus"
+                              },
+                              {
+                                "id": 4,
+                                "category_title": "Confession"
+                              },
+                              {
+                                "id": 2,
+                                "category_title": "Интервью"
+                              },
+                              {
+                                "id": 3,
+                                "category_title": "Quinque"
+                              },
+                              {
+                                "id": 1,
+                                "category_title": "Soulmates"
+                              },
+                              {
+                                "id": 6,
+                                "category_title": "Видео"
+                              }
+                            ]
+                          }
+                        ],
+                        "hero_btn_title": "Offer news",
+                        "display_articles_2_block": [
+                          {
+                            "article_title": "Влад Иваненко",
+                            "main_image": "/storage/1993afcf-16403546616yVI0.jpg",
+                            "article_preview_description": "владелец и главный редактор Playboy Украина",
+                            "create_date": "2021-08-30T00:00:00.000000Z",
+                            "id": 16,
+                            "author_id": 1,
+                            "oneCategory": [
+                              {
+                                "id": 1,
+                                "category_title": "Soulmates"
+                              },
+                              {
+                                "id": 2,
+                                "category_title": "Интервью"
+                              },
+                              {
+                                "id": 6,
+                                "category_title": "Видео"
+                              }
+                            ],
+                            "author": {
+                              "id": 1,
+                              "meta_title": "Ljubov Dzuzhynska",
+                              "name": "Ljubov Dzuzhynska",
+                              "slug": "Ljubov Dzuzhynska",
+                              "position": "Interview",
+                              "photo": "/storage/rectangle-203-1-1637433614pfmDn.png",
+                              "description": "Ljubov Dzuzhynska",
+                              "facebook": "https://ru.wikipedia.org/wiki/",
+                              "instagram": "https://ru.wikipedia.org/wiki/",
+                              "twitter": "https://ru.wikipedia.org/wiki/",
+                              "youtube": "https://www.youtube.com/"
+                            }
+                          },
+                          {
+                            "article_title": "Blue Foundation",
+                            "main_image": "/storage/listia-vetki-temnyj-144597-1920x1080-16375827697h8or.jpg",
+                            "article_preview_description": "датская шугейз и электронная поп-группа",
+                            "create_date": "2021-12-07T00:00:00.000000Z",
+                            "id": 17,
+                            "author_id": 1,
+                            "oneCategory": [
+                              {
+                                "id": 2,
+                                "category_title": "Интервью"
+                              }
+                            ],
+                            "author": {
+                              "id": 1,
+                              "meta_title": "Ljubov Dzuzhynska",
+                              "name": "Ljubov Dzuzhynska",
+                              "slug": "Ljubov Dzuzhynska",
+                              "position": "Interview",
+                              "photo": "/storage/rectangle-203-1-1637433614pfmDn.png",
+                              "description": "Ljubov Dzuzhynska",
+                              "facebook": "https://ru.wikipedia.org/wiki/",
+                              "instagram": "https://ru.wikipedia.org/wiki/",
+                              "twitter": "https://ru.wikipedia.org/wiki/",
+                              "youtube": "https://www.youtube.com/"
+                            }
+                          },
+                          {
+                            "article_title": "Интервью: Domenico Crisci",
+                            "main_image": "/storage/5-1638878489LMbv3.jpg",
+                            "article_preview_description": "итальянский ди-джей, продюсер электронной музыки и владелец музыкального лейбла SUMMA CUM LAUDE",
+                            "create_date": "2021-11-08T00:00:00.000000Z",
+                            "id": 18,
+                            "author_id": 2,
+                            "oneCategory": [
+                              {
+                                "id": 2,
+                                "category_title": "Интервью"
+                              }
+                            ],
+                            "author": {
+                              "id": 2,
+                              "meta_title": "Elena Savlokhova",
+                              "name": "Elena Savlokhova",
+                              "slug": "Elena Savlokhova",
+                              "position": "Interview",
+                              "photo": "/storage/rectangle-203-1637433624ROl7e.png",
+                              "description": "Lorem Ipsum is a fish text often used in print and web design. Lorem Ipsum has been the standard \"fish\" for Latin texts since the early 16th century."
+                            }
+                          },
+                          {
+                            "article_title": "Легендарное Аниме [часть 3]",
+                            "main_image": "/storage/8-1638879410tg20l.jpg",
+                            "article_preview_description": "«Аниме — японский термин, обозначающий все виды анимации».",
+                            "create_date": "2020-07-01T00:00:00.000000Z",
+                            "id": 19,
+                            "author_id": 1,
+                            "oneCategory": [
+                              {
+                                "id": 3,
+                                "category_title": "Quinque"
+                              },
+                              {
+                                "id": 5,
+                                "category_title": "Afflatus"
+                              }
+                            ],
+                            "author": {
+                              "id": 1,
+                              "meta_title": "Ljubov Dzuzhynska",
+                              "name": "Ljubov Dzuzhynska",
+                              "slug": "Ljubov Dzuzhynska",
+                              "position": "Interview",
+                              "photo": "/storage/rectangle-203-1-1637433614pfmDn.png",
+                              "description": "Ljubov Dzuzhynska",
+                              "facebook": "https://ru.wikipedia.org/wiki/",
+                              "instagram": "https://ru.wikipedia.org/wiki/",
+                              "twitter": "https://ru.wikipedia.org/wiki/",
+                              "youtube": "https://www.youtube.com/"
+                            }
+                          },
+                          {
+                            "article_title": "BLACK LIVES MATTER",
+                            "main_image": "/storage/9-1638879826Whe5G.jpg",
+                            "article_preview_description": "Документ составлен Сарой Софи Фликер, Алиссой Кляйн в мае 2020 года.",
+                            "create_date": "2020-06-02T00:00:00.000000Z",
+                            "id": 20,
+                            "oneCategory": [
+                              {
+                                "id": 1,
+                                "category_title": "Soulmates"
+                              },
+                              {
+                                "id": 2,
+                                "category_title": "Интервью"
+                              },
+                              {
+                                "id": 3,
+                                "category_title": "Quinque"
+                              },
+                              {
+                                "id": 4,
+                                "category_title": "Confession"
+                              },
+                              {
+                                "id": 5,
+                                "category_title": "Afflatus"
+                              },
+                              {
+                                "id": 6,
+                                "category_title": "Видео"
+                              }
+                            ]
+                          }
+                        ],
+                        "article_for_3_block": {
+                          "article_title": "Влад Иваненко",
+                          "main_image": "/storage/1993afcf-16403546616yVI0.jpg",
+                          "article_preview_description": "владелец и главный редактор Playboy Украина",
+                          "create_date": "2021-08-30T00:00:00.000000Z",
+                          "id": 16,
+                          "oneCategory": [
+                            {
+                              "id": 1,
+                              "category_title": "Soulmates"
+                            },
+                            {
+                              "id": 6,
+                              "category_title": "Видео"
+                            },
+                            {
+                              "id": 2,
+                              "category_title": "Интервью"
+                            }
+                          ]
+                        },
+                        "display_articles_4_block": [
+                          {
+                            "article_title": "«12 Правил Жизни: Как Победить Хаос» Джордан Питерсон",
+                            "main_image": "/storage/11-1638880759oZ5vV.jpg",
+                            "article_preview_description": "Автор: Глеб Буряк — доцент украинско-американского университета «Конкордия»",
+                            "create_date": "2019-04-14T00:00:00.000000Z",
+                            "id": 22,
+                            "author_id": 1,
+                            "oneCategory": [
+                              {
+                                "id": 4,
+                                "category_title": "Confession"
+                              }
+                            ],
+                            "author": {
+                              "id": 1,
+                              "meta_title": "Ljubov Dzuzhynska",
+                              "name": "Ljubov Dzuzhynska",
+                              "slug": "Ljubov Dzuzhynska",
+                              "position": "Interview",
+                              "photo": "/storage/rectangle-203-1-1637433614pfmDn.png",
+                              "description": "Ljubov Dzuzhynska",
+                              "facebook": "https://ru.wikipedia.org/wiki/",
+                              "instagram": "https://ru.wikipedia.org/wiki/",
+                              "twitter": "https://ru.wikipedia.org/wiki/",
+                              "youtube": "https://www.youtube.com/"
+                            }
+                          },
+                          {
+                            "article_title": "Global Modular Traffic 2/3",
+                            "main_image": "/storage/12-1638880990Ll93K.jpeg",
+                            "article_preview_description": "Corridor Audio — это мечта, которая сбылась. Это платформа для экспериментов, главной целью которой является выпуск качественного украинского контента. Сегодня Corridor Audio создает симбиоз музыки и абстрактного искусства,  настраивая слушателя и зрителя на одну частоту. Основные критерии — художественная форма и рефлексия.",
+                            "create_date": "2019-11-05T00:00:00.000000Z",
+                            "id": 23,
+                            "oneCategory": [
+                              {
+                                "id": 5,
+                                "category_title": "Afflatus"
+                              }
+                            ]
+                          },
+                          {
+                            "article_title": "Украина на Budapest Showcase Hub 2019",
+                            "main_image": "/storage/13-16388812277HdLD.jpg",
+                            "create_date": "2019-11-29T00:00:00.000000Z",
+                            "id": 24,
+                            "author_id": 2,
+                            "oneCategory": [
+                              {
+                                "id": 5,
+                                "category_title": "Afflatus"
+                              }
+                            ],
+                            "author": {
+                              "id": 2,
+                              "meta_title": "Elena Savlokhova",
+                              "name": "Elena Savlokhova",
+                              "slug": "Elena Savlokhova",
+                              "position": "Interview",
+                              "photo": "/storage/rectangle-203-1637433624ROl7e.png",
+                              "description": "Lorem Ipsum is a fish text often used in print and web design. Lorem Ipsum has been the standard \"fish\" for Latin texts since the early 16th century."
+                            }
+                          },
+                          {
+                            "article_title": "Дмитрий Гордон",
+                            "main_image": "/storage/16-16388819964xOj8.jpg",
+                            "article_preview_description": "Дмитрий Гордон — украинский писатель, журналист и ведущий программы «В гостях у Дмитрия Гордона».",
+                            "create_date": "2021-05-06T00:00:00.000000Z",
+                            "id": 25,
+                            "author_id": 1,
+                            "oneCategory": [
+                              {
+                                "id": 2,
+                                "category_title": "Интервью"
+                              },
+                              {
+                                "id": 1,
+                                "category_title": "Soulmates"
+                              },
+                              {
+                                "id": 6,
+                                "category_title": "Видео"
+                              }
+                            ],
+                            "author": {
+                              "id": 1,
+                              "meta_title": "Ljubov Dzuzhynska",
+                              "name": "Ljubov Dzuzhynska",
+                              "slug": "Ljubov Dzuzhynska",
+                              "position": "Interview",
+                              "photo": "/storage/rectangle-203-1-1637433614pfmDn.png",
+                              "description": "Ljubov Dzuzhynska",
+                              "facebook": "https://ru.wikipedia.org/wiki/",
+                              "instagram": "https://ru.wikipedia.org/wiki/",
+                              "twitter": "https://ru.wikipedia.org/wiki/",
+                              "youtube": "https://www.youtube.com/"
+                            }
+                          }
+                        ],
+                        "social": {
+                          "facebook": "https://www.facebook.com/aughtmag",
+                          "instagram": "https://instagram.com/aughtmag/",
+                          "twitter": "https://twitter.com/Aughtmag",
+                          "youtube": "https://www.youtube.com/channel/UCV2R84kjsJqZb29oX17iP2w"
+                        }
+                      }
+                    }
+                  },
                   "properties": {
                     "status": {
                       "type": "string",
@@ -525,41 +908,9 @@
                           "uniqueItems": true,
                           "minItems": 1,
                           "items": {
-                            "required": [
-                              "visible",
-                              "create_date",
-                              "article_title",
-                              "slug",
-                              "author_id",
-                              "interview",
-                              "video_maker",
-                              "main_image"
-                            ],
+                            "type": "object",
                             "properties": {
-                              "visible": {
-                                "type": "string",
-                                "minLength": 1
-                              },
-                              "create_date": {
-                                "type": "string",
-                                "minLength": 1
-                              },
                               "article_title": {
-                                "type": "string",
-                                "minLength": 1
-                              },
-                              "slug": {
-                                "type": "string",
-                                "minLength": 1
-                              },
-                              "author_id": {
-                                "type": "number"
-                              },
-                              "interview": {
-                                "type": "string",
-                                "minLength": 1
-                              },
-                              "video_maker": {
                                 "type": "string",
                                 "minLength": 1
                               },
@@ -567,187 +918,48 @@
                                 "type": "string",
                                 "minLength": 1
                               },
-                              "social_network": {
+                              "article_preview_description": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "create_date": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "id": {
+                                "type": "number"
+                              },
+                              "author_id": {
+                                "type": "number"
+                              },
+                              "oneCategory": {
                                 "type": "array",
                                 "uniqueItems": true,
                                 "minItems": 1,
                                 "items": {
-                                  "required": [
-                                    "social",
-                                    "social_link"
-                                  ],
+                                  "type": "object",
                                   "properties": {
-                                    "social": {
-                                      "type": "string",
-                                      "minLength": 1
+                                    "id": {
+                                      "type": "number"
                                     },
-                                    "social_link": {
+                                    "category_title": {
                                       "type": "string",
                                       "minLength": 1
                                     }
-                                  }
+                                  },
+                                  "required": [
+                                    "id",
+                                    "category_title"
+                                  ]
                                 }
-                              },
-                              "blocks": {
-                                "type": "object",
-                                "properties": {
-                                  "one_social": {
-                                    "type": "object",
-                                    "properties": {
-                                      "quote_label": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "textarea_md_font": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "textarea_lg_font_quote": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "textarea_sm_font_2_col": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      }
-                                    },
-                                    "required": [
-                                      "quote_label",
-                                      "textarea_md_font",
-                                      "textarea_lg_font_quote",
-                                      "textarea_sm_font_2_col"
-                                    ]
-                                  },
-                                  "left_img_title_desc": {
-                                    "type": "object",
-                                    "properties": {
-                                      "img": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "image": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "title": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      }
-                                    },
-                                    "required": [
-                                      "img",
-                                      "image",
-                                      "title"
-                                    ]
-                                  },
-                                  "right_img_title_desc": {
-                                    "type": "object",
-                                    "properties": {
-                                      "img": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "image": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "title": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      }
-                                    },
-                                    "required": [
-                                      "img",
-                                      "image",
-                                      "title"
-                                    ]
-                                  },
-                                  "img_quote": {
-                                    "type": "object",
-                                    "properties": {
-                                      "img": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "quote": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "img_label": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      }
-                                    },
-                                    "required": [
-                                      "img",
-                                      "quote",
-                                      "img_label"
-                                    ]
-                                  },
-                                  "gallery_and_audio": {
-                                    "type": "object",
-                                    "properties": {
-                                      "img": {
-                                        "type": "array",
-                                        "items": {
-                                          "required": [],
-                                          "properties": {}
-                                        }
-                                      },
-                                      "text": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "audio": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      }
-                                    },
-                                    "required": [
-                                      "img",
-                                      "text",
-                                      "audio"
-                                    ]
-                                  },
-                                  "img_and_video": {
-                                    "type": "object",
-                                    "properties": {
-                                      "img": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "video": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      }
-                                    },
-                                    "required": [
-                                      "img",
-                                      "video"
-                                    ]
-                                  }
-                                },
-                                "required": [
-                                  "one_social",
-                                  "left_img_title_desc",
-                                  "right_img_title_desc",
-                                  "img_quote",
-                                  "gallery_and_audio",
-                                  "img_and_video"
-                                ]
                               },
                               "author": {
                                 "type": "object",
                                 "properties": {
+                                  "id": {
+                                    "type": "number"
+                                  },
                                   "meta_title": {
-                                    "type": "string",
-                                    "minLength": 1
-                                  },
-                                  "meta_description": {
-                                    "type": "string",
-                                    "minLength": 1
-                                  },
-                                  "meta_keywords": {
                                     "type": "string",
                                     "minLength": 1
                                   },
@@ -787,21 +999,7 @@
                                     "type": "string",
                                     "minLength": 1
                                   }
-                                },
-                                "required": [
-                                  "meta_title",
-                                  "meta_description",
-                                  "meta_keywords",
-                                  "name",
-                                  "slug",
-                                  "position",
-                                  "photo",
-                                  "description",
-                                  "facebook",
-                                  "instagram",
-                                  "twitter",
-                                  "youtube"
-                                ]
+                                }
                               }
                             }
                           }
@@ -815,41 +1013,9 @@
                           "uniqueItems": true,
                           "minItems": 1,
                           "items": {
-                            "required": [
-                              "visible",
-                              "create_date",
-                              "article_title",
-                              "slug",
-                              "author_id",
-                              "interview",
-                              "video_maker",
-                              "main_image"
-                            ],
+                            "type": "object",
                             "properties": {
-                              "visible": {
-                                "type": "string",
-                                "minLength": 1
-                              },
-                              "create_date": {
-                                "type": "string",
-                                "minLength": 1
-                              },
                               "article_title": {
-                                "type": "string",
-                                "minLength": 1
-                              },
-                              "slug": {
-                                "type": "string",
-                                "minLength": 1
-                              },
-                              "author_id": {
-                                "type": "number"
-                              },
-                              "interview": {
-                                "type": "string",
-                                "minLength": 1
-                              },
-                              "video_maker": {
                                 "type": "string",
                                 "minLength": 1
                               },
@@ -857,187 +1023,48 @@
                                 "type": "string",
                                 "minLength": 1
                               },
-                              "social_network": {
+                              "article_preview_description": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "create_date": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "id": {
+                                "type": "number"
+                              },
+                              "author_id": {
+                                "type": "number"
+                              },
+                              "oneCategory": {
                                 "type": "array",
                                 "uniqueItems": true,
                                 "minItems": 1,
                                 "items": {
-                                  "required": [
-                                    "social",
-                                    "social_link"
-                                  ],
+                                  "type": "object",
                                   "properties": {
-                                    "social": {
-                                      "type": "string",
-                                      "minLength": 1
+                                    "id": {
+                                      "type": "number"
                                     },
-                                    "social_link": {
+                                    "category_title": {
                                       "type": "string",
                                       "minLength": 1
                                     }
-                                  }
+                                  },
+                                  "required": [
+                                    "id",
+                                    "category_title"
+                                  ]
                                 }
-                              },
-                              "blocks": {
-                                "type": "object",
-                                "properties": {
-                                  "one_social": {
-                                    "type": "object",
-                                    "properties": {
-                                      "quote_label": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "textarea_md_font": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "textarea_lg_font_quote": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "textarea_sm_font_2_col": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      }
-                                    },
-                                    "required": [
-                                      "quote_label",
-                                      "textarea_md_font",
-                                      "textarea_lg_font_quote",
-                                      "textarea_sm_font_2_col"
-                                    ]
-                                  },
-                                  "left_img_title_desc": {
-                                    "type": "object",
-                                    "properties": {
-                                      "img": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "image": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "title": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      }
-                                    },
-                                    "required": [
-                                      "img",
-                                      "image",
-                                      "title"
-                                    ]
-                                  },
-                                  "right_img_title_desc": {
-                                    "type": "object",
-                                    "properties": {
-                                      "img": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "image": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "title": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      }
-                                    },
-                                    "required": [
-                                      "img",
-                                      "image",
-                                      "title"
-                                    ]
-                                  },
-                                  "img_quote": {
-                                    "type": "object",
-                                    "properties": {
-                                      "img": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "quote": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "img_label": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      }
-                                    },
-                                    "required": [
-                                      "img",
-                                      "quote",
-                                      "img_label"
-                                    ]
-                                  },
-                                  "gallery_and_audio": {
-                                    "type": "object",
-                                    "properties": {
-                                      "img": {
-                                        "type": "array",
-                                        "items": {
-                                          "required": [],
-                                          "properties": {}
-                                        }
-                                      },
-                                      "text": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "audio": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      }
-                                    },
-                                    "required": [
-                                      "img",
-                                      "text",
-                                      "audio"
-                                    ]
-                                  },
-                                  "img_and_video": {
-                                    "type": "object",
-                                    "properties": {
-                                      "img": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "video": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      }
-                                    },
-                                    "required": [
-                                      "img",
-                                      "video"
-                                    ]
-                                  }
-                                },
-                                "required": [
-                                  "one_social",
-                                  "left_img_title_desc",
-                                  "right_img_title_desc",
-                                  "img_quote",
-                                  "gallery_and_audio",
-                                  "img_and_video"
-                                ]
                               },
                               "author": {
                                 "type": "object",
                                 "properties": {
+                                  "id": {
+                                    "type": "number"
+                                  },
                                   "meta_title": {
-                                    "type": "string",
-                                    "minLength": 1
-                                  },
-                                  "meta_description": {
-                                    "type": "string",
-                                    "minLength": 1
-                                  },
-                                  "meta_keywords": {
                                     "type": "string",
                                     "minLength": 1
                                   },
@@ -1077,21 +1104,7 @@
                                     "type": "string",
                                     "minLength": 1
                                   }
-                                },
-                                "required": [
-                                  "meta_title",
-                                  "meta_description",
-                                  "meta_keywords",
-                                  "name",
-                                  "slug",
-                                  "position",
-                                  "photo",
-                                  "description",
-                                  "facebook",
-                                  "instagram",
-                                  "twitter",
-                                  "youtube"
-                                ]
+                                }
                               }
                             }
                           }
@@ -1099,30 +1112,7 @@
                         "article_for_3_block": {
                           "type": "object",
                           "properties": {
-                            "visible": {
-                              "type": "string",
-                              "minLength": 1
-                            },
-                            "create_date": {
-                              "type": "string",
-                              "minLength": 1
-                            },
                             "article_title": {
-                              "type": "string",
-                              "minLength": 1
-                            },
-                            "slug": {
-                              "type": "string",
-                              "minLength": 1
-                            },
-                            "author_id": {
-                              "type": "number"
-                            },
-                            "interview": {
-                              "type": "string",
-                              "minLength": 1
-                            },
-                            "video_maker": {
                               "type": "string",
                               "minLength": 1
                             },
@@ -1130,297 +1120,44 @@
                               "type": "string",
                               "minLength": 1
                             },
-                            "social_network": {
+                            "article_preview_description": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "create_date": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "id": {
+                              "type": "number"
+                            },
+                            "oneCategory": {
                               "type": "array",
                               "uniqueItems": true,
                               "minItems": 1,
                               "items": {
-                                "required": [
-                                  "social",
-                                  "social_link"
-                                ],
+                                "type": "object",
                                 "properties": {
-                                  "social": {
-                                    "type": "string",
-                                    "minLength": 1
+                                  "id": {
+                                    "type": "number"
                                   },
-                                  "social_link": {
+                                  "category_title": {
                                     "type": "string",
                                     "minLength": 1
                                   }
                                 }
                               }
-                            },
-                            "blocks": {
-                              "type": "object",
-                              "properties": {
-                                "one_social": {
-                                  "type": "object",
-                                  "properties": {
-                                    "quote_label": {
-                                      "type": "string",
-                                      "minLength": 1
-                                    },
-                                    "textarea_md_font": {
-                                      "type": "string",
-                                      "minLength": 1
-                                    },
-                                    "textarea_lg_font_quote": {
-                                      "type": "string",
-                                      "minLength": 1
-                                    },
-                                    "textarea_sm_font_2_col": {
-                                      "type": "string",
-                                      "minLength": 1
-                                    }
-                                  },
-                                  "required": [
-                                    "quote_label",
-                                    "textarea_md_font",
-                                    "textarea_lg_font_quote",
-                                    "textarea_sm_font_2_col"
-                                  ]
-                                },
-                                "left_img_title_desc": {
-                                  "type": "object",
-                                  "properties": {
-                                    "img": {
-                                      "type": "string",
-                                      "minLength": 1
-                                    },
-                                    "image": {
-                                      "type": "string",
-                                      "minLength": 1
-                                    },
-                                    "title": {
-                                      "type": "string",
-                                      "minLength": 1
-                                    }
-                                  },
-                                  "required": [
-                                    "img",
-                                    "image",
-                                    "title"
-                                  ]
-                                },
-                                "right_img_title_desc": {
-                                  "type": "object",
-                                  "properties": {
-                                    "img": {
-                                      "type": "string",
-                                      "minLength": 1
-                                    },
-                                    "image": {
-                                      "type": "string",
-                                      "minLength": 1
-                                    },
-                                    "title": {
-                                      "type": "string",
-                                      "minLength": 1
-                                    }
-                                  },
-                                  "required": [
-                                    "img",
-                                    "image",
-                                    "title"
-                                  ]
-                                },
-                                "img_quote": {
-                                  "type": "object",
-                                  "properties": {
-                                    "img": {
-                                      "type": "string",
-                                      "minLength": 1
-                                    },
-                                    "quote": {
-                                      "type": "string",
-                                      "minLength": 1
-                                    },
-                                    "img_label": {
-                                      "type": "string",
-                                      "minLength": 1
-                                    }
-                                  },
-                                  "required": [
-                                    "img",
-                                    "quote",
-                                    "img_label"
-                                  ]
-                                },
-                                "gallery_and_audio": {
-                                  "type": "object",
-                                  "properties": {
-                                    "img": {
-                                      "type": "array",
-                                      "items": {
-                                        "required": [],
-                                        "properties": {}
-                                      }
-                                    },
-                                    "text": {
-                                      "type": "string",
-                                      "minLength": 1
-                                    },
-                                    "audio": {
-                                      "type": "string",
-                                      "minLength": 1
-                                    }
-                                  },
-                                  "required": [
-                                    "img",
-                                    "text",
-                                    "audio"
-                                  ]
-                                },
-                                "img_and_video": {
-                                  "type": "object",
-                                  "properties": {
-                                    "img": {
-                                      "type": "string",
-                                      "minLength": 1
-                                    },
-                                    "video": {
-                                      "type": "string",
-                                      "minLength": 1
-                                    }
-                                  },
-                                  "required": [
-                                    "img",
-                                    "video"
-                                  ]
-                                }
-                              },
-                              "required": [
-                                "one_social",
-                                "left_img_title_desc",
-                                "right_img_title_desc",
-                                "img_quote",
-                                "gallery_and_audio",
-                                "img_and_video"
-                              ]
-                            },
-                            "author": {
-                              "type": "object",
-                              "properties": {
-                                "meta_title": {
-                                  "type": "string",
-                                  "minLength": 1
-                                },
-                                "meta_description": {
-                                  "type": "string",
-                                  "minLength": 1
-                                },
-                                "meta_keywords": {
-                                  "type": "string",
-                                  "minLength": 1
-                                },
-                                "name": {
-                                  "type": "string",
-                                  "minLength": 1
-                                },
-                                "slug": {
-                                  "type": "string",
-                                  "minLength": 1
-                                },
-                                "position": {
-                                  "type": "string",
-                                  "minLength": 1
-                                },
-                                "photo": {
-                                  "type": "string",
-                                  "minLength": 1
-                                },
-                                "description": {
-                                  "type": "string",
-                                  "minLength": 1
-                                },
-                                "facebook": {
-                                  "type": "string",
-                                  "minLength": 1
-                                },
-                                "instagram": {
-                                  "type": "string",
-                                  "minLength": 1
-                                },
-                                "twitter": {
-                                  "type": "string",
-                                  "minLength": 1
-                                },
-                                "youtube": {
-                                  "type": "string",
-                                  "minLength": 1
-                                }
-                              },
-                              "required": [
-                                "meta_title",
-                                "meta_description",
-                                "meta_keywords",
-                                "name",
-                                "slug",
-                                "position",
-                                "photo",
-                                "description",
-                                "facebook",
-                                "instagram",
-                                "twitter",
-                                "youtube"
-                              ]
                             }
-                          },
-                          "required": [
-                            "visible",
-                            "create_date",
-                            "article_title",
-                            "slug",
-                            "author_id",
-                            "interview",
-                            "video_maker",
-                            "main_image",
-                            "social_network",
-                            "blocks",
-                            "author"
-                          ]
+                          }
                         },
                         "display_articles_4_block": {
                           "type": "array",
                           "uniqueItems": true,
                           "minItems": 1,
                           "items": {
-                            "required": [
-                              "visible",
-                              "create_date",
-                              "article_title",
-                              "slug",
-                              "author_id",
-                              "interview",
-                              "video_maker",
-                              "main_image"
-                            ],
+                            "type": "object",
                             "properties": {
-                              "visible": {
-                                "type": "string",
-                                "minLength": 1
-                              },
-                              "create_date": {
-                                "type": "string",
-                                "minLength": 1
-                              },
                               "article_title": {
-                                "type": "string",
-                                "minLength": 1
-                              },
-                              "slug": {
-                                "type": "string",
-                                "minLength": 1
-                              },
-                              "author_id": {
-                                "type": "number"
-                              },
-                              "interview": {
-                                "type": "string",
-                                "minLength": 1
-                              },
-                              "video_maker": {
                                 "type": "string",
                                 "minLength": 1
                               },
@@ -1428,187 +1165,48 @@
                                 "type": "string",
                                 "minLength": 1
                               },
-                              "social_network": {
+                              "article_preview_description": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "create_date": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "id": {
+                                "type": "number"
+                              },
+                              "author_id": {
+                                "type": "number"
+                              },
+                              "oneCategory": {
                                 "type": "array",
                                 "uniqueItems": true,
                                 "minItems": 1,
                                 "items": {
-                                  "required": [
-                                    "social",
-                                    "social_link"
-                                  ],
+                                  "type": "object",
                                   "properties": {
-                                    "social": {
-                                      "type": "string",
-                                      "minLength": 1
+                                    "id": {
+                                      "type": "number"
                                     },
-                                    "social_link": {
+                                    "category_title": {
                                       "type": "string",
                                       "minLength": 1
                                     }
-                                  }
+                                  },
+                                  "required": [
+                                    "id",
+                                    "category_title"
+                                  ]
                                 }
-                              },
-                              "blocks": {
-                                "type": "object",
-                                "properties": {
-                                  "one_social": {
-                                    "type": "object",
-                                    "properties": {
-                                      "quote_label": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "textarea_md_font": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "textarea_lg_font_quote": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "textarea_sm_font_2_col": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      }
-                                    },
-                                    "required": [
-                                      "quote_label",
-                                      "textarea_md_font",
-                                      "textarea_lg_font_quote",
-                                      "textarea_sm_font_2_col"
-                                    ]
-                                  },
-                                  "left_img_title_desc": {
-                                    "type": "object",
-                                    "properties": {
-                                      "img": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "image": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "title": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      }
-                                    },
-                                    "required": [
-                                      "img",
-                                      "image",
-                                      "title"
-                                    ]
-                                  },
-                                  "right_img_title_desc": {
-                                    "type": "object",
-                                    "properties": {
-                                      "img": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "image": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "title": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      }
-                                    },
-                                    "required": [
-                                      "img",
-                                      "image",
-                                      "title"
-                                    ]
-                                  },
-                                  "img_quote": {
-                                    "type": "object",
-                                    "properties": {
-                                      "img": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "quote": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "img_label": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      }
-                                    },
-                                    "required": [
-                                      "img",
-                                      "quote",
-                                      "img_label"
-                                    ]
-                                  },
-                                  "gallery_and_audio": {
-                                    "type": "object",
-                                    "properties": {
-                                      "img": {
-                                        "type": "array",
-                                        "items": {
-                                          "required": [],
-                                          "properties": {}
-                                        }
-                                      },
-                                      "text": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "audio": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      }
-                                    },
-                                    "required": [
-                                      "img",
-                                      "text",
-                                      "audio"
-                                    ]
-                                  },
-                                  "img_and_video": {
-                                    "type": "object",
-                                    "properties": {
-                                      "img": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      },
-                                      "video": {
-                                        "type": "string",
-                                        "minLength": 1
-                                      }
-                                    },
-                                    "required": [
-                                      "img",
-                                      "video"
-                                    ]
-                                  }
-                                },
-                                "required": [
-                                  "one_social",
-                                  "left_img_title_desc",
-                                  "right_img_title_desc",
-                                  "img_quote",
-                                  "gallery_and_audio",
-                                  "img_and_video"
-                                ]
                               },
                               "author": {
                                 "type": "object",
                                 "properties": {
+                                  "id": {
+                                    "type": "number"
+                                  },
                                   "meta_title": {
-                                    "type": "string",
-                                    "minLength": 1
-                                  },
-                                  "meta_description": {
-                                    "type": "string",
-                                    "minLength": 1
-                                  },
-                                  "meta_keywords": {
                                     "type": "string",
                                     "minLength": 1
                                   },
@@ -1648,407 +1246,32 @@
                                     "type": "string",
                                     "minLength": 1
                                   }
-                                },
-                                "required": [
-                                  "meta_title",
-                                  "meta_description",
-                                  "meta_keywords",
-                                  "name",
-                                  "slug",
-                                  "position",
-                                  "photo",
-                                  "description",
-                                  "facebook",
-                                  "instagram",
-                                  "twitter",
-                                  "youtube"
-                                ]
+                                }
                               }
+                            }
+                          }
+                        },
+                        "social": {
+                          "type": "object",
+                          "properties": {
+                            "facebook": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "instagram": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "twitter": {
+                              "type": "string",
+                              "minLength": 1
+                            },
+                            "youtube": {
+                              "type": "string",
+                              "minLength": 1
                             }
                           }
                         }
-                      },
-                      "required": [
-                        "logo",
-                        "hero_slider_articles",
-                        "hero_btn_title",
-                        "display_articles_2_block",
-                        "article_for_3_block",
-                        "display_articles_4_block"
-                      ]
-                    }
-                  },
-                  "required": [
-                    "status",
-                    "data"
-                  ],
-                  "x-examples": {
-                    "example-1": {
-                      "status": "success",
-                      "data": {
-                        "logo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                        "hero_slider_articles": [
-                          {
-                            "visible": "true",
-                            "create_date": "2021-11-17T00:00:00.000000Z",
-                            "article_title": "1",
-                            "slug": "1",
-                            "author_id": 1,
-                            "interview": "1",
-                            "video_maker": "1",
-                            "main_image": "1",
-                            "social_network": [
-                              {
-                                "social": "FB",
-                                "social_link": "11"
-                              },
-                              {
-                                "social": "SC",
-                                "social_link": "11"
-                              }
-                            ],
-                            "blocks": {
-                              "one_social": {
-                                "quote_label": "1",
-                                "textarea_md_font": "1",
-                                "textarea_lg_font_quote": "1",
-                                "textarea_sm_font_2_col": "1"
-                              },
-                              "left_img_title_desc": {
-                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "title": "1"
-                              },
-                              "right_img_title_desc": {
-                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "title": "1"
-                              },
-                              "img_quote": {
-                                "img": "/storage/screenshot-13-1634144521Ndd8M.png",
-                                "quote": "1",
-                                "img_label": "11"
-                              },
-                              "gallery_and_audio": {
-                                "img": [
-                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                  "/storage/screenshot-13-1634144521Ndd8M.png"
-                                ],
-                                "text": "1",
-                                "audio": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
-                              },
-                              "img_and_video": {
-                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "video": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
-                              }
-                            },
-                            "author": {
-                              "meta_title": "1",
-                              "meta_description": "1",
-                              "meta_keywords": "1",
-                              "name": "1",
-                              "slug": "2",
-                              "position": "1",
-                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                              "description": "1",
-                              "facebook": "1",
-                              "instagram": "1",
-                              "twitter": "1",
-                              "youtube": "1"
-                            }
-                          },
-                          {
-                            "visible": "true",
-                            "create_date": "2021-11-18T00:00:00.000000Z",
-                            "article_title": "2",
-                            "slug": "12",
-                            "author_id": 1,
-                            "interview": "2",
-                            "video_maker": "2",
-                            "main_image": "2",
-                            "social_label": "2",
-                            "author": {
-                              "meta_title": "1",
-                              "meta_description": "1",
-                              "meta_keywords": "1",
-                              "name": "1",
-                              "slug": "2",
-                              "position": "1",
-                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                              "description": "1",
-                              "facebook": "1",
-                              "instagram": "1",
-                              "twitter": "1",
-                              "youtube": "1"
-                            }
-                          }
-                        ],
-                        "hero_btn_title": "1",
-                        "display_articles_2_block": [
-                          {
-                            "visible": "true",
-                            "create_date": "2021-11-17T00:00:00.000000Z",
-                            "article_title": "1",
-                            "slug": "1",
-                            "author_id": 1,
-                            "interview": "1",
-                            "video_maker": "1",
-                            "main_image": "1",
-                            "social_network": [
-                              {
-                                "social": "FB",
-                                "social_link": "11"
-                              },
-                              {
-                                "social": "SC",
-                                "social_link": "11"
-                              }
-                            ],
-                            "blocks": {
-                              "one_social": {
-                                "quote_label": "1",
-                                "textarea_md_font": "1",
-                                "textarea_lg_font_quote": "1",
-                                "textarea_sm_font_2_col": "1"
-                              },
-                              "left_img_title_desc": {
-                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "title": "1"
-                              },
-                              "right_img_title_desc": {
-                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "title": "1"
-                              },
-                              "img_quote": {
-                                "img": "/storage/screenshot-13-1634144521Ndd8M.png",
-                                "quote": "1",
-                                "img_label": "11"
-                              },
-                              "gallery_and_audio": {
-                                "img": [
-                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                  "/storage/screenshot-13-1634144521Ndd8M.png"
-                                ],
-                                "text": "1",
-                                "audio": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
-                              },
-                              "img_and_video": {
-                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "video": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
-                              }
-                            },
-                            "author": {
-                              "meta_title": "1",
-                              "meta_description": "1",
-                              "meta_keywords": "1",
-                              "name": "1",
-                              "slug": "2",
-                              "position": "1",
-                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                              "description": "1",
-                              "facebook": "1",
-                              "instagram": "1",
-                              "twitter": "1",
-                              "youtube": "1"
-                            }
-                          },
-                          {
-                            "visible": "true",
-                            "create_date": "2021-11-18T00:00:00.000000Z",
-                            "article_title": "2",
-                            "slug": "12",
-                            "author_id": 1,
-                            "interview": "2",
-                            "video_maker": "2",
-                            "main_image": "2",
-                            "social_label": "2",
-                            "author": {
-                              "meta_title": "1",
-                              "meta_description": "1",
-                              "meta_keywords": "1",
-                              "name": "1",
-                              "slug": "2",
-                              "position": "1",
-                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                              "description": "1",
-                              "facebook": "1",
-                              "instagram": "1",
-                              "twitter": "1",
-                              "youtube": "1"
-                            }
-                          }
-                        ],
-                        "article_for_3_block": {
-                          "visible": "true",
-                          "create_date": "2021-11-17T00:00:00.000000Z",
-                          "article_title": "1",
-                          "slug": "1",
-                          "author_id": 1,
-                          "interview": "1",
-                          "video_maker": "1",
-                          "main_image": "1",
-                          "social_network": [
-                            {
-                              "social": "FB",
-                              "social_link": "11"
-                            },
-                            {
-                              "social": "SC",
-                              "social_link": "11"
-                            }
-                          ],
-                          "blocks": {
-                            "one_social": {
-                              "quote_label": "1",
-                              "textarea_md_font": "1",
-                              "textarea_lg_font_quote": "1",
-                              "textarea_sm_font_2_col": "1"
-                            },
-                            "left_img_title_desc": {
-                              "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                              "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                              "title": "1"
-                            },
-                            "right_img_title_desc": {
-                              "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                              "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                              "title": "1"
-                            },
-                            "img_quote": {
-                              "img": "/storage/screenshot-13-1634144521Ndd8M.png",
-                              "quote": "1",
-                              "img_label": "11"
-                            },
-                            "gallery_and_audio": {
-                              "img": [
-                                "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "/storage/screenshot-13-1634144521Ndd8M.png"
-                              ],
-                              "text": "1",
-                              "audio": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
-                            },
-                            "img_and_video": {
-                              "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                              "video": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
-                            }
-                          },
-                          "author": {
-                            "meta_title": "1",
-                            "meta_description": "1",
-                            "meta_keywords": "1",
-                            "name": "1",
-                            "slug": "2",
-                            "position": "1",
-                            "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                            "description": "1",
-                            "facebook": "1",
-                            "instagram": "1",
-                            "twitter": "1",
-                            "youtube": "1"
-                          }
-                        },
-                        "display_articles_4_block": [
-                          {
-                            "visible": "true",
-                            "create_date": "2021-11-17T00:00:00.000000Z",
-                            "article_title": "1",
-                            "slug": "1",
-                            "author_id": 1,
-                            "interview": "1",
-                            "video_maker": "1",
-                            "main_image": "1",
-                            "social_network": [
-                              {
-                                "social": "FB",
-                                "social_link": "11"
-                              },
-                              {
-                                "social": "SC",
-                                "social_link": "11"
-                              }
-                            ],
-                            "blocks": {
-                              "one_social": {
-                                "quote_label": "1",
-                                "textarea_md_font": "1",
-                                "textarea_lg_font_quote": "1",
-                                "textarea_sm_font_2_col": "1"
-                              },
-                              "left_img_title_desc": {
-                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "title": "1"
-                              },
-                              "right_img_title_desc": {
-                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "title": "1"
-                              },
-                              "img_quote": {
-                                "img": "/storage/screenshot-13-1634144521Ndd8M.png",
-                                "quote": "1",
-                                "img_label": "11"
-                              },
-                              "gallery_and_audio": {
-                                "img": [
-                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                  "/storage/screenshot-13-1634144521Ndd8M.png"
-                                ],
-                                "text": "1",
-                                "audio": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
-                              },
-                              "img_and_video": {
-                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "video": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
-                              }
-                            },
-                            "author": {
-                              "meta_title": "1",
-                              "meta_description": "1",
-                              "meta_keywords": "1",
-                              "name": "1",
-                              "slug": "2",
-                              "position": "1",
-                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                              "description": "1",
-                              "facebook": "1",
-                              "instagram": "1",
-                              "twitter": "1",
-                              "youtube": "1"
-                            }
-                          },
-                          {
-                            "visible": "true",
-                            "create_date": "2021-11-18T00:00:00.000000Z",
-                            "article_title": "2",
-                            "slug": "12",
-                            "author_id": 1,
-                            "interview": "2",
-                            "video_maker": "2",
-                            "main_image": "2",
-                            "social_label": "2",
-                            "author": {
-                              "meta_title": "1",
-                              "meta_description": "1",
-                              "meta_keywords": "1",
-                              "name": "1",
-                              "slug": "2",
-                              "position": "1",
-                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                              "description": "1",
-                              "facebook": "1",
-                              "instagram": "1",
-                              "twitter": "1",
-                              "youtube": "1"
-                            }
-                          }
-                        ]
                       }
                     }
                   }
@@ -2058,369 +1281,382 @@
                     "value": {
                       "status": "success",
                       "data": {
-                        "logo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
+                        "logo": "/storage/aught-1637698504vK2uJ.png",
                         "hero_slider_articles": [
                           {
-                            "visible": "true",
-                            "create_date": "2021-11-17T00:00:00.000000Z",
-                            "article_title": "1",
-                            "slug": "1",
+                            "article_title": "Влад Иваненко",
+                            "main_image": "/storage/1993afcf-16403546616yVI0.jpg",
+                            "article_preview_description": "владелец и главный редактор Playboy Украина",
+                            "create_date": "2021-08-30T00:00:00.000000Z",
+                            "id": 16,
                             "author_id": 1,
-                            "interview": "1",
-                            "video_maker": "1",
-                            "main_image": "1",
-                            "social_network": [
+                            "oneCategory": [
                               {
-                                "social": "FB",
-                                "social_link": "11"
+                                "id": 1,
+                                "category_title": "Soulmates"
                               },
                               {
-                                "social": "SC",
-                                "social_link": "11"
+                                "id": 6,
+                                "category_title": "Видео"
+                              },
+                              {
+                                "id": 2,
+                                "category_title": "Интервью"
                               }
                             ],
-                            "blocks": {
-                              "one_social": {
-                                "quote_label": "1",
-                                "textarea_md_font": "1",
-                                "textarea_lg_font_quote": "1",
-                                "textarea_sm_font_2_col": "1"
-                              },
-                              "left_img_title_desc": {
-                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "title": "1"
-                              },
-                              "right_img_title_desc": {
-                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "title": "1"
-                              },
-                              "img_quote": {
-                                "img": "/storage/screenshot-13-1634144521Ndd8M.png",
-                                "quote": "1",
-                                "img_label": "11"
-                              },
-                              "gallery_and_audio": {
-                                "img": [
-                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                  "/storage/screenshot-13-1634144521Ndd8M.png"
-                                ],
-                                "text": "1",
-                                "audio": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
-                              },
-                              "img_and_video": {
-                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "video": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
-                              }
-                            },
                             "author": {
-                              "meta_title": "1",
-                              "meta_description": "1",
-                              "meta_keywords": "1",
-                              "name": "1",
-                              "slug": "2",
-                              "position": "1",
-                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                              "description": "1",
-                              "facebook": "1",
-                              "instagram": "1",
-                              "twitter": "1",
-                              "youtube": "1"
+                              "id": 1,
+                              "meta_title": "Ljubov Dzuzhynska",
+                              "name": "Ljubov Dzuzhynska",
+                              "slug": "Ljubov Dzuzhynska",
+                              "position": "Interview",
+                              "photo": "/storage/rectangle-203-1-1637433614pfmDn.png",
+                              "description": "Ljubov Dzuzhynska",
+                              "facebook": "https://ru.wikipedia.org/wiki/",
+                              "instagram": "https://ru.wikipedia.org/wiki/",
+                              "twitter": "https://ru.wikipedia.org/wiki/",
+                              "youtube": "https://www.youtube.com/"
                             }
                           },
                           {
-                            "visible": "true",
-                            "create_date": "2021-11-18T00:00:00.000000Z",
-                            "article_title": "2",
-                            "slug": "12",
+                            "article_title": "Blue Foundation",
+                            "main_image": "/storage/listia-vetki-temnyj-144597-1920x1080-16375827697h8or.jpg",
+                            "article_preview_description": "датская шугейз и электронная поп-группа",
+                            "create_date": "2021-12-07T00:00:00.000000Z",
+                            "id": 17,
                             "author_id": 1,
-                            "interview": "2",
-                            "video_maker": "2",
-                            "main_image": "2",
-                            "social_label": "2",
+                            "oneCategory": [
+                              {
+                                "id": 2,
+                                "category_title": "Интервью"
+                              }
+                            ],
                             "author": {
-                              "meta_title": "1",
-                              "meta_description": "1",
-                              "meta_keywords": "1",
-                              "name": "1",
-                              "slug": "2",
-                              "position": "1",
-                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                              "description": "1",
-                              "facebook": "1",
-                              "instagram": "1",
-                              "twitter": "1",
-                              "youtube": "1"
+                              "id": 1,
+                              "meta_title": "Ljubov Dzuzhynska",
+                              "name": "Ljubov Dzuzhynska",
+                              "slug": "Ljubov Dzuzhynska",
+                              "position": "Interview",
+                              "photo": "/storage/rectangle-203-1-1637433614pfmDn.png",
+                              "description": "Ljubov Dzuzhynska",
+                              "facebook": "https://ru.wikipedia.org/wiki/",
+                              "instagram": "https://ru.wikipedia.org/wiki/",
+                              "twitter": "https://ru.wikipedia.org/wiki/",
+                              "youtube": "https://www.youtube.com/"
                             }
+                          },
+                          {
+                            "article_title": "BLACK LIVES MATTER",
+                            "main_image": "/storage/9-1638879826Whe5G.jpg",
+                            "article_preview_description": "Документ составлен Сарой Софи Фликер, Алиссой Кляйн в мае 2020 года.",
+                            "create_date": "2020-06-02T00:00:00.000000Z",
+                            "id": 20,
+                            "oneCategory": [
+                              {
+                                "id": 5,
+                                "category_title": "Afflatus"
+                              },
+                              {
+                                "id": 4,
+                                "category_title": "Confession"
+                              },
+                              {
+                                "id": 2,
+                                "category_title": "Интервью"
+                              },
+                              {
+                                "id": 3,
+                                "category_title": "Quinque"
+                              },
+                              {
+                                "id": 1,
+                                "category_title": "Soulmates"
+                              },
+                              {
+                                "id": 6,
+                                "category_title": "Видео"
+                              }
+                            ]
                           }
                         ],
-                        "hero_btn_title": "1",
+                        "hero_btn_title": "Offer news",
                         "display_articles_2_block": [
                           {
-                            "visible": "true",
-                            "create_date": "2021-11-17T00:00:00.000000Z",
-                            "article_title": "1",
-                            "slug": "1",
+                            "article_title": "Влад Иваненко",
+                            "main_image": "/storage/1993afcf-16403546616yVI0.jpg",
+                            "article_preview_description": "владелец и главный редактор Playboy Украина",
+                            "create_date": "2021-08-30T00:00:00.000000Z",
+                            "id": 16,
                             "author_id": 1,
-                            "interview": "1",
-                            "video_maker": "1",
-                            "main_image": "1",
-                            "social_network": [
+                            "oneCategory": [
                               {
-                                "social": "FB",
-                                "social_link": "11"
+                                "id": 1,
+                                "category_title": "Soulmates"
                               },
                               {
-                                "social": "SC",
-                                "social_link": "11"
+                                "id": 2,
+                                "category_title": "Интервью"
+                              },
+                              {
+                                "id": 6,
+                                "category_title": "Видео"
                               }
                             ],
-                            "blocks": {
-                              "one_social": {
-                                "quote_label": "1",
-                                "textarea_md_font": "1",
-                                "textarea_lg_font_quote": "1",
-                                "textarea_sm_font_2_col": "1"
-                              },
-                              "left_img_title_desc": {
-                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "title": "1"
-                              },
-                              "right_img_title_desc": {
-                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "title": "1"
-                              },
-                              "img_quote": {
-                                "img": "/storage/screenshot-13-1634144521Ndd8M.png",
-                                "quote": "1",
-                                "img_label": "11"
-                              },
-                              "gallery_and_audio": {
-                                "img": [
-                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                  "/storage/screenshot-13-1634144521Ndd8M.png"
-                                ],
-                                "text": "1",
-                                "audio": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
-                              },
-                              "img_and_video": {
-                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "video": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
-                              }
-                            },
                             "author": {
-                              "meta_title": "1",
-                              "meta_description": "1",
-                              "meta_keywords": "1",
-                              "name": "1",
-                              "slug": "2",
-                              "position": "1",
-                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                              "description": "1",
-                              "facebook": "1",
-                              "instagram": "1",
-                              "twitter": "1",
-                              "youtube": "1"
+                              "id": 1,
+                              "meta_title": "Ljubov Dzuzhynska",
+                              "name": "Ljubov Dzuzhynska",
+                              "slug": "Ljubov Dzuzhynska",
+                              "position": "Interview",
+                              "photo": "/storage/rectangle-203-1-1637433614pfmDn.png",
+                              "description": "Ljubov Dzuzhynska",
+                              "facebook": "https://ru.wikipedia.org/wiki/",
+                              "instagram": "https://ru.wikipedia.org/wiki/",
+                              "twitter": "https://ru.wikipedia.org/wiki/",
+                              "youtube": "https://www.youtube.com/"
                             }
                           },
                           {
-                            "visible": "true",
-                            "create_date": "2021-11-18T00:00:00.000000Z",
-                            "article_title": "2",
-                            "slug": "12",
+                            "article_title": "Blue Foundation",
+                            "main_image": "/storage/listia-vetki-temnyj-144597-1920x1080-16375827697h8or.jpg",
+                            "article_preview_description": "датская шугейз и электронная поп-группа",
+                            "create_date": "2021-12-07T00:00:00.000000Z",
+                            "id": 17,
                             "author_id": 1,
-                            "interview": "2",
-                            "video_maker": "2",
-                            "main_image": "2",
-                            "social_label": "2",
+                            "oneCategory": [
+                              {
+                                "id": 2,
+                                "category_title": "Интервью"
+                              }
+                            ],
                             "author": {
-                              "meta_title": "1",
-                              "meta_description": "1",
-                              "meta_keywords": "1",
-                              "name": "1",
-                              "slug": "2",
-                              "position": "1",
-                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                              "description": "1",
-                              "facebook": "1",
-                              "instagram": "1",
-                              "twitter": "1",
-                              "youtube": "1"
+                              "id": 1,
+                              "meta_title": "Ljubov Dzuzhynska",
+                              "name": "Ljubov Dzuzhynska",
+                              "slug": "Ljubov Dzuzhynska",
+                              "position": "Interview",
+                              "photo": "/storage/rectangle-203-1-1637433614pfmDn.png",
+                              "description": "Ljubov Dzuzhynska",
+                              "facebook": "https://ru.wikipedia.org/wiki/",
+                              "instagram": "https://ru.wikipedia.org/wiki/",
+                              "twitter": "https://ru.wikipedia.org/wiki/",
+                              "youtube": "https://www.youtube.com/"
                             }
+                          },
+                          {
+                            "article_title": "Интервью: Domenico Crisci",
+                            "main_image": "/storage/5-1638878489LMbv3.jpg",
+                            "article_preview_description": "итальянский ди-джей, продюсер электронной музыки и владелец музыкального лейбла SUMMA CUM LAUDE",
+                            "create_date": "2021-11-08T00:00:00.000000Z",
+                            "id": 18,
+                            "author_id": 2,
+                            "oneCategory": [
+                              {
+                                "id": 2,
+                                "category_title": "Интервью"
+                              }
+                            ],
+                            "author": {
+                              "id": 2,
+                              "meta_title": "Elena Savlokhova",
+                              "name": "Elena Savlokhova",
+                              "slug": "Elena Savlokhova",
+                              "position": "Interview",
+                              "photo": "/storage/rectangle-203-1637433624ROl7e.png",
+                              "description": "Lorem Ipsum is a fish text often used in print and web design. Lorem Ipsum has been the standard \"fish\" for Latin texts since the early 16th century."
+                            }
+                          },
+                          {
+                            "article_title": "Легендарное Аниме [часть 3]",
+                            "main_image": "/storage/8-1638879410tg20l.jpg",
+                            "article_preview_description": "«Аниме — японский термин, обозначающий все виды анимации».",
+                            "create_date": "2020-07-01T00:00:00.000000Z",
+                            "id": 19,
+                            "author_id": 1,
+                            "oneCategory": [
+                              {
+                                "id": 3,
+                                "category_title": "Quinque"
+                              },
+                              {
+                                "id": 5,
+                                "category_title": "Afflatus"
+                              }
+                            ],
+                            "author": {
+                              "id": 1,
+                              "meta_title": "Ljubov Dzuzhynska",
+                              "name": "Ljubov Dzuzhynska",
+                              "slug": "Ljubov Dzuzhynska",
+                              "position": "Interview",
+                              "photo": "/storage/rectangle-203-1-1637433614pfmDn.png",
+                              "description": "Ljubov Dzuzhynska",
+                              "facebook": "https://ru.wikipedia.org/wiki/",
+                              "instagram": "https://ru.wikipedia.org/wiki/",
+                              "twitter": "https://ru.wikipedia.org/wiki/",
+                              "youtube": "https://www.youtube.com/"
+                            }
+                          },
+                          {
+                            "article_title": "BLACK LIVES MATTER",
+                            "main_image": "/storage/9-1638879826Whe5G.jpg",
+                            "article_preview_description": "Документ составлен Сарой Софи Фликер, Алиссой Кляйн в мае 2020 года.",
+                            "create_date": "2020-06-02T00:00:00.000000Z",
+                            "id": 20,
+                            "oneCategory": [
+                              {
+                                "id": 1,
+                                "category_title": "Soulmates"
+                              },
+                              {
+                                "id": 2,
+                                "category_title": "Интервью"
+                              },
+                              {
+                                "id": 3,
+                                "category_title": "Quinque"
+                              },
+                              {
+                                "id": 4,
+                                "category_title": "Confession"
+                              },
+                              {
+                                "id": 5,
+                                "category_title": "Afflatus"
+                              },
+                              {
+                                "id": 6,
+                                "category_title": "Видео"
+                              }
+                            ]
                           }
                         ],
                         "article_for_3_block": {
-                          "visible": "true",
-                          "create_date": "2021-11-17T00:00:00.000000Z",
-                          "article_title": "1",
-                          "slug": "1",
-                          "author_id": 1,
-                          "interview": "1",
-                          "video_maker": "1",
-                          "main_image": "1",
-                          "social_network": [
+                          "article_title": "Влад Иваненко",
+                          "main_image": "/storage/1993afcf-16403546616yVI0.jpg",
+                          "article_preview_description": "владелец и главный редактор Playboy Украина",
+                          "create_date": "2021-08-30T00:00:00.000000Z",
+                          "id": 16,
+                          "oneCategory": [
                             {
-                              "social": "FB",
-                              "social_link": "11"
+                              "id": 1,
+                              "category_title": "Soulmates"
                             },
                             {
-                              "social": "SC",
-                              "social_link": "11"
+                              "id": 6,
+                              "category_title": "Видео"
+                            },
+                            {
+                              "id": 2,
+                              "category_title": "Интервью"
                             }
-                          ],
-                          "blocks": {
-                            "one_social": {
-                              "quote_label": "1",
-                              "textarea_md_font": "1",
-                              "textarea_lg_font_quote": "1",
-                              "textarea_sm_font_2_col": "1"
-                            },
-                            "left_img_title_desc": {
-                              "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                              "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                              "title": "1"
-                            },
-                            "right_img_title_desc": {
-                              "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                              "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                              "title": "1"
-                            },
-                            "img_quote": {
-                              "img": "/storage/screenshot-13-1634144521Ndd8M.png",
-                              "quote": "1",
-                              "img_label": "11"
-                            },
-                            "gallery_and_audio": {
-                              "img": [
-                                "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "/storage/screenshot-13-1634144521Ndd8M.png"
-                              ],
-                              "text": "1",
-                              "audio": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
-                            },
-                            "img_and_video": {
-                              "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                              "video": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
-                            }
-                          },
-                          "author": {
-                            "meta_title": "1",
-                            "meta_description": "1",
-                            "meta_keywords": "1",
-                            "name": "1",
-                            "slug": "2",
-                            "position": "1",
-                            "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                            "description": "1",
-                            "facebook": "1",
-                            "instagram": "1",
-                            "twitter": "1",
-                            "youtube": "1"
-                          }
+                          ]
                         },
                         "display_articles_4_block": [
                           {
-                            "visible": "true",
-                            "create_date": "2021-11-17T00:00:00.000000Z",
-                            "article_title": "1",
-                            "slug": "1",
+                            "article_title": "«12 Правил Жизни: Как Победить Хаос» Джордан Питерсон",
+                            "main_image": "/storage/11-1638880759oZ5vV.jpg",
+                            "article_preview_description": "Автор: Глеб Буряк — доцент украинско-американского университета «Конкордия»",
+                            "create_date": "2019-04-14T00:00:00.000000Z",
+                            "id": 22,
                             "author_id": 1,
-                            "interview": "1",
-                            "video_maker": "1",
-                            "main_image": "1",
-                            "social_network": [
+                            "oneCategory": [
                               {
-                                "social": "FB",
-                                "social_link": "11"
-                              },
-                              {
-                                "social": "SC",
-                                "social_link": "11"
+                                "id": 4,
+                                "category_title": "Confession"
                               }
                             ],
-                            "blocks": {
-                              "one_social": {
-                                "quote_label": "1",
-                                "textarea_md_font": "1",
-                                "textarea_lg_font_quote": "1",
-                                "textarea_sm_font_2_col": "1"
-                              },
-                              "left_img_title_desc": {
-                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "title": "1"
-                              },
-                              "right_img_title_desc": {
-                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "image": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "title": "1"
-                              },
-                              "img_quote": {
-                                "img": "/storage/screenshot-13-1634144521Ndd8M.png",
-                                "quote": "1",
-                                "img_label": "11"
-                              },
-                              "gallery_and_audio": {
-                                "img": [
-                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                  "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                  "/storage/screenshot-13-1634144521Ndd8M.png"
-                                ],
-                                "text": "1",
-                                "audio": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
-                              },
-                              "img_and_video": {
-                                "img": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                                "video": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg"
-                              }
-                            },
                             "author": {
-                              "meta_title": "1",
-                              "meta_description": "1",
-                              "meta_keywords": "1",
-                              "name": "1",
-                              "slug": "2",
-                              "position": "1",
-                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                              "description": "1",
-                              "facebook": "1",
-                              "instagram": "1",
-                              "twitter": "1",
-                              "youtube": "1"
+                              "id": 1,
+                              "meta_title": "Ljubov Dzuzhynska",
+                              "name": "Ljubov Dzuzhynska",
+                              "slug": "Ljubov Dzuzhynska",
+                              "position": "Interview",
+                              "photo": "/storage/rectangle-203-1-1637433614pfmDn.png",
+                              "description": "Ljubov Dzuzhynska",
+                              "facebook": "https://ru.wikipedia.org/wiki/",
+                              "instagram": "https://ru.wikipedia.org/wiki/",
+                              "twitter": "https://ru.wikipedia.org/wiki/",
+                              "youtube": "https://www.youtube.com/"
                             }
                           },
                           {
-                            "visible": "true",
-                            "create_date": "2021-11-18T00:00:00.000000Z",
-                            "article_title": "2",
-                            "slug": "12",
-                            "author_id": 1,
-                            "interview": "2",
-                            "video_maker": "2",
-                            "main_image": "2",
-                            "social_label": "2",
+                            "article_title": "Global Modular Traffic 2/3",
+                            "main_image": "/storage/12-1638880990Ll93K.jpeg",
+                            "article_preview_description": "Corridor Audio — это мечта, которая сбылась. Это платформа для экспериментов, главной целью которой является выпуск качественного украинского контента. Сегодня Corridor Audio создает симбиоз музыки и абстрактного искусства,  настраивая слушателя и зрителя на одну частоту. Основные критерии — художественная форма и рефлексия.",
+                            "create_date": "2019-11-05T00:00:00.000000Z",
+                            "id": 23,
+                            "oneCategory": [
+                              {
+                                "id": 5,
+                                "category_title": "Afflatus"
+                              }
+                            ]
+                          },
+                          {
+                            "article_title": "Украина на Budapest Showcase Hub 2019",
+                            "main_image": "/storage/13-16388812277HdLD.jpg",
+                            "create_date": "2019-11-29T00:00:00.000000Z",
+                            "id": 24,
+                            "author_id": 2,
+                            "oneCategory": [
+                              {
+                                "id": 5,
+                                "category_title": "Afflatus"
+                              }
+                            ],
                             "author": {
-                              "meta_title": "1",
-                              "meta_description": "1",
-                              "meta_keywords": "1",
-                              "name": "1",
-                              "slug": "2",
-                              "position": "1",
-                              "photo": "/storage/5ed0299f66909d1964e6659d60466222-xl-1634044584qIBR9.jpg",
-                              "description": "1",
-                              "facebook": "1",
-                              "instagram": "1",
-                              "twitter": "1",
-                              "youtube": "1"
+                              "id": 2,
+                              "meta_title": "Elena Savlokhova",
+                              "name": "Elena Savlokhova",
+                              "slug": "Elena Savlokhova",
+                              "position": "Interview",
+                              "photo": "/storage/rectangle-203-1637433624ROl7e.png",
+                              "description": "Lorem Ipsum is a fish text often used in print and web design. Lorem Ipsum has been the standard \"fish\" for Latin texts since the early 16th century."
+                            }
+                          },
+                          {
+                            "article_title": "Дмитрий Гордон",
+                            "main_image": "/storage/16-16388819964xOj8.jpg",
+                            "article_preview_description": "Дмитрий Гордон — украинский писатель, журналист и ведущий программы «В гостях у Дмитрия Гордона».",
+                            "create_date": "2021-05-06T00:00:00.000000Z",
+                            "id": 25,
+                            "author_id": 1,
+                            "oneCategory": [
+                              {
+                                "id": 2,
+                                "category_title": "Интервью"
+                              },
+                              {
+                                "id": 1,
+                                "category_title": "Soulmates"
+                              },
+                              {
+                                "id": 6,
+                                "category_title": "Видео"
+                              }
+                            ],
+                            "author": {
+                              "id": 1,
+                              "meta_title": "Ljubov Dzuzhynska",
+                              "name": "Ljubov Dzuzhynska",
+                              "slug": "Ljubov Dzuzhynska",
+                              "position": "Interview",
+                              "photo": "/storage/rectangle-203-1-1637433614pfmDn.png",
+                              "description": "Ljubov Dzuzhynska",
+                              "facebook": "https://ru.wikipedia.org/wiki/",
+                              "instagram": "https://ru.wikipedia.org/wiki/",
+                              "twitter": "https://ru.wikipedia.org/wiki/",
+                              "youtube": "https://www.youtube.com/"
                             }
                           }
-                        ]
+                        ],
+                        "social": {
+                          "facebook": "https://www.facebook.com/aughtmag",
+                          "instagram": "https://instagram.com/aughtmag/",
+                          "twitter": "https://twitter.com/Aughtmag",
+                          "youtube": "https://www.youtube.com/channel/UCV2R84kjsJqZb29oX17iP2w"
+                        }
                       }
                     }
                   }
