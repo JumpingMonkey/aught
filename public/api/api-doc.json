@@ -2810,6 +2810,118 @@
       },
       "parameters": []
     },
+    "/contacts": {
+      "get": {
+        "summary": "GET Contacts Page",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "",
+                  "type": "object",
+                  "x-examples": {
+                    "example-1": {
+                      "status": "success",
+                      "data": {
+                        "sort_title": "1",
+                        "grid_title": "1",
+                        "list_title": "1",
+                        "display_category": [
+                          {
+                            "id": 1,
+                            "category_title": "цццц"
+                          },
+                          {
+                            "id": 2,
+                            "category_title": "ццццц"
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "sort_title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "grid_title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "list_title": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "display_category": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "category_title": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example-1": {
+                    "value": {
+                      "status": "success",
+                      "data": {
+                        "sort_title": "1",
+                        "grid_title": "1",
+                        "list_title": "1",
+                        "display_category": [
+                          {
+                            "id": 1,
+                            "category_title": "цццц"
+                          },
+                          {
+                            "id": 2,
+                            "category_title": "ццццц"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/404-error"
+          }
+        },
+        "operationId": "get-contacts-page",
+        "description": "Get contacts page",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/lang"
+          }
+        ]
+      },
+      "parameters": []
+    },
     "/category/{id}": {
       "get": {
         "summary": "GET One Category",
