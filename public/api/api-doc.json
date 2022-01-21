@@ -3034,10 +3034,10 @@
                       "status": "success",
                       "data": {
                         "id": 16,
-                        "meta_title": "Видео Интервью: Влад Иваненко",
+                        "meta_title": "Влад Иваненко",
                         "visible": "true",
                         "create_date": "2021-08-30T00:00:00.000000Z",
-                        "article_title": "Видео Интервью: Влад Иваненко",
+                        "article_title": "Влад Иваненко",
                         "slug": "vlad_ivanenko",
                         "author_id": 1,
                         "interview": "Любовь Дзюжинская",
@@ -3059,6 +3059,26 @@
                           }
                         ],
                         "article_preview_description": "владелец и главный редактор Playboy Украина",
+                        "oneCategory": [
+                          {
+                            "id": 1,
+                            "category_title": "Soulmates",
+                            "slug": "Soulmates",
+                            "category_description": "Lorem Ipsum is a fish text often used in print and web design. Lorem Ipsum has been the standard \"fish\" for Latin texts since the early 16th century."
+                          },
+                          {
+                            "id": 6,
+                            "category_title": "Видео",
+                            "slug": "video",
+                            "category_description": "Lorem Ipsum is a fish text often used in print and web design. Lorem Ipsum has been the standard \"fish\" for Latin texts since the early 16th century."
+                          },
+                          {
+                            "id": 2,
+                            "category_title": "Интервью",
+                            "slug": "Interviews",
+                            "category_description": "Тестовое описание для проверки"
+                          }
+                        ],
                         "author": {
                           "id": 1,
                           "meta_title": "Ljubov Dzuzhynska",
@@ -3147,6 +3167,31 @@
                           "type": "string",
                           "minLength": 1
                         },
+                        "oneCategory": {
+                          "type": "array",
+                          "uniqueItems": true,
+                          "minItems": 1,
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "number"
+                              },
+                              "category_title": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "slug": {
+                                "type": "string",
+                                "minLength": 1
+                              },
+                              "category_description": {
+                                "type": "string",
+                                "minLength": 1
+                              }
+                            }
+                          }
+                        },
                         "author": {
                           "type": "object",
                           "properties": {
@@ -3205,10 +3250,10 @@
                       "status": "success",
                       "data": {
                         "id": 16,
-                        "meta_title": "Видео Интервью: Влад Иваненко",
+                        "meta_title": "Влад Иваненко",
                         "visible": "true",
                         "create_date": "2021-08-30T00:00:00.000000Z",
-                        "article_title": "Видео Интервью: Влад Иваненко",
+                        "article_title": "Влад Иваненко",
                         "slug": "vlad_ivanenko",
                         "author_id": 1,
                         "interview": "Любовь Дзюжинская",
@@ -3230,6 +3275,26 @@
                           }
                         ],
                         "article_preview_description": "владелец и главный редактор Playboy Украина",
+                        "oneCategory": [
+                          {
+                            "id": 1,
+                            "category_title": "Soulmates",
+                            "slug": "Soulmates",
+                            "category_description": "Lorem Ipsum is a fish text often used in print and web design. Lorem Ipsum has been the standard \"fish\" for Latin texts since the early 16th century."
+                          },
+                          {
+                            "id": 6,
+                            "category_title": "Видео",
+                            "slug": "video",
+                            "category_description": "Lorem Ipsum is a fish text often used in print and web design. Lorem Ipsum has been the standard \"fish\" for Latin texts since the early 16th century."
+                          },
+                          {
+                            "id": 2,
+                            "category_title": "Интервью",
+                            "slug": "Interviews",
+                            "category_description": "Тестовое описание для проверки"
+                          }
+                        ],
                         "author": {
                           "id": 1,
                           "meta_title": "Ljubov Dzuzhynska",
