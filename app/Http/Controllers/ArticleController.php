@@ -15,7 +15,9 @@ class ArticleController extends Controller
      */
     public function getOneArticle(Request $request)
     {
-        $data = OneArticleModel::query()->where('id', $request->id)->firstOrFail();
+        $data = OneArticleModel::query()
+            ->with(['oneCategory'])
+            ->where('id', $request->id)->firstOrFail();
         $content = $data->getFullData();
 
 //        $author = OneAuthorModel::query()->where('id', $content['author_id'])->firstOrFail();
