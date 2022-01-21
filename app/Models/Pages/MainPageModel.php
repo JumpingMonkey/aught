@@ -3,6 +3,7 @@
 namespace App\Models\Pages;
 
 use App\Models\OneArticleModel;
+use App\Models\Parts\FooterModel;
 use App\Traits\TranslateAndConvertMediaUrl;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -108,6 +109,14 @@ class MainPageModel extends Model
         return $object;
     }
 
+    public static function getSocialLinks($object){
+        $footer = FooterModel::query()
+            ->firstOrFail(['facebook', 'instagram', 'twitter', 'youtube']);
+        $footer = $footer->getFullData();
+        $object['social'] = $footer;
+        return $object;
+    }
+
     public function getFullData()
     {
         try {
@@ -119,6 +128,7 @@ class MainPageModel extends Model
                 $data = self::getArticles($data, 'display_articles_2_block');
                 $data = self::getArticles($data, 'display_articles_4_block');
                 $data = self::getOneArticle($data, 'article_for_3_block');
+                $data = self::getSocialLinks($data);
 
 
             return $data;
