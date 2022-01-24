@@ -3,6 +3,7 @@
 namespace App\Nova;
 
 use App\Models\OneCategoryModel;
+use ClassicO\NovaMediaLibrary\MediaLibrary;
 use Digitalcloud\MultilingualNova\Multilingual;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
@@ -58,6 +59,10 @@ class OneCategory extends Resource
             Text::make('Meta-title', 'meta_title'),
             Text::make('Meta-description', 'meta_description'),
             Text::make('Meta-keywords', 'meta_keywords'),
+
+            Text::make('Og title', 'og_title')->hideFromIndex(),
+            Text::make('Og description', 'og_description')->hideFromIndex(),
+            MediaLibrary::make('Og image', 'og_img')->hideFromIndex(),
 
             Text::make('Название категории', 'category_title'),
             Text::make('Слаг', 'slug'),

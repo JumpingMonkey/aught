@@ -20,6 +20,8 @@ class PrivacyPolicyModel extends Model
         'meta_keywords',
         'title',
         'blocks',
+        'og_title',
+        'og_description',
     ];
 
     public $translatable = [
@@ -28,6 +30,12 @@ class PrivacyPolicyModel extends Model
         'meta_keywords',
         'title',
         'blocks',
+        'og_title',
+        'og_description',
+    ];
+
+    public $mediaToUrl = [
+        'og_img',
     ];
 
     public static function normalizeData($object)

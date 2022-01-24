@@ -34,6 +34,8 @@ class OneArticleModel extends Model
         'social_label',
         'social_network',
         'blocks',
+        'og_title',
+        'og_description',
     ];
 
     public $translatable = [
@@ -48,6 +50,8 @@ class OneArticleModel extends Model
         'social_label',
         'social_network',
         'blocks',
+        'og_title',
+        'og_description',
     ];
 
     public $mediaToUrl = [
@@ -57,7 +61,7 @@ class OneArticleModel extends Model
         'video',
         'audio',
         'main_image',
-
+        'og_img',
     ];
 
     public function oneCategory()

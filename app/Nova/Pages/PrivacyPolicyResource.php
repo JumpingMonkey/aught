@@ -3,6 +3,7 @@
 namespace App\Nova\Pages;
 
 use App\Models\Pages\PrivacyPolicyModel;
+use ClassicO\NovaMediaLibrary\MediaLibrary;
 use Digitalcloud\MultilingualNova\Multilingual;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
@@ -59,6 +60,10 @@ class PrivacyPolicyResource extends Resource
             Text::make('Meta-title', 'meta_title'),
             Text::make('Meta-description', 'meta_description'),
             Text::make('Meta-keywords', 'meta_keywords'),
+
+            Text::make('Og title', 'og_title')->hideFromIndex(),
+            Text::make('Og description', 'og_description')->hideFromIndex(),
+            MediaLibrary::make('Og image', 'og_img')->hideFromIndex(),
 
             Text::make('Title', 'title'),
             Flexible::make('Blocks', 'blocks')

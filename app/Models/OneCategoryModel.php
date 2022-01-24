@@ -21,6 +21,8 @@ class OneCategoryModel extends Model
         'category_title',
         'slug',
         'category_description',
+        'og_title',
+        'og_description',
     ];
 
     public $translatable = [
@@ -28,8 +30,14 @@ class OneCategoryModel extends Model
         'meta_description',
         'meta_keywords',
         'category_title',
+        'og_title',
+        'og_description',
 
         'category_description',
+    ];
+
+    public $mediaToUrl = [
+        'og_img',
     ];
 
     public function articles()

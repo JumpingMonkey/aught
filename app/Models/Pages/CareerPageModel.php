@@ -21,6 +21,8 @@ class CareerPageModel extends Model
         'title',
         'description',
         'vacancies',
+        'og_title',
+        'og_description',
     ];
 
     public $translatable = [
@@ -30,11 +32,14 @@ class CareerPageModel extends Model
         'title',
         'description',
         'vacancies',
+        'og_title',
+        'og_description',
     ];
 
     public $mediaToUrl = [
         'img',
-        'vacancies'
+        'vacancies',
+        'og_img',
     ];
 
     public static function normalizeData($object)

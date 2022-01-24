@@ -66,6 +66,10 @@ class AboutPageResource extends Resource
             Text::make('Meta-description', 'meta_description'),
             Text::make('Meta-keywords', 'meta_keywords'),
 
+            Text::make('Og title', 'og_title')->hideFromIndex(),
+            Text::make('Og description', 'og_description')->hideFromIndex(),
+            MediaLibrary::make('Og image', 'og_img')->hideFromIndex(),
+
             Textarea::make('Заголовок', 'title'),
 
             Tabs::make('Блоки', [

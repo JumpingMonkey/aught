@@ -27,6 +27,8 @@ class OneAuthorModel extends Model
         'instagram',
         'twitter',
         'youtube',
+        'og_title',
+        'og_description',
     ];
 
     protected $translatable = [
@@ -40,10 +42,13 @@ class OneAuthorModel extends Model
         'instagram',
         'twitter',
         'youtube',
+        'og_title',
+        'og_description',
     ];
 
     public $mediaToUrl = [
         'photo',
+        'og_img',
     ];
 
     public function articles()

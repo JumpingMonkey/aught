@@ -58,6 +58,10 @@ class OneAuthorResource extends Resource
             Text::make('Meta-description', 'meta_description')->hideFromIndex(),
             Text::make('Meta-keywords', 'meta_keywords')->hideFromIndex(),
 
+            Text::make('Og title', 'og_title')->hideFromIndex(),
+            Text::make('Og description', 'og_description')->hideFromIndex(),
+            MediaLibrary::make('Og image', 'og_img')->hideFromIndex(),
+
             Text::make('Имя', 'name'),
             Text::make('Слаг', 'slug')->rules('required')->creationRules('unique:one_author_models,slug'),
             Text::make('Должность', 'position'),

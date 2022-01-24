@@ -23,6 +23,8 @@ class MainPageModel extends Model
         'display_articles_2_block',
         'article_for_3_block',
         'display_articles_4_block',
+        'og_title',
+        'og_description',
     ];
 
     public $translatable = [
@@ -31,6 +33,8 @@ class MainPageModel extends Model
         'display_articles_2_block',
         'article_for_3_block',
         'display_articles_4_block',
+        'og_title',
+        'og_description',
     ];
 
     public $mediaToUrl = [

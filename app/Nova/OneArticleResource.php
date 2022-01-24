@@ -64,6 +64,11 @@ class OneArticleResource extends Resource
             Text::make('Meta-title', 'meta_title')->hideFromIndex(),
             Text::make('Meta-description', 'meta_description')->hideFromIndex(),
             Text::make('Meta-keywords', 'meta_keywords')->hideFromIndex(),
+
+            Text::make('Og title', 'og_title')->hideFromIndex(),
+            Text::make('Og description', 'og_description')->hideFromIndex(),
+            MediaLibrary::make('Og image', 'og_img')->hideFromIndex(),
+
             BelongsToMany::make('OneCategory'),
             Boolean::make('Отображать на сайте?', 'visible')
                 ->trueValue('true')
@@ -94,10 +99,10 @@ class OneArticleResource extends Resource
             ])->button('Добавить соцсеть'),
 
             Flexible::make('Блоки', 'blocks')->hideFromIndex()
-                ->addLayout('Соцсеть', 'one_social',[
+                ->addLayout('Блок с цитатой', 'one_social',[
                     Textarea::make('Многострочное поле ср. шрифт', 'textarea_md_font'),
                     Textarea::make('Многострочное поле мал. шрифт две кол. 1', 'textarea_sm_font_1_col'),
-                    Textarea::make('Многострочное поле мал. шрифт две кол. 2', 'textarea_sm_font_2_col'),
+//                    Textarea::make('Многострочное поле мал. шрифт две кол. 2', 'textarea_sm_font_2_col'),
                     Textarea::make('Цитата бол. шрифт', 'textarea_lg_font_quote'),
                     Text::make('Подпись к цитате', 'quote_label'),
                 ])
@@ -118,7 +123,8 @@ class OneArticleResource extends Resource
                 ])
                 ->addLayout('Галерея + аудио ', 'gallery_and_audio', [
                     MediaLibrary::make('Фото', 'img')->array(),
-                    Textarea::make('Текст', 'text'),
+                    Textarea::make('Текст(большой шрифт)', 'large_font_text'),
+                    Textarea::make('Текст(мал. шрифт)', 'small_font_text'),
                     MediaLibrary::make('Аудио', 'audio'),
                 ])
                 ->addLayout('Текстовый блок', 'text_content_block', [

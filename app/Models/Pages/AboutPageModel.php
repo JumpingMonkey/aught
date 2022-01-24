@@ -29,6 +29,8 @@ class AboutPageModel extends Model
         'right_small_text',
         'gallery',
         'creeping_line',
+        'og_title',
+        'og_description',
     ];
 
     public $translatable = [
@@ -43,13 +45,16 @@ class AboutPageModel extends Model
         'left_small_text',
         'right_small_text',
         'creeping_line',
+        'og_title',
+        'og_description',
     ];
 
     public $mediaToUrl = [
         'big_img',
         'small_img',
         'gallery',
-        'img'
+        'img',
+        'og_img',
     ];
 
     public static function normalizeData($object)
