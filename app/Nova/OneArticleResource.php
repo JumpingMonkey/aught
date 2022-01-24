@@ -6,7 +6,9 @@ use App\Models\OneArticleModel;
 use App\Models\OneAuthorModel;
 use ClassicO\NovaMediaLibrary\MediaLibrary;
 use Digitalcloud\MultilingualNova\Multilingual;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\BelongsToMany;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Date;
@@ -77,6 +79,7 @@ class OneArticleResource extends Resource
             Text::make('Заголовок', 'article_title'),
             Text::make('Описание для превью', 'article_preview_description')->hideFromIndex(),
             Text::make('Слаг', 'slug')->creationRules('unique:one_article_models,slug')->hideFromIndex(),
+            BelongsTo::make('Автор', 'author', OneAuthorResource::class),
             Select::make('Автор статьи', 'author_id')->options(
                 OneAuthorModel::all()->pluck('name', 'id')
             )->displayUsingLabels()->hideFromIndex(),
