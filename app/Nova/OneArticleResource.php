@@ -88,7 +88,6 @@ class OneArticleResource extends Resource
 
             MediaLibrary::make('Фото', 'main_image')->rules('required')->hideFromIndex(),
 
-            Text::make('Подпись к соц сетям', 'social_label')->hideFromIndex(),
             Flexible::make('Соцсети', 'social_network')->hideFromIndex()
             ->addLayout('Соцсеть', 'one_social',[
                 Select::make('Соцсеть', 'social')->options([
