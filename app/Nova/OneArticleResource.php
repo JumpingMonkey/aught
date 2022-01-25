@@ -102,41 +102,47 @@ class OneArticleResource extends Resource
             ])->button('Добавить соцсеть'),
 
             Flexible::make('Блоки', 'blocks')->hideFromIndex()
-                ->addLayout('Блок с цитатой', 'one_social',[
-                    Textarea::make('Многострочное поле ср. шрифт', 'textarea_md_font'),
-                    Textarea::make('Многострочное поле мал. шрифт две кол. 1', 'textarea_sm_font_1_col'),
-//                    Textarea::make('Многострочное поле мал. шрифт две кол. 2', 'textarea_sm_font_2_col'),
-                    Textarea::make('Цитата бол. шрифт', 'textarea_lg_font_quote'),
+                ->addLayout('Заголовок', 'title', [
+                    Textarea::make('Заголовок', 'title'),
+                ])
+                ->addLayout('Текст', 'text', [
+                    Textarea::make('Текст', 'text'),
+                ])
+                ->addLayout('Цитата', 'quote', [
+                    Textarea::make('Цитата', 'quote'),
                     Text::make('Подпись к цитате', 'quote_label'),
                 ])
+                ->addLayout('Точка', 'mark_list', [
+                    Trix::make('Точка', 'mark_list'),
+                ])
                 ->addLayout('Фото слева + заг. опис.', 'left_img_title_desc', [
-                    Text::make('Заголовок', 'title'),
+                    Textarea::make('Заголовок', 'title'),
                     Textarea::make('Описание', 'image'),
                     MediaLibrary::make('Фото', 'img')
                 ])
                 ->addLayout('Фото справа + заг. опис.', 'right_img_title_desc', [
-                    Text::make('Заголовок', 'title'),
+                    Textarea::make('Заголовок', 'title'),
                     Textarea::make('Описание', 'image'),
                     MediaLibrary::make('Фото', 'img')
                 ])
-                ->addLayout('Фото и цитата ', 'img_quote', [
+                ->addLayout('Фото+цитата ', 'img_quote', [
                     Textarea::make('Цитата', 'quote'),
                     MediaLibrary::make('Фото', 'img'),
                     Text::make('Подпись к фото', 'img_label'),
                 ])
-                ->addLayout('Галерея + аудио ', 'gallery_and_audio', [
-                    MediaLibrary::make('Фото', 'img')->array(),
-                    Textarea::make('Текст(большой шрифт)', 'large_font_text'),
-                    Textarea::make('Текст(мал. шрифт)', 'small_font_text'),
+                ->addLayout('Цифра', 'number_list', [
+                    Trix::make('Цифра', 'number_list'),
+                ])
+                ->addLayout('Слайдер', 'slider', [
+                    MediaLibrary::make('Слайд', 'slide')->array(),
+                ])
+                ->addLayout('Аудио', 'audio', [
                     MediaLibrary::make('Аудио', 'audio'),
                 ])
-                ->addLayout('Текстовый блок', 'text_content_block', [
-                    Textarea::make('Текст 1', 'text_1'),
-                    Trix::make('Список', 'list'),
-                    Textarea::make('Текст 2', 'text_2'),
-                ])
-                ->addLayout('Фото + видео ', 'img_and_video', [
+                ->addLayout('Фото', 'img', [
                     MediaLibrary::make('Фото', 'img'),
+                ])
+                ->addLayout('Видео ', 'video', [
                     MediaLibrary::make('Видео', 'video'),
                 ])->button('Добавить блок'),
         ];
