@@ -15,7 +15,7 @@ class AuthorController extends Controller
      */
     public function getAuthorList()
     {
-        $data = OneAuthorModel::query()->select('name', 'id', 'facebook', 'instagram', 'twitter', 'youtube')->get();
+        $data = OneAuthorModel::query()->select('name', 'id', 'facebook', 'instagram', 'twitter', 'youtube', 'photo', 'position', 'description')->get();
         $authorsData = [];
         foreach ($data as $author){
             $authorsData[] = $author->getFullData();
