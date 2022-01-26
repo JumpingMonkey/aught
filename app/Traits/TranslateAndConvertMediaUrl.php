@@ -11,7 +11,12 @@ trait TranslateAndConvertMediaUrl
             if ($getLayoutName){
                 foreach ($object[$fieldName] as $key => $item){
                     if ($fullCloneAttribute){
-                        $newData[$key . "_" . $item["layout"]] = $item["attributes"];
+
+                        if (array_key_exists('slide', $item["attributes"])){
+                            $newData[$key . "_" . $item["layout"]] = $item["attributes"]['slide'];
+                        } else {
+                            $newData[$key . "_" . $item["layout"]] = $item["attributes"];
+                        }
                         continue;
                     }
                     if ($isObject){
@@ -23,7 +28,11 @@ trait TranslateAndConvertMediaUrl
             } else {
                 foreach ($object[$fieldName] as $key => $item){
                     if ($fullCloneAttribute){
-                        $newData[] = $item["attributes"];
+                        if (array_key_exists('slide', $item["attributes"])){
+                            $newData[] = $item["attributes"]['slide'];
+                        } else {
+                            $newData[] = $item["attributes"];
+                        }
                         continue;
                     }
                     if ($isObject){
