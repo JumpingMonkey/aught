@@ -20,7 +20,10 @@ class AboutPageController extends Controller
         $data = AboutPageModel::firstOrFail();
         $content = $data->getFullData();
 
-        $authors = OneAuthorModel::query()->select('name', 'id', 'facebook', 'instagram', 'twitter', 'youtube', 'photo', 'position', 'description')->get();
+        $authors = OneAuthorModel::query()
+            ->select('name', 'id', 'facebook', 'instagram', 'twitter', 'youtube', 'photo', 'position', 'description')
+            ->limit(2)
+            ->get();
         $authorsData = [];
         foreach ($authors as $author){
             $authorsData[] = $author->getFullData();
