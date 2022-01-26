@@ -16,7 +16,10 @@ class ContactsPageController extends Controller
             ->firstOrFail(['contact_email', 'facebook', 'instagram', 'twitter', 'youtube']);
         $footer = $footer->getFullData();
 
-        $data = OneAuthorModel::query()->select('name', 'id', 'facebook', 'instagram', 'twitter', 'youtube')->get();
+        $data = OneAuthorModel::query()
+            ->select('name', 'id', 'facebook', 'instagram', 'twitter', 'youtube')
+            ->limit(2)
+            ->get();
         $authorsData = [];
         foreach ($data as $author){
             $authorsData[] = $author->getFullData();
