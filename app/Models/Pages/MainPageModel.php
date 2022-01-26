@@ -17,24 +17,31 @@ class MainPageModel extends Model
     protected $table = 'main_page_models';
 
     protected $fillable = [
+        'meta_title',
+        'meta_description',
+        'meta_keywords',
+        'og_title',
+        'og_description',
+        'og_img',
         'logo',
         'hero_slider_articles',
         'hero_btn_title',
         'display_articles_2_block',
         'article_for_3_block',
         'display_articles_4_block',
-        'og_title',
-        'og_description',
     ];
 
     public $translatable = [
+        'meta_title',
+        'meta_description',
+        'meta_keywords',
+        'og_title',
+        'og_description',
         'hero_slider_articles',
         'hero_btn_title',
         'display_articles_2_block',
         'article_for_3_block',
         'display_articles_4_block',
-        'og_title',
-        'og_description',
     ];
 
     public $mediaToUrl = [
