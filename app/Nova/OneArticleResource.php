@@ -6,6 +6,9 @@ use App\Models\OneArticleModel;
 use App\Models\OneAuthorModel;
 use ClassicO\NovaMediaLibrary\MediaLibrary;
 use Digitalcloud\MultilingualNova\Multilingual;
+use Drobee\NovaSluggable\Slug;
+use Drobee\NovaSluggable\SluggableText;
+
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
@@ -76,10 +79,14 @@ class OneArticleResource extends Resource
                 ->trueValue('true')
                 ->falseValue('false')->hideFromIndex(),
             Date::make('Дата создания', 'create_date')->nullable()->hideFromIndex(),
-            Text::make('Заголовок', 'article_title'),
+            SluggableText::make('Заголовок', 'article_title')->slug('Слаг'),
             Text::make('Описание для превью', 'article_preview_description')->hideFromIndex(),
-            Text::make('Слаг', 'slug')->creationRules('unique:one_article_models,slug')->hideFromIndex(),
-            BelongsTo::make('Автор', 'author', OneAuthorResource::class),
+            Slug::make('Слаг', 'slug')->hideFromIndex(),
+//            Slug::make('Слаг', 'slug')
+//                ->from('article_title')
+//                ->creationRules('unique:one_article_models,slug')
+//                ->hideFromIndex(),
+//            BelongsTo::make('Автор', 'author', OneAuthorResource::class),
             Select::make('Автор статьи', 'author_id')->options(
                 OneAuthorModel::all()->pluck('name', 'id')
             )->displayUsingLabels()->hideFromIndex(),
