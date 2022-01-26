@@ -62,6 +62,7 @@ class OneArticleModel extends Model
         'audio',
         'main_image',
         'og_img',
+        'slide',
     ];
 
     public function oneCategory()
