@@ -81,7 +81,9 @@ class OneArticleResource extends Resource
             Date::make('Дата создания', 'create_date')->nullable()->hideFromIndex(),
             SluggableText::make('Заголовок', 'article_title')->slug('Слаг'),
             Text::make('Описание для превью', 'article_preview_description')->hideFromIndex(),
-            Slug::make('Слаг', 'slug')->hideFromIndex(),
+            Slug::make('Слаг', 'slug')
+                ->rules('unique:one_article_models,slug')
+                ->hideFromIndex(),
 //            Slug::make('Слаг', 'slug')
 //                ->from('article_title')
 //                ->creationRules('unique:one_article_models,slug')

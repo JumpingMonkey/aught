@@ -15,10 +15,18 @@ class ArticleController extends Controller
      */
     public function getOneArticle(Request $request)
     {
-        $data = OneArticleModel::query()
-            ->with(['oneCategory'])
-            ->where('id', $request->id)->firstOrFail();
-        $content = $data->getFullData();
+        if ($request->slug != null) {
+            $data = OneArticleModel::query()
+                ->with(['oneCategory'])
+                ->where('slug', $request->slug)->firstOrFail();
+            $content = $data->getFullData();
+        } else {
+            $data = OneArticleModel::query()
+                ->with(['oneCategory'])
+                ->where('id', $request->id)->firstOrFail();
+            $content = $data->getFullData();
+        }
+
 
 //        $author = OneAuthorModel::query()->where('id', $content['author_id'])->firstOrFail();
 //        $authorContent = $author->getFullData();
