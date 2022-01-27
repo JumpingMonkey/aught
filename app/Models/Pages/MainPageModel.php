@@ -83,12 +83,15 @@ class MainPageModel extends Model
                 'one_category_models.id',
                 'category_title',
             );
-        }])->whereIn("id", $articleIds)->get();
+        }])->whereIn("id", $articleIds, '', '',)->get();
 
-        foreach ($articles as $article){
-
-            $content[] = $article->getDataForMain();
+        foreach ($articleIds as $id){
+            $content[] = $articles->where('id', $id)->firstOrFail()->getDataForMain();
         }
+//        foreach ($articles as $article){
+//
+//            $content[] = $article->getDataForMain();
+//        }
 
         $object[$fieldName] = $content;
 
