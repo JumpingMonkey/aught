@@ -82,7 +82,7 @@ class MainPageResource extends Resource
                     )->displayUsingLabels()
                 ])->button('Добавить статью'),
 
-            Select::make('Статья в третьем блоке', 'article_for_3_block')->searchable()->options(
+            Select::make('Статья в третьем блоке', 'article_for_3_block')->nullable()->searchable()->options(
                 OneArticleModel::all()->pluck('article_title', 'id'),
             )->displayUsingLabels(),
             Flexible::make('Отображаемые статьи 4 блок', 'display_articles_4_block')

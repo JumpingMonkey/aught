@@ -62,9 +62,50 @@ class MainPageModel extends Model
 
     public static function getArticles ($object, $fieldName) {
 
+//If the object is not include field
         if (!array_key_exists($fieldName, $object)) {
+            $articles = OneArticleModel::query()->select(
+                'article_title',
+                'main_image',
+                'article_preview_description',
+                'create_date',
+                'id',
+                'author_id',
+                'slug',
+            )->with(['oneCategory' => function($query) {
+                $query->select(
+                    'one_category_models.id',
+                    'category_title',
+                );
+            }])->limit(6)
+                ->orderByDesc('id')
+                ->get();
+
+            if ($articles->count() == 0) {
+                $object[$fieldName] = 'Articles not found!';
+                return $object;
+            };
+
+            switch ($fieldName){
+                case 'hero_slider_articles':
+                    $articles = array_slice($articles->all(), 0, 3);
+                    foreach ($articles as $article){
+                        $content[] = $article->getDataForMain();
+                    }
+                    $object[$fieldName] = $content;
+                    break;
+                case 'display_articles_2_block':
+                case 'display_articles_4_block':
+                    foreach ($articles as $article){
+                        $content[] = $article->getDataForMain();
+                    }
+                    $object[$fieldName] = $content;
+                    break;
+            }
             return $object;
         }
+// end block "If the object is not include field"
+
 
         $articleIds = [];
         foreach ($object[$fieldName] as $value){
@@ -84,11 +125,19 @@ class MainPageModel extends Model
                 'one_category_models.id',
                 'category_title',
             );
-        }])->whereIn("id", $articleIds)->get();
+        }])->whereIn("id", $articleIds)->first();
 
-        foreach ($articleIds as $id){
-            $content[] = $articles->where('id', $id)->firstOrFail()->getDataForMain();
+        if ($articles !== null){
+            foreach ($articleIds as $id){
+                $res = $articles->where('id', $id)->first();
+                if ($res !== null) {
+                    $content[] = $res->getDataForMain();
+                }
+            }
+        } else {
+            $content[] = 'Articles not found!';
         }
+
 //        foreach ($articles as $article){
 //
 //            $content[] = $article->getDataForMain();
@@ -102,6 +151,28 @@ class MainPageModel extends Model
     public static function getOneArticle ($object, $fieldName) {
 
         if (!array_key_exists($fieldName, $object)) {
+            $article = OneArticleModel::query()->select(
+                'article_title',
+                'main_image',
+                'article_preview_description',
+                'create_date',
+                'id',
+                'author_id',
+                'slug',
+            )->with(['oneCategory' => function($query) {
+                $query->select(
+                    'one_category_models.id',
+                    'category_title',
+                );
+            }])->orderByDesc('id')
+                ->first();
+
+            if ($article == null) {
+                $object[$fieldName] = 'Articles not found!';
+                return $object;
+            } else {
+                $object[$fieldName] = $article->getDataForMain();
+            }
             return $object;
         }
 
@@ -119,10 +190,31 @@ class MainPageModel extends Model
                     'category_title',
                 );
             }])
-            ->where("id", $object[$fieldName])->firstOrFail();
+            ->where("id", $object[$fieldName])->first();
 
-        $object[$fieldName] = $article->getDataForMain();
-
+        if ($article !== null) {
+            $object[$fieldName] = $article->getDataForMain();
+        } else {
+            $defaultArticle = OneArticleModel::query()
+                ->select(
+                    'article_title',
+                    'main_image',
+                    'article_preview_description',
+                    'create_date',
+                    'id',
+                    'slug',
+                )->with(['oneCategory' => function($query) {
+                    $query->select(
+                        'one_category_models.id',
+                        'category_title',
+                    );
+                }])->first();
+            if ($defaultArticle !== null) {
+                $object[$fieldName] = $defaultArticle->getDataForMain();
+            } else {
+                $object[$fieldName] = "Article not found!";
+            }
+        }
         return $object;
     }
 
