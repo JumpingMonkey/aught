@@ -78,12 +78,13 @@ class MainPageModel extends Model
             'create_date',
             'id',
             'author_id',
+            'slug',
         )->with(['oneCategory' => function($query) {
             $query->select(
                 'one_category_models.id',
                 'category_title',
             );
-        }])->whereIn("id", $articleIds, '', '',)->get();
+        }])->whereIn("id", $articleIds)->get();
 
         foreach ($articleIds as $id){
             $content[] = $articles->where('id', $id)->firstOrFail()->getDataForMain();
@@ -110,7 +111,8 @@ class MainPageModel extends Model
                 'main_image',
                 'article_preview_description',
                 'create_date',
-                'id'
+                'id',
+                'slug',
             )->with(['oneCategory' => function($query) {
                 $query->select(
                     'one_category_models.id',
@@ -144,7 +146,6 @@ class MainPageModel extends Model
                 $data = self::getArticles($data, 'display_articles_4_block');
                 $data = self::getOneArticle($data, 'article_for_3_block');
                 $data = self::getSocialLinks($data);
-
 
             return $data;
 
