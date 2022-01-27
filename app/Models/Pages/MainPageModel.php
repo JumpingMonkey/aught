@@ -125,7 +125,7 @@ class MainPageModel extends Model
                 'one_category_models.id',
                 'category_title',
             );
-        }])->whereIn("id", $articleIds)->first();
+        }])->whereIn("id", $articleIds)->get();
 
         if ($articles !== null){
             foreach ($articleIds as $id){
