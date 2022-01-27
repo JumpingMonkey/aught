@@ -95,7 +95,10 @@ class OneArticleResource extends Resource
             Text::make('Интервьюер', 'interview')->hideFromIndex(),
             Text::make('Видеоограф/фотограф', 'video_maker')->hideFromIndex(),
 
-            MediaLibrary::make('Фото', 'main_image')->rules('required')->hideFromIndex(),
+            MediaLibrary::make('Фото', 'main_image')
+                ->array('list')
+                ->rules('required')
+                ->hideFromIndex(),
 
             Flexible::make('Соцсети', 'social_network')->hideFromIndex()
             ->addLayout('Соцсеть', 'one_social',[

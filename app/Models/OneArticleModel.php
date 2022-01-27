@@ -15,7 +15,8 @@ class OneArticleModel extends Model
     protected $table = 'one_article_models';
 
     protected $casts = [
-        'create_date' => 'date'
+        'create_date' => 'date',
+        'main_image' => 'array'
     ];
 
     protected $fillable = [
