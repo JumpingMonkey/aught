@@ -96,7 +96,7 @@ class OneArticleResource extends Resource
             Text::make('Видеоограф/фотограф', 'video_maker')->hideFromIndex(),
 
             MediaLibrary::make('Фото', 'main_image')
-                ->array('list')
+//                ->array('list')
                 ->rules('required')
                 ->hideFromIndex(),
 
