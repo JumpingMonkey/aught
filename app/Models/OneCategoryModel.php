@@ -83,4 +83,17 @@ class OneCategoryModel extends Model
 
     }
 
+    public function getDataForPartsPage()
+    {
+        try {
+
+            $data = $this->getAllWithMediaUrlWithout(['created_at', 'updated_at', 'meta_title', 'meta_description', 'meta_keywords', 'category_description']);
+            return self::normalizeData($data);
+
+        } catch (\Exception $ex) {
+            throw new ModelNotFoundException();
+        }
+
+    }
+
 }

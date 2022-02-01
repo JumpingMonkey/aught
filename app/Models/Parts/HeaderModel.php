@@ -2,6 +2,7 @@
 
 namespace App\Models\Parts;
 
+use App\Models\OneCategoryModel;
 use App\Traits\TranslateAndConvertMediaUrl;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -35,11 +36,29 @@ class HeaderModel extends Model
         try {
 
             $data = $this->getAllWithMediaUrlWithout(['id', 'created_at', 'updated_at']);
-            return self::normalizeData($data);
+            $data =  self::normalizeData($data);
+            return $this->getCategoriesData($data, 'display_category');
 
         } catch (\Exception $ex) {
             throw new ModelNotFoundException();
         }
 
+    }
+
+    public function getCategoriesData($object, $field) {
+        $categoryIds = [];
+
+        foreach ($object[$field] as $category) {
+            $categoryIds[] = $category['category'];
+        }
+
+        $categoryModels = OneCategoryModel::query()->whereIn('id', $categoryIds)->get();
+
+        $categoriesData = [];
+        foreach ($categoryModels as $oneCategoryData){
+            $categoriesData[] = $oneCategoryData->getDataForPartsPage();
+        }
+        $object[$field] = $categoriesData;
+        return $object;
     }
 }
