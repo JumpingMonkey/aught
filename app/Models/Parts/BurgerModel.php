@@ -2,6 +2,7 @@
 
 namespace App\Models\Parts;
 
+use App\Models\OneArticleModel;
 use App\Models\OneCategoryModel;
 use App\Traits\TranslateAndConvertMediaUrl;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -41,7 +42,8 @@ class BurgerModel extends Model
 
             $data = $this->getAllWithMediaUrlWithout(['id', 'created_at', 'updated_at']);
             $data =  self::normalizeData($data);
-            return $this->getCategoriesData($data, 'display_category');
+            $data = $this->getCategoriesData($data, 'display_category');
+            return $this->getArticlesData($data, 'display_article');
 
         } catch (\Exception $ex) {
             throw new ModelNotFoundException();
@@ -63,6 +65,22 @@ class BurgerModel extends Model
             $categoriesData[] = $oneCategoryData->getDataForPartsPage();
         }
         $object[$field] = $categoriesData;
+        return $object;
+    }
+
+    public function getArticlesData($object, $field) {
+        $articlesIds = [];
+
+        foreach ($object[$field] as $article) {
+            $articlesIds[] = $article['article'];
+        }
+        $articlesIds = array_unique($articlesIds);
+        $articleModels = OneArticleModel::query()->whereIn('id', $articlesIds)->get();
+        $articlesData = [];
+        foreach ($articleModels as $oneArticleData){
+            $articlesData[] = $oneArticleData->getDataForBurger();
+        }
+        $object[$field] = $articlesData;
         return $object;
     }
 }

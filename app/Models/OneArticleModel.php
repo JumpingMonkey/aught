@@ -151,6 +151,22 @@ class OneArticleModel extends Model
 
     }
 
+    public function getDataForBurger()
+    {
+        try {
+
+            $data = $this->getAllWithMediaUrlWithout(['created_at', 'updated_at', 'meta_title', 'meta_description', 'meta_keywords', 'author_id',
+                'interview', 'video_maker', 'social_label', 'social_network', 'blocks', ]);
+            $data = self::normalizeData($data);
+
+            return $data;
+
+        } catch (\Exception $ex) {
+            throw new ModelNotFoundException();
+        }
+
+    }
+
 
 
 }
