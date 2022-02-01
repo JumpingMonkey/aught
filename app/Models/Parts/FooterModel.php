@@ -47,13 +47,17 @@ class FooterModel extends Model
         return $object;
     }
 
-    public function getFullData()
+    public function getFullData($withCategory = true)
     {
         try {
-
             $data = $this->getAllWithMediaUrlWithout(['id', 'created_at', 'updated_at']);
-            $data =  self::normalizeData($data);
-            return $this->getCategoriesData($data, 'display_category');
+
+            if ($withCategory) {
+                $data =  self::normalizeData($data);
+                return $this->getCategoriesData($data, 'display_category');
+            } else {
+                return  self::normalizeData($data);
+            }
 
         } catch (\Exception $ex) {
             throw new ModelNotFoundException();

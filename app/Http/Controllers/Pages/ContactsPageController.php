@@ -12,12 +12,13 @@ use Illuminate\Http\Request;
 class ContactsPageController extends Controller
 {
     public function index() {
+
         $footer = FooterModel::query()
-            ->firstOrFail(['contact_email', 'facebook', 'instagram', 'twitter', 'youtube']);
-        $footer = $footer->getFullData();
+            ->firstOrFail(['contact_email', 'facebook', 'instagram', 'twitter', 'youtube', ]);
+        $footer = $footer->getFullData(false);
 
         $data = OneAuthorModel::query()
-            ->select('name', 'id', 'facebook', 'instagram', 'twitter', 'youtube')
+            ->select('name', 'id', 'facebook', 'instagram', 'twitter', 'youtube', 'position')
             ->limit(2)
             ->get();
         $authorsData = [];
