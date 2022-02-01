@@ -58,9 +58,9 @@ class OneCategory extends Resource
             ID::make(__('ID'), 'id')->sortable(),
             Multilingual::make('Language'),
 
-            Text::make('Meta-title', 'meta_title'),
-            Text::make('Meta-description', 'meta_description'),
-            Text::make('Meta-keywords', 'meta_keywords'),
+            Text::make('Meta-title', 'meta_title')->hideFromIndex(),
+            Text::make('Meta-description', 'meta_description')->hideFromIndex(),
+            Text::make('Meta-keywords', 'meta_keywords')->hideFromIndex(),
 
             Text::make('Og title', 'og_title')->hideFromIndex(),
             Text::make('Og description', 'og_description')->hideFromIndex(),
@@ -70,7 +70,7 @@ class OneCategory extends Resource
             Slug::make('Слаг', 'slug')
                 ->CreationRules('unique:one_article_models,slug')
                 ->hideFromIndex(),
-            Text::make('Описание категории', 'category_description'),
+            Text::make('Описание категории', 'category_description')->hideFromIndex(),
         ];
     }
 
