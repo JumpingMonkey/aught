@@ -5,6 +5,8 @@ namespace App\Nova;
 use App\Models\OneCategoryModel;
 use ClassicO\NovaMediaLibrary\MediaLibrary;
 use Digitalcloud\MultilingualNova\Multilingual;
+use Drobee\NovaSluggable\Slug;
+use Drobee\NovaSluggable\SluggableText;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Select;
@@ -64,8 +66,10 @@ class OneCategory extends Resource
             Text::make('Og description', 'og_description')->hideFromIndex(),
             MediaLibrary::make('Og image', 'og_img')->hideFromIndex(),
 
-            Text::make('Название категории', 'category_title'),
-            Text::make('Слаг', 'slug'),
+            SluggableText::make('Название категории', 'category_title')->slug('Слаг'),
+            Slug::make('Слаг', 'slug')
+                ->CreationRules('unique:one_article_models,slug')
+                ->hideFromIndex(),
             Text::make('Описание категории', 'category_description'),
         ];
     }
