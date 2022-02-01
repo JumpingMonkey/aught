@@ -74,7 +74,7 @@ class ArticleController extends Controller
      */
     public function getArticleListSearchResponse(Request $request)
     {
-        $data = OneArticleModel::query()->select('id', 'article_title', 'main_image', 'create_date', 'author_id', 'article_preview_description')
+        $data = OneArticleModel::query()->select('id', 'slug', 'article_title', 'main_image', 'create_date', 'author_id', 'article_preview_description')
             ->where('article_title', 'LIKE',  "%$request->search%")
             ->with(['oneCategory' => function($q){
                 $q->select(
