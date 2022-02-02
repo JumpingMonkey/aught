@@ -35,6 +35,13 @@ class CategoriesPageController extends Controller
      */
     public function getOneCategory(Request $request)
     {
+        if (isset($request->slug)){
+            $type = 'slug';
+            $value = $request->slug;
+        } elseif (isset($request->id)){
+            $type = 'id';
+            $value = $request->id;
+        }
 
         $data = OneCategoryModel::with(['articles' => function($query) {
             $query->select(
@@ -51,7 +58,7 @@ class CategoriesPageController extends Controller
                     'category_title',
                 );
             }]);
-        }])->findOrFail($request->id);
+        }])->where($type, $value)->firstOrFail();
 
         $content = $data->getFullData();
 

@@ -51,7 +51,8 @@ Route::middleware('locale')->group(function (){
     Route::get('/articles-search/{search}', [ArticleController::class, 'getArticleListSearchResponse']);
     Route::get('/author/{id}', [AuthorController::class, 'getOneAuthor']);
     Route::get('/authors', [AuthorController::class, 'getAuthorList']);
-    Route::get('/category/{id}', [CategoriesPageController::class, 'getOneCategory']);
+    Route::get('/category-by-id/{id}', [CategoriesPageController::class, 'getOneCategory']);
+    Route::get('/category/{slug}', [CategoriesPageController::class, 'getOneCategory']);
 
     //popup
     Route::get('/request', [PopupsController::class, 'getRequestPage']);
