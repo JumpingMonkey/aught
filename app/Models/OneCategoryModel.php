@@ -74,7 +74,7 @@ class OneCategoryModel extends Model
     {
         try {
 
-            $data = $this->getAllWithMediaUrlWithout(['created_at', 'updated_at', 'meta_title', 'meta_description', 'meta_keywords', 'slug', 'category_description']);
+            $data = $this->getAllWithMediaUrlWithout(['created_at', 'updated_at', 'meta_title', 'meta_description', 'meta_keywords', 'category_description']);
             return self::normalizeData($data);
 
         } catch (\Exception $ex) {
