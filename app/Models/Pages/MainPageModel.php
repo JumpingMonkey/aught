@@ -125,6 +125,7 @@ class MainPageModel extends Model
             $query->select(
                 'one_category_models.id',
                 'category_title',
+                'slug'
             );
         }])->whereIn("id", $articleIds)->get();
 
@@ -164,6 +165,7 @@ class MainPageModel extends Model
                 $query->select(
                     'one_category_models.id',
                     'category_title',
+                    'slug'
                 );
             }])->orderByDesc('id')
                 ->first();
@@ -189,6 +191,7 @@ class MainPageModel extends Model
                 $query->select(
                     'one_category_models.id',
                     'category_title',
+                    'slug',
                 );
             }])
             ->where("id", $object[$fieldName])->first();
@@ -208,6 +211,7 @@ class MainPageModel extends Model
                     $query->select(
                         'one_category_models.id',
                         'category_title',
+                        'slug',
                     );
                 }])->first();
             if ($defaultArticle !== null) {
