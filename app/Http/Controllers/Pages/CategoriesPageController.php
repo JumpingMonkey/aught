@@ -56,6 +56,7 @@ class CategoriesPageController extends Controller
                 $query->select(
                     'one_category_models.id',
                     'category_title',
+                    'slug'
                 );
             }]);
         }])->where($type, $value)->firstOrFail();
