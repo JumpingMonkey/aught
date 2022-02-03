@@ -52,6 +52,7 @@ class ArticleController extends Controller
                 $q->select(
                     'one_category_models.id',
                     'category_title',
+                    'slug',
                 );
             }])
             ->get();
@@ -80,6 +81,7 @@ class ArticleController extends Controller
                 $q->select(
                     'one_category_models.id',
                     'category_title',
+                    'slug',
                 );
             }])
             ->get();
