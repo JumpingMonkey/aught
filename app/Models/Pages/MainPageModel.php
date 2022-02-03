@@ -76,6 +76,7 @@ class MainPageModel extends Model
                 $query->select(
                     'one_category_models.id',
                     'category_title',
+                    'slug',
                 );
             }])->limit(6)
                 ->orderByDesc('id')
