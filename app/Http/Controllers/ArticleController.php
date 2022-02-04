@@ -27,6 +27,36 @@ class ArticleController extends Controller
             $content = $data->getFullData();
         }
 
+        if (isset($content['oneCategory'])){
+            $categoryIds = [];
+            foreach ($content['oneCategory'] as $category){
+                $categoryIds[] = $category['id'];
+            }
+
+            $randomData = OneArticleModel::query()->select('id', 'article_title', 'create_date',
+                'author_id', 'main_image', 'slug', 'article_preview_description')
+                ->whereHas('oneCategory', function ($q) use($categoryIds){
+                    $q->whereIn('one_category_models.id', $categoryIds);
+                })
+                ->with(['oneCategory' => function($q) use ($categoryIds){
+                    $q->select(
+                        'one_category_models.id',
+                        'category_title',
+                        'slug',
+                    );
+                }])
+                ->limit(5)
+                ->where('id', '!=', $content['id'])
+                ->get();
+
+            $random = [];
+            foreach ($randomData as $article){
+                $random[] = $article->getFullData(false);
+            }
+        }
+
+
+
 
 //        $author = OneAuthorModel::query()->where('id', $content['author_id'])->firstOrFail();
 //        $authorContent = $author->getFullData();
@@ -36,7 +66,8 @@ class ArticleController extends Controller
         /*return json obj*/
         return response()->json([
             'status' => 'success',
-            'data' => $content
+            'data' => $content,
+            'random' => $random ?? 'у статьи нет категорий!',
         ])->setEncodingOptions('ass');
     }
 
