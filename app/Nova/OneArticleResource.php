@@ -153,8 +153,8 @@ class OneArticleResource extends Resource
                 ->addLayout('Фото', 'img', [
                     MediaLibrary::make('Фото', 'img'),
                 ])
-                ->addLayout('Видео ', 'video', [
-                    MediaLibrary::make('Видео', 'video'),
+                ->addLayout('Ссылка на видео', 'video_link', [
+                    Textarea::make('Ссылка на видео', 'video_link'),
                 ])->button('Добавить блок'),
         ];
     }
