@@ -54,20 +54,12 @@ class ArticleController extends Controller
                 $random[] = $article->getFullData(false);
             }
         }
-
-
-
-
-//        $author = OneAuthorModel::query()->where('id', $content['author_id'])->firstOrFail();
-//        $authorContent = $author->getFullData();
-//dd($authorContent);
-//        $content['author_id'] = $authorContent;
-
+        $content['random'] = $random ?? 'у статьи нет категорий!';
         /*return json obj*/
         return response()->json([
             'status' => 'success',
             'data' => $content,
-            'random' => $random ?? 'у статьи нет категорий!',
+//            'random' => $random ?? 'у статьи нет категорий!',
         ])->setEncodingOptions('ass');
     }
 
