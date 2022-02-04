@@ -128,12 +128,12 @@ class OneArticleResource extends Resource
                 ])
                 ->addLayout('Фото слева + заг. опис.', 'left_img_title_desc', [
                     Textarea::make('Заголовок', 'title'),
-                    Textarea::make('Описание', 'image'),
+                    Textarea::make('Описание', 'description'),
                     MediaLibrary::make('Фото', 'img')
                 ])
                 ->addLayout('Фото справа + заг. опис.', 'right_img_title_desc', [
                     Textarea::make('Заголовок', 'title'),
-                    Textarea::make('Описание', 'image'),
+                    Textarea::make('Описание', 'description'),
                     MediaLibrary::make('Фото', 'img')
                 ])
                 ->addLayout('Фото+цитата ', 'img_quote', [
