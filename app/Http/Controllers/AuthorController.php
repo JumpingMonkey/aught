@@ -15,7 +15,7 @@ class AuthorController extends Controller
      */
     public function getAuthorList()
     {
-        $data = OneAuthorModel::query()->select('name', 'id', 'facebook', 'instagram', 'twitter', 'youtube', 'photo', 'position', 'description')->get();
+        $data = OneAuthorModel::query()->select('name', 'slug', 'id', 'facebook', 'instagram', 'twitter', 'youtube', 'photo', 'position', 'description')->get();
         $authorsData = [];
         foreach ($data as $author){
             $authorsData[] = $author->getFullData();
@@ -35,8 +35,14 @@ class AuthorController extends Controller
      */
     public function getOneAuthor(Request $request)
     {
-        $data = OneAuthorModel::query()->where('id', $request->id)->firstOrFail();
-        $content = $data->getFullData();
+        if (isset($request->slug)){
+            $data = OneAuthorModel::query()->where('slug', $request->slug)->firstOrFail();
+            $content = $data->getFullData();
+        } elseif ($request->id){
+            $data = OneAuthorModel::query()->where('id', $request->id)->firstOrFail();
+            $content = $data->getFullData();
+        }
+
 
         $articles = OneArticleModel::query()->where('author_id', $content['id'])->select('id')->get();
 
