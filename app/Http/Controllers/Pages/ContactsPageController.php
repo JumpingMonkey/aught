@@ -18,7 +18,7 @@ class ContactsPageController extends Controller
         $footer = $footer->getFullData(false);
 
         $data = OneAuthorModel::query()
-            ->select('name', 'id', 'facebook', 'instagram', 'twitter', 'youtube', 'position')
+            ->select('name', 'slug', 'id', 'facebook', 'instagram', 'twitter', 'youtube', 'position')
             ->limit(2)
             ->get();
         $authorsData = [];

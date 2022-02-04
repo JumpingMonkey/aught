@@ -8,6 +8,7 @@ use Digitalcloud\MultilingualNova\Multilingual;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Select;
+use Laravel\Nova\Fields\Slug;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -63,7 +64,10 @@ class OneAuthorResource extends Resource
             MediaLibrary::make('Og image', 'og_img')->hideFromIndex(),
 
             Text::make('Имя', 'name'),
-            Text::make('Слаг', 'slug')->rules('required')->creationRules('unique:one_author_models,slug'),
+            Slug::make('Слаг', 'slug')
+                ->from('name')
+                ->rules('required')
+                ->creationRules('unique:one_author_models,slug'),
             Text::make('Должность', 'position'),
             MediaLibrary::make('Фото', 'photo')->rules('required'),
             Textarea::make('Описание', 'description')->rules('required'),
