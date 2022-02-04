@@ -21,7 +21,7 @@ class AboutPageController extends Controller
         $content = $data->getFullData();
 
         $authors = OneAuthorModel::query()
-            ->select('name', 'id', 'facebook', 'instagram', 'twitter', 'youtube', 'photo', 'position', 'description')
+            ->select('name', 'id', 'slug', 'facebook', 'instagram', 'twitter', 'youtube', 'photo', 'position', 'description')
             ->limit(2)
             ->get();
         $authorsData = [];
