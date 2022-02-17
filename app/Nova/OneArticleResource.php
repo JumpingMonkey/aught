@@ -80,6 +80,7 @@ class OneArticleResource extends Resource
                 ->falseValue('false')->hideFromIndex(),
             Date::make('Дата создания', 'create_date')->nullable()->hideFromIndex(),
             SluggableText::make('Заголовок', 'article_title')->slug('Слаг'),
+            Text::make('Описание', 'article_description')->hideFromIndex(),
             Text::make('Описание для превью', 'article_preview_description')->hideFromIndex(),
             Slug::make('Слаг', 'slug')
                 ->CreationRules('unique:one_article_models,slug')

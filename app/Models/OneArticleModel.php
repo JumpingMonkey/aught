@@ -26,6 +26,7 @@ class OneArticleModel extends Model
         'visible',
         'create_date',
         'article_title',
+        'article_description',
         'article_preview_description',
         'slug',
         'author_id',
@@ -45,6 +46,7 @@ class OneArticleModel extends Model
         'meta_description',
         'meta_keywords',
         'article_title',
+        'article_description',
         'article_preview_description',
 //        'author_id',
         'interview',
@@ -157,7 +159,7 @@ class OneArticleModel extends Model
         try {
 
             $data = $this->getAllWithMediaUrlWithout(['created_at', 'updated_at', 'meta_title', 'meta_description', 'meta_keywords', 'author_id',
-                'interview', 'video_maker', 'social_label', 'social_network', 'blocks', 'og_title', 'og_description', 'og_img', 'create_date',
+                'interview', 'video_maker','article_description', 'social_label', 'social_network', 'blocks', 'og_title', 'og_description', 'og_img', 'create_date',
             ]);
             $data = self::normalizeData($data);
 

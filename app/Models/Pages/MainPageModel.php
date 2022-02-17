@@ -68,6 +68,7 @@ class MainPageModel extends Model
                 'article_title',
                 'main_image',
                 'article_preview_description',
+                'article_description',
                 'create_date',
                 'video_maker',
                 'video_maker_link',
@@ -118,6 +119,7 @@ class MainPageModel extends Model
         $articles = OneArticleModel::query()->select(
             'article_title',
             'main_image',
+            'article_description',
             'article_preview_description',
             'create_date',
             'id',
@@ -160,6 +162,7 @@ class MainPageModel extends Model
             $article = OneArticleModel::query()->select(
                 'article_title',
                 'main_image',
+                'article_description',
                 'article_preview_description',
                 'create_date',
                 'id',
@@ -188,6 +191,7 @@ class MainPageModel extends Model
         $article = OneArticleModel::query()
             ->select(
                 'article_title',
+                'article_description',
                 'main_image',
                 'article_preview_description',
                 'video_maker',
@@ -210,6 +214,7 @@ class MainPageModel extends Model
             $defaultArticle = OneArticleModel::query()
                 ->select(
                     'article_title',
+                    'article_description',
                     'main_image',
                     'article_preview_description',
                     'video_maker',
