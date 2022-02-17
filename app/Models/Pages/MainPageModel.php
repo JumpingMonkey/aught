@@ -235,7 +235,7 @@ class MainPageModel extends Model
 
     public static function getSocialLinks($object){
         $footer = FooterModel::query()
-            ->firstOrFail(['facebook', 'instagram', 'twitter', 'youtube']);
+            ->firstOrFail(['facebook', 'instagram', 'twitter', 'youtube', 'soundcloud']);
         $footer = $footer->getFullData(false);
         $object['social'] = $footer;
         return $object;

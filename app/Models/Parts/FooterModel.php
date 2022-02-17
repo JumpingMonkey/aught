@@ -26,6 +26,7 @@ class FooterModel extends Model
         'instagram',
         'twitter',
         'youtube',
+        'soundcloud',
     ];
 
     public $translatable = [

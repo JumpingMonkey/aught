@@ -14,7 +14,7 @@ class ContactsPageController extends Controller
     public function index() {
 
         $footer = FooterModel::query()
-            ->firstOrFail(['contact_email', 'facebook', 'instagram', 'twitter', 'youtube', ]);
+            ->firstOrFail(['contact_email', 'facebook', 'instagram', 'twitter', 'youtube', 'soundcloud']);
         $footer = $footer->getFullData(false);
 
         $data = OneAuthorModel::query()

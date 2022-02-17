@@ -84,6 +84,9 @@ class FooterResource extends Resource
             Text::make('Youtube сылка', 'youtube')
                 ->rules('required')
                 ->hideFromIndex(),
+            Text::make('Soundcloud сылка', 'soundcloud')
+                ->rules('required')
+                ->hideFromIndex(),
         ];
     }
 
