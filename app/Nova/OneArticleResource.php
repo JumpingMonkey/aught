@@ -94,6 +94,7 @@ class OneArticleResource extends Resource
             )->displayUsingLabels()->hideFromIndex(),
             Text::make('Интервьюер', 'interview')->hideFromIndex(),
             Text::make('Видеоограф/фотограф', 'video_maker')->hideFromIndex(),
+            Text::make('Видеоограф/фотограф ссылка', 'video_maker_link')->hideFromIndex(),
 
             MediaLibrary::make('Фото', 'main_image')
 //                ->array('list')

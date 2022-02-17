@@ -37,6 +37,7 @@ class OneArticleModel extends Model
         'blocks',
         'og_title',
         'og_description',
+        'video_maker_link',
     ];
 
     public $translatable = [
