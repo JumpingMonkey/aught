@@ -201,6 +201,7 @@ class MainPageModel extends Model
                 'video_maker',
                 'video_maker_link',
                 'create_date',
+                'author_id',
                 'id',
                 'slug',
             )->with(['oneCategory' => function($query) {
@@ -225,6 +226,7 @@ class MainPageModel extends Model
                     'video_maker',
                     'video_maker_link',
                     'create_date',
+                    'author_id',
                     'id',
                     'slug',
                 )->with(['oneCategory' => function($query) {
