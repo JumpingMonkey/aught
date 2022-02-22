@@ -111,6 +111,10 @@ class OneArticleResource extends Resource
                     'YT' => 'YT',
                     'TW' => 'TW',
                     'IN' => 'IN',
+                    'AM' => 'AM',
+                    'Spotify' => 'Spotify',
+                    'BC' => 'BC',
+                    'WEB' => 'WEB',
                 ]),
                 Text::make('Ccылка на соцсеть', 'social_link')
             ])->button('Добавить соцсеть'),
