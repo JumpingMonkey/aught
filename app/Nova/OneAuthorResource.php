@@ -64,17 +64,21 @@ class OneAuthorResource extends Resource
             MediaLibrary::make('Og image', 'og_img')->hideFromIndex(),
 
             Text::make('Имя', 'name'),
-            Slug::make('Слаг', 'slug')
+            Slug::make('Слаг', 'slug')->hideFromIndex()
                 ->from('name')
                 ->rules('required')
                 ->creationRules('unique:one_author_models,slug'),
             Text::make('Должность', 'position'),
-            MediaLibrary::make('Фото', 'photo')->rules('required'),
-            Textarea::make('Описание', 'description')->rules('required'),
-            Text::make('Facebook сылка', 'facebook'),
-            Text::make('instagram сылка', 'instagram'),
-            Text::make('Twitter сылка', 'twitter'),
-            Text::make('Youtube сылка', 'youtube'),
+            MediaLibrary::make('Фото', 'photo')->rules('required')->hideFromIndex(),
+            Textarea::make('Описание', 'description')->rules('required')->hideFromIndex(),
+            Text::make('Facebook сылка', 'facebook')->hideFromIndex(),
+            Text::make('instagram сылка', 'instagram')->hideFromIndex(),
+            Text::make('Twitter сылка', 'twitter')->hideFromIndex(),
+            Text::make('Youtube сылка', 'youtube')->hideFromIndex(),
+            Text::make('Apple music сылка', 'apple_music')->hideFromIndex(),
+            Text::make('Spotify сылка', 'spotify')->hideFromIndex(),
+            Text::make('Band camp сылка', 'band_camp')->hideFromIndex(),
+            Text::make('Web site сылка', 'web_site')->hideFromIndex(),
         ];
     }
 
