@@ -20,6 +20,7 @@
         "optimistdigital/nova-sortable": "^2.4",
         "spatie/eloquent-sortable": "^4.0",
         "spatie/laravel-translatable": "4.6",
+        "waynestate/nova-ckeditor4-field": "^0.7.0",
         "whitecube/nova-flexible-content": "^0.2.8"
     },
     "require-dev": {
