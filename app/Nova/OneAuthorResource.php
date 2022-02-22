@@ -75,10 +75,6 @@ class OneAuthorResource extends Resource
             Text::make('instagram сылка', 'instagram')->hideFromIndex(),
             Text::make('Twitter сылка', 'twitter')->hideFromIndex(),
             Text::make('Youtube сылка', 'youtube')->hideFromIndex(),
-            Text::make('Apple music сылка', 'apple_music')->hideFromIndex(),
-            Text::make('Spotify сылка', 'spotify')->hideFromIndex(),
-            Text::make('Band camp сылка', 'band_camp')->hideFromIndex(),
-            Text::make('Web site сылка', 'web_site')->hideFromIndex(),
         ];
     }
 

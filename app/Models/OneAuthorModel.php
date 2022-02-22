@@ -29,10 +29,6 @@ class OneAuthorModel extends Model
         'youtube',
         'og_title',
         'og_description',
-        'apple_music',
-        'spotify',
-        'band_camp',
-        'web_site',
     ];
 
     protected $translatable = [
