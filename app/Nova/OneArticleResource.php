@@ -21,6 +21,7 @@ use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Waynestate\Nova\CKEditor;
 use Whitecube\NovaFlexibleContent\Flexible;
 
 class OneArticleResource extends Resource
@@ -119,27 +120,27 @@ class OneArticleResource extends Resource
                     Textarea::make('Заголовок', 'title'),
                 ])
                 ->addLayout('Текст', 'text', [
-                    Textarea::make('Текст', 'text'),
+                    CKEditor::make('Текст', 'text'),
                 ])
                 ->addLayout('Цитата', 'quote', [
-                    Textarea::make('Цитата', 'quote'),
+                    CKEditor::make('Цитата', 'quote'),
                     Text::make('Подпись к цитате', 'quote_label'),
                 ])
                 ->addLayout('Точка', 'mark_list', [
                     Trix::make('Точка', 'mark_list'),
                 ])
                 ->addLayout('Фото слева + заг. опис.', 'left_img_title_desc', [
-                    Textarea::make('Заголовок', 'title'),
-                    Textarea::make('Описание', 'description'),
+                    CKEditor::make('Заголовок', 'title'),
+                    CKEditor::make('Описание', 'description'),
                     MediaLibrary::make('Фото', 'img')
                 ])
                 ->addLayout('Фото справа + заг. опис.', 'right_img_title_desc', [
-                    Textarea::make('Заголовок', 'title'),
-                    Textarea::make('Описание', 'description'),
+                    CKEditor::make('Заголовок', 'title'),
+                    CKEditor::make('Описание', 'description'),
                     MediaLibrary::make('Фото', 'img')
                 ])
                 ->addLayout('Фото+цитата ', 'img_quote', [
-                    Textarea::make('Цитата', 'quote'),
+                    CKEditor::make('Цитата', 'quote'),
                     MediaLibrary::make('Фото', 'img'),
                     Text::make('Подпись к фото', 'img_label'),
                 ])
