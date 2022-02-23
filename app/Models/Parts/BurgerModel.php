@@ -75,7 +75,15 @@ class BurgerModel extends Model
             $articlesIds[] = $article['article'];
         }
         $articlesIds = array_unique($articlesIds);
-        $articleModels = OneArticleModel::query()->whereIn('id', $articlesIds)->get();
+        $articleModels = OneArticleModel::query()
+
+            ->with(['oneCategory' => function($query) {
+                $query->select(
+                    'one_category_models.id',
+                    'category_title',
+                    'slug',
+                );
+            }])->whereIn('id', $articlesIds)->get();
         $articlesData = [];
         foreach ($articleModels as $oneArticleData){
             $articlesData[] = $oneArticleData->getDataForBurger();

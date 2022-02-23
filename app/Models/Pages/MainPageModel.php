@@ -31,7 +31,7 @@ class MainPageModel extends Model
         'display_articles_4_block',
     ];
 
-    public $translatable = [
+    protected $translatable = [
         'meta_title',
         'meta_description',
         'meta_keywords',
